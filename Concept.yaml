@@ -11,4 +11,106 @@ in package json
 "test" : "jest --watchAll",
 "eject" : "react-scripts eject" 
 
-now npm test
+now npm test;
+
+
+
+
+
+// redux async thunk, middlewere
+
+Middleware: It is function which works b/w the dispatch and reducer;
+
+// redux-thunk middleware ek middleware hai jo old practices ka part hai mordern me Redux toolkitquery me hm createAsyncthunk ka use krte hai;
+//=> middleware or redux-thunk ko configureStore({}); automatically add krdeta hai aabb;;
+
+// hm createAsyncthunk ko hamari slice me banate hai isme built in different features ate hai ;
+
+hm iska use krke proper CRUD kar skate hai ;
+
+like createAsyncThunk("data/fetch",(data,{rejectionState or many features here ate hai })=>{ perform our async operation by giving api a POST,DELETE methods});
+
+// after making our function asyncthunk we have to now make our reducers which are differnt from reducers they are extraReducers;
+
+syntax old me ham direclty extraReducers me :{} ese code likhte thee
+
+extraReducers : {
+  [ourAsyncFunction.pending] : (state)=>{
+    state.loading = true;
+  },
+  [ourAsyncFunction.fullfilled] : (state,action)=>{
+    state.loading = false;
+    state.dataArray = action.payload;
+  },
+  [ourAsyncFunction.rejection] : (state,action)=>{
+    state.loading = false;
+    state.error = action.error.message || "some error occurred";
+  },
+};
+
+
+this abpve is old practise new one is we have to use builder
+
+extraReducers : (builder)=>{
+  builder
+        .addCase(ourAsyncFunction.pending,(state)=>{
+           state.loading = true;
+        })
+        .addCase(ourAsyncFunction.fulfilled,(state,action)=>{
+           state.loading = true;
+           state.dataArray = action.payload;
+        })
+        .addCase(ourAsyncFunction.rejection,(state,action)=>{
+           state.loading = false;
+           state.error = action.error.message || "some error occurred";
+        })
+};
+
+
+// Now on store we have to follow best type script practies
+
+export type RootState = ReturnType<typeOf store.getState>;
+export type AppDispatch = typeOf store.dispatch;
+
+// now call these types on useDispatch<AppDispatch> and useSelector(state:RootState) like this;;;
+
+
+//Performance Optimization in redux
+
+1.) Ham redux store ke update hone par jaha jaha par uski values useSeletor se use hori hogi vo sab component re-render hhge just like context to hm React.meme() ka use kar skate hai for avoid re-renders;
+
+2.) useSelector() ka wisely use kar skate hai like only un values ko store se elege jinka actual use hai component me naki sabhi ko;
+
+3.) createSelector():
+ Use createSelector for Memoization
+createSelector se derived state ko efficiently calculate kar sakte hain. Agar input state same hai, to yeh cached result return karta hai, jo unnecessary calculations ko avoid karta hai.
+
+it is return cache value of state if state not changes so it dont re-calculate again:
+
+# import { createSelector } from '@reduxjs/toolkit';
+
+# const selectItems = (state: RootState) => state.data.items;
+# const selectActiveItems = createSelector(
+#   [selectItems],
+#   (items) => items.filter((item) => item.active) // Derived state
+# );
+
+#  In component
+# const activeItems = useSelector(selectActiveItems);
+
+
+4.) Split Reducers: (Modular state management)
+Divide application state into multiple slices:
+configureStore({
+ reducer:{
+   red1:slice1.reducer,
+   red2:slice2.reducer,
+   red3:slice3.reducer,
+   red4:slice4.reducer,
+ }
+})
+
+Use Redux DevTools
+Redux DevTools ka use karna helpful hota hai debugging aur state management track karne ke liye.
+
+configureStore by default Redux DevTools ko enable karta hai:
