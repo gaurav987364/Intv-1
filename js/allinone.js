@@ -289,3 +289,25 @@ const nestedObj = {
 
 const items = nestedObj;
 console.log({...items})
+
+
+// senario based question about forms
+
+//Q: suppose we have one form like this and in form we have one button we have to guess what happend when user press submit button and what happen when we change the type of button from submit to another ? 
+
+{/* 
+    //? ans => in first case the form is submitted due to default behaviour of button when it is type submit, and the user input is store in the url:
+    <form>
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    //? no it is not submitted now due to type chnage in button
+    <form>
+        <input type="text" name="username">
+        <input type="password" name="password">
+        <button type="button">Save</button>
+    </form> 
+*/
+}

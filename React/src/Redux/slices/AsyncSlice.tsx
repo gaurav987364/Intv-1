@@ -29,6 +29,8 @@ const asyncSlice = createSlice({
               })
               .addCase(fetchData.rejected,(state,action)=>{
                 state.loading = false;
+                // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                //@ts-expect-error
                 state.error = action.error.message!;
               })
     }

@@ -5,7 +5,7 @@ import { asyncSlice } from "../slices/AsyncSlice";
 const store = configureStore({
     reducer:{
         users:UserSlice.reducer,
-        data:asyncSlice.reducer // createAsyncThunk
+        data :asyncSlice.reducer // createAsyncThunk
     },
 });
 

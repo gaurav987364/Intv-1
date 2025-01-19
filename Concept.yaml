@@ -77,7 +77,7 @@ export type AppDispatch = typeOf store.dispatch;
 
 //Performance Optimization in redux
 
-1.) Ham redux store ke update hone par jaha jaha par uski values useSeletor se use hori hogi vo sab component re-render hhge just like context to hm React.meme() ka use kar skate hai for avoid re-renders;
+1.) Ham redux store ke update hone par jaha jaha par uski values useSeletor se use hori hogi vo sab component re-render hhge just like context to hm React.memo() ka use kar skate hai for avoid re-renders;
 
 2.) useSelector() ka wisely use kar skate hai like only un values ko store se elege jinka actual use hai component me naki sabhi ko;
 
@@ -114,3 +114,6 @@ Use Redux DevTools
 Redux DevTools ka use karna helpful hota hai debugging aur state management track karne ke liye.
 
 configureStore by default Redux DevTools ko enable karta hai:
+
+
+// 
