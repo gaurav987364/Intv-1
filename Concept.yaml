@@ -114,6 +114,3 @@ Use Redux DevTools
 Redux DevTools ka use karna helpful hota hai debugging aur state management track karne ke liye.
 
 configureStore by default Redux DevTools ko enable karta hai:
-
-
-// ....
