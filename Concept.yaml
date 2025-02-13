@@ -123,3 +123,7 @@ configureStore({
 
 
 //We have to add some more concepts here;
+
+// Middleware: It is function which works b/w the dispatch and reducer;
+
+// Redux-thunk middleware ek middleware hai jo old practices ka part hai mordern me Redux toolkit query me hm createAsyncthunk ka use krte hai;
