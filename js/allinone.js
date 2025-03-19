@@ -314,3 +314,20 @@ console.log({...items})
 
 
 //Heloow
+
+
+//Q: create an sufffle function for array
+const array = [1,2,3,4,5,6,7,8,9];
+function sufffleArray(arr){
+    for(let i=arr.length-1;i>0;i++){
+        let randomIndex = Math.floor(Math.random() * (i+1));
+        [arr[i],arr[randomIndex]] = [arr[randomIndex],arr[i]];
+    }
+    return arr;
+};
+
+//T type
+// interface Props<T>{
+//     array: T[]
+// };
+// <T extends Element>({}:Props<T>);
