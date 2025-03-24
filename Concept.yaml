@@ -128,4 +128,32 @@ configureStore({
 
 // Redux-thunk middleware ek middleware hai jo old practices ka part hai mordern me Redux toolkit query me hm createAsyncthunk ka use krte hai;
 
+
+
+
+
 //revision krna hai;
+
+
+
+
+
+
+
+●–––>> Some talk about classes in React or Js
+class Parent {
+ public name;
+ constructor(name){
+  this.name = name;
+ }
+}
+
+class Child extends Parent {
+ constructor(name, age){
+  super(name); // calling parent constructor
+  this.age = age;
+ }
+}
+
+
+Note: ham supes keyword ka use isliye krte hai taki hm child class me parnet ke features ko call kr sake ok; jese ki child class ya koi  bhi class kisi dusri class ko jab extend krti hai to to ek child class ki trah behave krti hai and jise extend kr rhe hai vo ek parnet ki trh to smjo parnet ke andarr hamare pass constructor hai to uski chijo ko hm child me use kr skte hai just like typescript ka interface extneds something ok to un chijo ko use krne ke liye hme ye sper keyword ka use krna pdta  hai;;
