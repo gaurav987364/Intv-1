@@ -110,7 +110,7 @@ switch(true){
     default:
         console.log("Unknown operation");
         break;
-}
+};
 
 // do-while ( do your work until conidition is true);
 let count = 0;
