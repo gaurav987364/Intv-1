@@ -1,0 +1,165 @@
+Js Topics :- 
+
+JavaScript Basics
+
+Introduction to JavaScript and its usage✅
+Variables: var, let, and const✅
+Hoisting✅
+Data Types (Primitives): String, Number, Boolean, Undefined, Null, Symbol, and BigInt✅
+Data Types (Non-primitives): Arrays, Objects, Functions ✅
+
+Operators:
+Arithmetic operators: +, -, *, /, %, **
+Comparison operators: ==, ===, !=, !==, >, <, >=, <=
+Logical operators: &&, ||, !
+Assignment operators: =, +=, -=, *=, /=, etc.
+
+Comma Operator✅
+let numb = (1,2,3,4,5);
+console.log(numb) // 5 return the end value only because comma operatorworks from left to right;
+
+
+Type Coercion and Conversion✅
+Template Literals✅
+Control Flow✅ it handles the execution of Program
+
+Conditional Statements: if, else if, else, and switch statements✅
+Loops:✅
+switch statements✅
+for, while, do...while✅
+Loop controls: break, continue✅
+
+
+
+Ternary Operator
+Functions
+
+Function Declarations
+Function Expressions
+Arrow Functions
+IIFE (Immediately Invoked Function Expressions)
+Parameters and Arguments
+Rest and Spread Syntax in Functions
+Intermediate Level Concepts
+Arrays
+
+Creating and Manipulating Arrays
+Array Methods:
+Mutating: push, pop, shift, unshift, splice, sort, reverse
+Non-mutating: map, filter, reduce, forEach, find, findIndex, every, some, concat, slice
+Nested Arrays and Flattening
+Objects
+
+Object Literals and Properties
+Accessing and Modifying Properties
+Object Methods:
+Object.keys, Object.values,Object.fromEntries, Object.entries
+Destructuring and Nested Destructuring
+Object Spread and Rest
+Closures and Scope :{
+    1.function Scope
+    2.global Scope
+    3.blocked Scope
+    4. module sccope
+    5.Lexical scope
+}
+
+Global, Function, Block Scope
+Lexical Scope and Closure
+this Keyword in Different Contexts
+Advanced Functions
+
+Callback Functions
+Higher-Order Functions
+Function Currying
+Function Composition
+Function composition in JavaScript is a powerful technique that allows you to combine multiple functions into a single function. This can make your code more modular and easier to read.
+Asynchronous JavaScript
+
+Callbacks and Callback Hell
+Promises:
+Creating and Resolving Promises
+Promise chaining and error handling
+Async/Await
+Error Handling in Asynchronous Code
+Event Loop Basics
+Advanced Level Concepts
+Object-Oriented Programming (OOP) in JavaScript
+
+this Keyword and Binding
+Prototypal Inheritance
+ES6 Classes:
+Constructors, methods, inheritance
+Static and Instance Methods
+super and extends Keywords
+Private and Public Fields
+Functional Programming
+
+Immutability and Pure Functions
+Higher-Order Functions in Functional Programming
+Closures in Functional Programming
+Array and Object Immutability Techniques
+Advanced Array Methods: reduce, flatMap
+Modules and Module Patterns
+
+Module Pattern
+ES6 Modules: import, export, default export, named exports
+IIFE for Module Creation
+Error Handling
+
+try...catch Blocks
+Custom Error Messages
+Throwing and Catching Errors
+Error Types: SyntaxError, TypeError, ReferenceError, RangeError
+Asynchronous Programming and Event Loop
+
+Event Loop, Call Stack, Microtasks, and Macrotasks
+setTimeout, setInterval, and clearInterval
+Promise.all, Promise.race, Promise.any, and Promise.allSettled;
+
+🚀🚀🚀
+Expert Level Concepts;-
+
+JavaScript Design Patterns
+
+Singleton Pattern
+Module and Revealing Module Pattern
+Factory Pattern
+Observer Pattern
+Strategy Pattern
+Memory Management and Optimization
+
+Garbage Collection
+Memory Leaks and Common Sources (e.g., global variables, closures)
+Performance Optimization Techniques
+Debouncing and Throttling
+Advanced Data Structures and Algorithms
+
+Linked Lists, Stacks, and Queues in JavaScript
+Hash Tables
+Binary Trees and Binary Search Trees
+Sorting Algorithms: Bubble, Merge, Quick, Insertion, Selection
+Searching Algorithms: Linear and Binary Search
+Event Handling and DOM Manipulation
+
+Event Bubbling and Capturing
+Event Delegation
+addEventListener and removeEventListener
+Manipulating the DOM (Document Object Model)
+Regular Expressions (RegEx)
+
+Basics of Regular Expressions
+Common RegEx Patterns and Syntax
+Using RegEx for String Manipulation
+Advanced Browser APIs
+
+Fetch API and HTTP Requests
+Web Storage APIs: Local Storage, Session Storage, Cookies
+MutationObserver for DOM Observation
+Web Workers for Multithreading
+Testing in JavaScript
+
+Unit Testing Basics
+Testing Libraries (e.g., Jest, Mocha, Chai)
+Writing and Running Test Suites
+Mocking and Test-Driven Development (TDD)
