@@ -118,3 +118,9 @@ do {
   console.log(`Count is ${count}`);
   count++;
 } while (count < 5);
+
+
+// Ternary operator
+const data = true;
+data ? console.log(data) : "no data available";
+//true output

@@ -31,15 +31,15 @@ Loop controls: break, continue✅
 
 
 
-Ternary Operator
-Functions
+Ternary Operator✅
+Functions✅
 
-Function Declarations
-Function Expressions
-Arrow Functions
-IIFE (Immediately Invoked Function Expressions)
-Parameters and Arguments
-Rest and Spread Syntax in Functions
+Function Declarations✅
+Function Expressions✅
+Arrow Functions✅
+IIFE (Immediately Invoked Function Expressions)✅
+Parameters and Arguments✅
+Rest and Spread Syntax in Functions✅
 Intermediate Level Concepts
 Arrays
 

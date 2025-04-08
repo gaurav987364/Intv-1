@@ -1,0 +1,51 @@
+This files contains all the list of topics that roadside coder frontend interview prepration course have :-
+
+var let const,
+map filter reduce,
+functions,
+closures,
+currying,
+objects,
+this keyword, (Implicit binding)
+call, bind , apply, (Explicit binding)
+Promises,
+debounce and throttle,
+event propagation,
+Compose & Pipe,
+Prototypes,
+class & constructor
+Event loop
+
+How react works under the hood?
+virtual dom , reconciliation & diifing algorithm,
+most aksed interview questions,
+class vs function components,
+state vs props,
+hooks,
+useeffect polifill,
+useMemo polifill,
+memoizatons,
+useImerptive handle and forward ref
+Rect router interview question
+redux questions 
+
+Machine codeing round
+holy grail,
+accordian
+caraousel
+configurable color box
+post with comment
+E-commerce filters systmes
+advance tix tac toe
+poll - widget
+Match similar tiles or memory game
+
+
+React profiler
+client side vs server side renderings
+Web vitals
+code spilitting
+Virtualizations,
+accessiblity,
+HOC Pattrens
+
