@@ -330,4 +330,4 @@ function sufffleArray(arr){
 // interface Props<T>{
 //     array: T[]
 // };
-// <T extends Element>({}:Props<T>);
+// <T extends Element>({}:Props<T>)
