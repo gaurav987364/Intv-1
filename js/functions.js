@@ -1,15 +1,13 @@
 //** All About functions in Js */
 
-
 // Function declaration
-function myFunctionDeclaration(){}; // is called the function declaration
+function myFunctionDeclaration() {} // is called the function declaration
 
 // Funstion initialization
 //? after make the function declaration now we have to called the function for excute the code isnide it now it is callled the function, is called function initialization
 
 // function expression
-const myFunctionExpression = function(){}; // is called the function expression
-
+const myFunctionExpression = function () {}; // is called the function expression
 
 // Types of functions
 // normal function are aslo called the function declaration as well.
@@ -32,12 +30,12 @@ const myFunctionExpression = function(){}; // is called the function expression
 
 console.log(this); // In browsers (global context): Window object
 const obj = {
-    name: "Gaurav",
-    greet: function () {
-      console.log(this.name);
-    },
-  };
-  obj.greet(); // Output: "Gaurav" (In block scope)
+  name: "Gaurav",
+  greet: function () {
+    console.log(this.name);
+  },
+};
+obj.greet(); // Output: "Gaurav" (In block scope)
 
 function sayHello() {
   console.log(this);
@@ -45,49 +43,46 @@ function sayHello() {
 sayHello(); // Non-strict mode: Window object, Strict mode: undefined
 
 const obj1 = {
-    name: "Gaurav",
-    arrowFunc: () => {
-      console.log(this.name);
-    },
-  };
-  obj1.arrowFunc(); // Output: undefined (in browsers/global scope)
-
-  //! in class this refers to instance of the class;
-class Person {
-constructor(name) {
-    this.name = name;
-}
-sayName() {
+  name: "Gaurav",
+  arrowFunc: () => {
     console.log(this.name);
-}
+  },
+};
+obj1.arrowFunc(); // Output: undefined (in browsers/global scope)
+
+//! in class this refers to instance of the class;
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+  sayName() {
+    console.log(this.name);
+  }
 }
 
 const person = new Person("Gaurav");
 person.sayName(); // Output: "Gaurav"
 
-
-
 // Question based on that this;
 var length = 20;
-function setContext(){
-    console.log(this.length)
+function setContext() {
+  console.log(this.length);
 }
 const OBJ = {
-    length:30,
-    fnc:function(args){
-        setContext() // now this sets the context value
-    }
+  length: 30,
+  fnc: function (args) {
+    setContext(); // now this sets the context value
+  },
 };
-console.log(OBJ.fnc());// guess the output // 20; not 30; becaause it points to global scope not this object scope;
+console.log(OBJ.fnc()); // guess the output // 20; not 30; becaause it points to global scope not this object scope;
 
 var length = 1;
-function count(){
-    console.log(this.length)
+function count() {
+  console.log(this.length);
 }
 const arr = [count, "ABC", 20, {}];
 console.log(arr[0]());
 //? now the output is 4 because count function is setting the context over arr not getting the global length; so it print arr.length ok
-
 
 // call, bind and apply functions
 //? these are also known as explicit binding, we used these methods for setting the value of this context.
@@ -96,133 +91,202 @@ console.log(arr[0]());
 
 //? cal take that object jiski property use krni hai or  takes parametres (normally) jo us method me bjnne hai;
 const dataset = {
-    name:"Raju"
+  name: "Raju",
 };
 // now we have to set this of object
-function sayHii(message){
-    console.log(this.name + "Says Hiii." + message)
+function sayHii(message) {
+  console.log(this.name + "Says Hiii." + message);
 }
 const newObj = sayHii.call(dataset, "From Haryana.");
 console.log(newObj);
 
-
 //? apply take paramtres in form of array;
 const user = {
-    name:"User1"
-}
-function doGreet(age, sex, height, dob){
-    console.log(this.name + " Of " + age + " & " + sex + " & " + height + " & have " + dob + " Says Hello");
+  name: "User1",
+};
+function doGreet(age, sex, height, dob) {
+  console.log(
+    this.name +
+      " Of " +
+      age +
+      " & " +
+      sex +
+      " & " +
+      height +
+      " & have " +
+      dob +
+      " Says Hello"
+  );
 }
 
-const newUser = doGreet.apply(user, [23,"Male", "6ft", "02/12/2000"]);
+const newUser = doGreet.apply(user, [23, "Male", "6ft", "02/12/2000"]);
 console.log(newUser);
-
 
 //? bind provide us with a new resuseable function which we can call later;
 
 const Obj = {
-    name:"Bablu"
+  name: "Bablu",
 };
-function setContext(age){
-    console.log(this.name + ` ${age}`)
+function setContext(age) {
+  console.log(this.name + ` ${age}`);
 }
 const NewFunctionFromBind = setContext.bind(Obj);
 console.log(NewFunctionFromBind(20));
-
 
 //? some More examples on call, bind and apply;
 
 // getting one function from one object and call it on second;
 const student1 = {
-    name: "Gaurav",
-    marks: [90, 85, 88],
-    calculateAverage: function () {
-      const total = this.marks.reduce((sum, mark) => sum + mark, 0);
-      return total / this.marks.length;
-    },
+  name: "Gaurav",
+  marks: [90, 85, 88],
+  calculateAverage: function () {
+    const total = this.marks.reduce((sum, mark) => sum + mark, 0);
+    return total / this.marks.length;
+  },
 };
 
 const student2 = {
-    name: "Priya",
-    marks: [80, 75, 95],
+  name: "Priya",
+  marks: [80, 75, 95],
 };
 const avgMarks = student1.calculateAverage.call(student2);
 console.log(avgMarks);
 
-
-
-  
 const numbers = [23, 45, 67, 12, 89];
 const maxValue = Math.max.apply(null, numbers);
 console.log(`Max Value: ${maxValue}`);
 // Output: Max Value: 89
 
-
-
-
 function logMethodDetails(func, context, ...args) {
-    console.log(`Calling function: ${func.name}`);
-    return func.call(context, ...args);
+  console.log(`Calling function: ${func.name}`);
+  return func.call(context, ...args);
 }
-  
+
 const mathOperations = {
-    number: 10,
-    multiplyBy: function (factor) {
-        return this.number * factor;
-    },
+  number: 10,
+  multiplyBy: function (factor) {
+    return this.number * factor;
+  },
 };
-  
+
 const result = logMethodDetails(mathOperations.multiplyBy, mathOperations, 5);
 console.log(`Result: ${result}`);
 // Output:
 // Calling function: multiplyBy
 // Result: 50
 
-
-
-
 function displaySkills(skill1, skill2, skill3) {
-    console.log(`${this.name} is skilled in ${skill1}, ${skill2}, and ${skill3}.`);
-  }
-  
-  const Person = { name: "Gaurav" };
-  
-  const skills = ["JavaScript", "React", "Node.js"];
-  
-  // Using `apply` to pass skills as an array
-  displaySkills.apply(Person, skills);
-  
-  // Using `call` to pass skills as separate arguments
-  displaySkills.call(Person, ...skills);
-  
-  // Using `bind` to create a pre-bound version for later use
-  const displayBoundSkills = displaySkills.bind(Person, "JavaScript", "React");
-  displayBoundSkills("Node.js");
+  console.log(
+    `${this.name} is skilled in ${skill1}, ${skill2}, and ${skill3}.`
+  );
+}
+
+const Person = { name: "Gaurav" };
+
+const skills = ["JavaScript", "React", "Node.js"];
+
+// Using `apply` to pass skills as an array
+displaySkills.apply(Person, skills);
+
+// Using `call` to pass skills as separate arguments
+displaySkills.call(Person, ...skills);
+
+// Using `bind` to create a pre-bound version for later use
+const displayBoundSkills = displaySkills.bind(Person, "JavaScript", "React");
+displayBoundSkills("Node.js");
 
 //! NOTE :- call, bind apply is not working with arrow functions ok;
 //! Note :- chaing of bind , call, apply method over bind,call,apply is not woking ok;
 
-
-
-
-
-
 // function closures , lexical scope and currying functions
 //? closure is not a thing but closure is a phenomena, when an inner or child function uses the value of the parent functions the closure is created
+//? inner function outer function kee variable ko use krke uske around closure create kr leta hai and then baad me usko update krta hai, like parnet function ke execution ya run hone ke baad bhi uske pass ability hai ki update kr ske value of variable ko;
+function count() {
+  let count = 0;
+  return function childcount() {
+    console.log("Closure is created.");
+    count++;
+  };
+}
+const res = count();
+console.log(res); // return function body
+console.dir(res); // we check closure is creted or not
+console.log(res()); //increse count
+console.log(res());
+console.log(res());
+console.log(res());
+//! so at value of count is 4 in the closure;
+//? we can use closure for making secret variable, data encapsulations etc.
 
+//? lexical scope => In simple language, lexical scope is, a variable defined outside your scope or upper scope is automatically available inside your scope which means you don't need to pass it there, like in closures inner function uses outside variable ok.
 
-// function Composition 
+//? curring in js =>Currying in JavaScript is a functional programming technique where a function is transformed into a series of functions, each taking a single argument. Instead of providing all arguments to the function at once, you provide them one at a time.
+
+// =>Currying is the process of breaking down a function that takes multiple arguments into a sequence of functions, each taking one argument.
+
+function curriedfunction(a) {
+  return function child1fnc(b) {
+    return function child2(c) {
+      return function child3(d) {
+        return (a + b + c + d / 4) * 100;
+      };
+    };
+  };
+}
+console.log(curriedfunction(2)(3)(4)(5));
+
 //Function Composition:
-// Develop a  function that takes two or more functions as arguments and returns a function that is the composition of those functions (i.e.,  should be equivalent to ). 
-// ...etc
+//? Function composition is the process of combining two or more functions to produce a new function that executes the individual functions in a specified sequence.
 
+// For eg :- we have two function f and g, now by composing them to make new function h is called function composition;   {h(x) = f(g(x));}
+
+//Note :- sequence of passing function to new function is matters ok
+
+const add = (x) => x * 2;
+const double = (x) => x * x;
+const composeCalculation = (f, g) => (x) => f(g(x));
+const resFnc = composeCalculation(double, add);
+console.log(resFnc(2, 3)); // 25 ans
+
+const toUpperCase = (str) => str.toUpperCase();
+const appendExclamation = (str) => `${str}!`;
+
+const compose = (f, g) => (x) => f(g(x)); // Same composition logic
+const shout = compose(appendExclamation, toUpperCase);
+
+console.log(shout("hello")); // Output: "HELLO!"
+
+// Working with Asynchronous Functions
+const fetchData = async () => ({ user: "John", age: 25 });
+const transformUser = (userData) =>
+  `${userData.user} is ${userData.age} years old.`;
+
+const composeAsync = (f, g) => async (x) => f(await g(x));
+
+const getUserDescription = composeAsync(transformUser, fetchData);
+
+getUserDescription().then(console.log); // Output: "John is 25 years old."
+// ...etc
 
 //** Question and Custom Methods in Js */
 
 // Q:Debounce Function
 // Create a debounce function that limits the rate at which a function can fire
+function debounce(fn, delay) {
+  let timer = null;
+  return function (...args) {
+    if (timer) {
+      clearTimeout(timer);
+      timer = null;
+    }
 
-// Q: Write Throttle Function ? 
+    timer = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
+
+// Q: Write Throttle Function ?
 
 // Q:Convert Object Keys from snake_case to camelCase
 // Provide a function that converts all keys in an object from snake_case to camelCase .
@@ -244,7 +308,6 @@ function displaySkills(skill1, skill2, skill3) {
 
 // Q:Custom Observable Implementation (RxJS-like)
 // Build an observable/observer system that supports operations like filter, map, and asynchronous subscription.
-
 
 // //? Methods or reuseable functions or methods mized topics?
 
@@ -293,8 +356,6 @@ function displaySkills(skill1, skill2, skill3) {
 
 // Q:Error-Handling Composed Functions:
 // Write a Compose (or pipe) function that chains multiple functions together. Ensure that if one function throws an error (or rejects a promise), the error is caught and handled gracefully.
-
-
 
 //? More question ?
 // Q: write a function that take two array and one number as argument and we have to find pair of array matching that number?
