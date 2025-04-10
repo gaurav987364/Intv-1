@@ -9,6 +9,30 @@ function myFunctionDeclaration() {} // is called the function declaration
 // function expression
 const myFunctionExpression = function () {}; // is called the function expression
 
+
+// question on function declaration vs expression
+console.log(myFnc())
+function myFnc(){
+  console.log("this is function declaration.")
+}
+console.log(myFnc())
+var myFnc = ()=>{
+  console.log("this is arrow function & also anonymous function as well")
+}
+console.log(myFnc())
+var myFnc = function(){
+  console.log("This is function expression.")
+}
+console.log(myFnc());
+// this is function declaration.
+// this is function declaration.
+//this is arrow function & also anonymous function as well
+//This is function expression.
+
+
+
+
+
 // Types of functions
 // normal function are aslo called the function declaration as well.
 // arrow function
@@ -234,6 +258,19 @@ function curriedfunction(a) {
   };
 }
 console.log(curriedfunction(2)(3)(4)(5));
+
+//? Infinite currying :-
+// this is also a currying in js but we used this approach when we are not write a n number of function for n number of arguments so we used the infinite curying;
+
+//understand the way of writing this method ok;
+
+function infiniteCurry(a){
+  return function childFnc(b){
+    if(!b) return a
+    return infiniteCurry(a+b)
+  }
+};
+console.log(infiniteCurry(2)(3)(4)(5)(6)(7)());
 
 //Function Composition:
 //? Function composition is the process of combining two or more functions to produce a new function that executes the individual functions in a specified sequence.
