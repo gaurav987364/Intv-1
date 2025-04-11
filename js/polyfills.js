@@ -26,6 +26,18 @@ Array.prototype.myMap = function(items=[]){
     return results;
 };
 
+//? filter polyfill
+Array.prototype.myFilter = function(callback){
+    const filteredArray = [];
+
+    for (let i = 0; i < this.length; i++) {
+        if(callback(this[i],i,this)){
+            filteredArray.push(this[i])
+        }
+    }
+    return filteredArray;
+};
+
 //? Polyfill of call;
 //  we need two things as call methods need that, like one is context, argumnets
 
