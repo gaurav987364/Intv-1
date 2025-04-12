@@ -79,9 +79,6 @@ function sortString(str) {
 }
 console.log(sortString("gaurav")); //upper chracter mattrens while sorting;
 
-
-
-
 // Q:Longest Word Length
 // Given a sentence, find the length of its longest word;
 
@@ -97,24 +94,95 @@ console.log(
   lengthOfLonegestWord("hey my name is vikas and i am a react js developer.")
 );
 
-
-
-
 // Q:Count Character Frequency
 // Create a function to count the frequency of each character in a string.
+function countCharcterFrequency(str) {
+  let frequency = {};
+  for (let char of str) {
+    frequency[char] = (frequency[char] || 0) + 1;
+  }
+  return frequency;
+}
+console.log(countCharcterFrequency("Hey kese ho tum bhai"));
 
 // Q:First Non-Repeating Character
 // Identify the first character in a string that does not repeat
+function firstNonRepeatingCharcs(str) {
+  let frequency = {};
+  for (let char of str) {
+    frequency[char] = (frequency[char] || 0) + 1;
+  }
+
+  for (let char of str) {
+    // means appaer only first/once time
+    if (frequency[char] === 1) {
+      return char;
+    }
+  }
+  return null;
+}
+console.log(firstNonRepeatingCharcs("swiss")); //w
+console.log(firstNonRepeatingCharcs("hello")); //h
+console.log(firstNonRepeatingCharcs("george")); //o
 
 // Q:Title Case Conversion
 // Write a function that converts any string to title case (capitalizing the first letter of each word).
+function capitalizationOfStr(str) {
+  const strArr = str
+    .split(" ")
+    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(" ");
+  return strArr;
+}
+console.log(capitalizationOfStr("hey my name is panda op"));
+
+
+
 
 //Q:Reverse Each Word in a Sentence
 // Rather than reversing the whole string, reverse each word individually while keeping word order intact.
+function reverseEachWord(str){
+  //? sol-1
+  // const strArr = str.split(" ").map(word => word.split("").reverse().join("")).join(" ");
+  // return strArr;
+  
+  //? sol-2
+  let result = "";
+  let word = ""
+  for (let i = 0; i <= str.length; i++) {
+    if(i === str.length || str[i] === " "){ // ends of the word or string
+      for (let j=word.length -1; j>=0; j--) { // back loop for that word
+        result += word[j];
+      }
+
+      if(i !== str.length){ // add space at the end of words after pusing one word to result.
+        result += " ";
+      }
+
+      word = "" // reset the word variable so loop run on next word;
+    } else {
+      word += str[i] //now we join the whole string;
+    }
+  }
+  return result;
+}
+console.log(reverseEachWord("hey my name is gaurav"));
 
 // Q:Find the First Recurring Character in a String
 // Determine the first character in a string that appears more than once
+function firstReOcurringCharter(str){
+  let frequency = {};
+  for(let char of str){
+    frequency[char] = (frequency[char] || 0) + 1;
 
+    //check which comes more
+    if(frequency[char] > 1){
+      return char;
+    }
+  }
+  return null;
+};
+console.log(firstReOcurringCharter("chandu ki chachi"));
 // Q:Generate All Permutations of a Given String
 // Write a function that returns all possible permutations of a string’s characters.
 

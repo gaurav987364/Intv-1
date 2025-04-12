@@ -64,9 +64,10 @@ Closures and Scope :{
     5.Lexical scope
 }
 
-Global, Function, Block Scope
-Lexical Scope and Closure
-this Keyword in Different Contexts
+Global, Function, Block Scope✅
+Lexical Scope and Closure✅
+this Keyword in Different Contexts✅
+
 Advanced Functions
 
 Callback Functions
@@ -86,7 +87,7 @@ Event Loop Basics
 Advanced Level Concepts
 Object-Oriented Programming (OOP) in JavaScript
 
-this Keyword and Binding
+this Keyword and Binding✅
 Prototypal Inheritance
 ES6 Classes:
 Constructors, methods, inheritance
