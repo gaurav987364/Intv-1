@@ -318,7 +318,7 @@ function debounce(fn, delay) {
     }
 
     timer = setTimeout(() => {
-      func.apply(this, args);
+      fn.apply(this, args);
     }, delay);
   };
 }
