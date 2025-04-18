@@ -183,8 +183,41 @@ function firstReOcurringCharter(str){
   return null;
 };
 console.log(firstReOcurringCharter("chandu ki chachi"));
+
+
 // Q:Generate All Permutations of a Given String;;
 // Write a function that returns all possible permutations of a string’s characters.
+//? permutation means 3! => 3x2x1 => 6 permutation,
+//? like if input is ABC then has 6 perumtattion ['ABC', 'ACB', 'BAC', 'BCA', 'CAB', 'CBA']
+
+//? formula => n x (n-1) x (n-2) x ... x 1;
+//? also used recursion here;
+function getPermutations(string){
+  if(string.length === 1){
+    return [string]; // base string have only 1 permutation
+  }
+
+  const allCombos = [];
+
+  for (let i = 0; i < string.length; i++) {
+    //get all characters one-by-one
+    const char = string[i];
+
+    //get remaining characters also
+    const remainingChars = string.slice(0,i)+string.slice(i+1);
+    // console.log(remainingChars);
+
+    //remainning permutations using recursion;
+    const remainingPerms = getPermutations(remainingChars);
+    
+    //prepend current charater to each permutation of the remaining str;
+    for(const perm of remainingPerms){
+      allCombos.push(perm+char);
+    }
+  }
+  return allCombos;
+}
+console.log(getPermutations("GAURAV"));
 
 // Q:Group Anagrams from an Array of Strings
 // Build a function that groups anagrams together from a supplied array of strings.
