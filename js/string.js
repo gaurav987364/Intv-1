@@ -217,7 +217,7 @@ function getPermutations(string){
   }
   return allCombos;
 }
-console.log(getPermutations("GAURAV"));
+console.log(getPermutations("GAURAV")); //720 permutations;
 
 // Q:Group Anagrams from an Array of Strings
 // Build a function that groups anagrams together from a supplied array of strings.
@@ -231,10 +231,11 @@ console.log(getPermutations("GAURAV"));
 
 // Q:String Manipulation: Remove all vowels from a given string
 
-// Q:String Manipulation: Reverse a string without using built-in reverse methods
 
 // Q:Parse Complex Query Strings into Nested Objects
 // Develop a parser that converts query strings (including nested structures like ) into a proper object.
 
 //Q:Longest Substring Without Repeating Characters
 // Given a string, find the length (or value) of the longest substring without duplicate characters.
+
+
