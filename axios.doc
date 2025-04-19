@@ -1,0 +1,50 @@
+Axiox is better than fetch due to following reasons:-(Basics)
+
+1. easy and cleaner syntax,
+2. better error handling,
+3. mainly automatically convert data to json
+
+//normal mode
+async ()=>{
+    try{
+        const res = await fetch("www.api.com");
+        const data = await res.json(res);
+        console.log(data);
+    } catch(error) {
+        console.log(error)
+    }
+};
+
+
+// in axios
+async ()=>{
+    try{
+        const res = await axios.get("Our.api.com");
+        // automatically convert to json
+        console.log(data);
+    } catch(error) {
+        console.log(error.message)
+        console.log(error.response.status)
+        console.log(error.response.data)
+    }
+}
+
+
+//professional way;
+
+import axios from "axios";
+
+const baseUrl = 'https://youtube.com'
+
+const api = axios.create({
+    baseUrl,
+    credentials:true // for send/recieve cookis with each request;
+});
+
+//now make your functions here like
+export const getData = ()=>{
+    // we are just return the method from here;
+    return api.get("/vidios");
+}
+
+getData(); and you are good to go;
