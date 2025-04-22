@@ -219,6 +219,38 @@ function getPermutations(string){
 }
 console.log(getPermutations("GAURAV")); //720 permutations;
 
+//Q:Merge two sorted string into single str 
+// "ACE","BDF" => "ABCDEF";
+function MergeTwoSortedStrings(str1,str2){
+  const str1Arr = str1.split("");
+  const str2Arr = str2.split("");
+
+  let result = "";
+  let i=0;
+  let j=0;
+
+  while (i<str1Arr.length && j<str2Arr.length) {
+    if(str1[i]<str2[j]){
+      result += str1[i]
+      i++
+    } else {
+      result += str2[j]
+      j++
+    }
+  }
+
+  while (i<str1Arr.length) {
+    result += str1[i]
+    i++
+  }
+  while (j<str2Arr.length){
+    result += str2[j]
+    j++
+  }
+  return result;
+};
+console.log(MergeTwoSortedStrings("ACE","BDF"));
+
 // Q:Group Anagrams from an Array of Strings
 // Build a function that groups anagrams together from a supplied array of strings.
 

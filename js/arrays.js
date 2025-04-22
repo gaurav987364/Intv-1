@@ -1,4 +1,5 @@
 //** All About Arrays in Js */
+//![hame time complexity ka dhayn rakha kr sab question krne hai]
 
 
 // Q:Remove Duplicates from an Array
@@ -33,6 +34,35 @@
 
 // Q:Merge Two Sorted Arrays
 // Implement a function that merges two sorted arrays into a single sorted array.
+// we have two array;[1,3,5], [2,4,6];
+function mergeTwoSortedArray(arr1,arr2){
+    let result = [];
+    //solve using best time complexity;
+    let i=0;
+    let j=0;
+    // we dont know the exact length of array;
+    while (i<arr1.length && j<arr2.length) {
+        if(arr1[i]<arr2[j]){
+            result.push(arr1[i]) //push only first
+            i++ // to next element
+        } else {
+            result.push(arr2[j])
+            j++
+        }
+    };
+
+    //now pushing all other elements also
+    while(i<arr1.length){
+        result.push(arr1[i])
+        i++
+    }
+    while(j<arr2.length){
+        result.push(arr2[j])
+        j++
+    }
+    return result;
+}
+console.log(mergeTwoSortedArray([1,3,5],[2,4,6]));
 
 // Q:Flatten a Nested Array (Arbitrary Depth)
 // Write a function to recursively flatten an array that contains nested arrays at any depth.
