@@ -32,3 +32,36 @@ console.log(scoreOfParenthesis("(()(()))")); //6
 console.log(scoreOfParenthesis("((())(()))")); //8
 console.log(scoreOfParenthesis("(((((())))))")); //32
 console.log(scoreOfParenthesis("((())(())(())(()))")); //16
+
+
+// DSA (Data Structures & Algorithms) – 15 Must-Know;
+
+//* Reverse a linked list (iterative & recursive)
+
+//* Detect cycle in a linked list
+
+//* Two sum, Three sum
+
+//* Merge two sorted arrays / lists
+
+//* Longest Substring Without Repeating Characters
+
+//* Valid Parentheses
+
+//* Sliding Window Maximum
+
+//* Top K Frequent Elements
+
+//* Binary Search (with edge case patterns)
+
+//* Kth largest/smallest in array
+
+//* Implement stack using queue or vice versa
+
+//* Find peak element in a mountain array
+
+//* Level-order traversal of a binary tree
+
+//* Clone a graph
+
+//* LRU Cache implementation

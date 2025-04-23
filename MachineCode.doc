@@ -1,0 +1,77 @@
+Machine Coding Round – 10 Powerful Practice Ideas
+Todo App with local storage, filters, and undo
+
+Rate Limiter (per IP / per user)
+
+Infinite Scroll List
+
+Custom Modal Manager with Portal
+
+Drag and Drop Kanban Board
+
+Image Carousel / Slider Component (React + Tailwind)
+
+Chat UI with message grouping
+
+Dynamic Form Builder (with validation)
+
+Product List Page with Sorting/Filtering/Pagination
+
+Custom Toast Notification System with Progress Bar;
+
+
+
+
+✅ MERN Stack (Most Asked - 35 Questions)
+React (10)
+
+Explain the virtual DOM and how React uses it.
+
+Difference between class and functional components.
+
+What are hooks? Explain useEffect, useState, and useRef with examples.
+
+How does React handle re-renders and reconciliation?
+
+Explain prop drilling and how to avoid it.
+
+How would you optimize a React app’s performance?
+
+Difference between controlled and uncontrolled components.
+
+What is context API? When and why would you use it?
+
+What is lazy loading in React?
+
+How would you implement a custom hook?
+
+Node.js + Express (10)
+11. How does the event loop work in Node.js?
+12. What is middleware in Express?
+13. Explain the difference between process.nextTick(), setImmediate(), and setTimeout().
+14. How do you handle file uploads in Node.js?
+15. How would you secure a Node.js app (helmet, rate-limiter, etc.)?
+16. How do you structure a scalable Express backend project?
+17. Difference between synchronous and asynchronous code in Node.js.
+18. How do you handle errors centrally in Express?
+19. JWT vs sessions – pros, cons, and implementation.
+20. How would you write a RESTful API using Express?
+
+MongoDB (5)
+21. Difference between MongoDB and traditional SQL databases.
+22. Explain schema design in MongoDB.
+23. How do indexes work in MongoDB?
+24. What are aggregation pipelines?
+25. How would you implement relationships in MongoDB?
+
+Full Stack + Integration (10)
+26. How does MERN work together from client to server to database?
+27. How do you manage state across a full-stack app?
+28. How do you protect private routes in MERN apps?
+29. Explain the flow of authentication using JWT in MERN.
+30. How do you structure a production-ready MERN app?
+31. How would you implement role-based access control?
+32. What are CORS and how do you handle it in MERN apps?
+33. How do you deploy a MERN stack app (e.g., Vercel + Render)?
+34. What is Redux Toolkit, and when would you use it?
+35. How would you handle token refresh securely?
