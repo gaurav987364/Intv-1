@@ -129,11 +129,37 @@ console.log(secondLargestNumber([10, 20, 30])); // Output: 20
 console.log(secondLargestNumber([30, 30, 40])); // Output: 30
 console.log(secondLargestNumber([1, 4, 6, 2, 0])); // Output: 4
 
+
+//Q: Count the frequency of each charater in the array also return the sorted array of frequency count;
+// ["a", "b", "b", "c", "c"] => ["a":1, "b":2, "c":2]
+function countFrequencyNSort(arr){
+    let frequency = {};
+
+    for(let char of arr){
+        frequency[char] = (frequency[char] || 0)+1;
+    }
+
+    const sortedFrequency = Object.entries(frequency).sort((a,b)=> b[1]-a[1]);
+    return sortedFrequency.flat(Infinity);
+}
+console.log(countFrequencyNSort(["x","a", "s","r","r","a","x","a","s"]))
+
 // Q:Detect Array using Array.isArray()
 // Create a function that checks if a given value is an array.
+function Detect(arr){
+    return Array.isArray(arr) ? true : false;
+};
+console.log(Detect([1,2,3])) //true
+console.log(Detect({name:"Gs", age:22})) //f
+console.log(Detect((1,2,3)))//f
+console.log(Detect("1,2,3"))//f
 
 // Q:Convert String to Array
 // Write a function that splits a string into an array of words.
+function splitArray(str){
+    return Array.from(str); //["a", "b", "c"]  or .of("str")=["str"]
+};
+console.log(splitArray("abcdefgh"))
 
 // Q:Simple CSV to Object Converter
 // Convert a comma-separated string into an array of objects assuming the first row is the header.

@@ -151,7 +151,7 @@ function reverseEachWord(str){
   let word = ""
   for (let i = 0; i <= str.length; i++) {
     if(i === str.length || str[i] === " "){ // ends of the word or string
-      for (let j=word.length -1; j>=0; j--) { // back loop for that word
+      for (let j=word.length - 1; j>=0; j--) { // back loop for that word
         result += word[j];
       }
 
@@ -253,6 +253,27 @@ console.log(MergeTwoSortedStrings("ACE","BDF"));
 
 // Q:Group Anagrams from an Array of Strings
 // Build a function that groups anagrams together from a supplied array of strings.
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+function groupAnagrams(arr){
+  let anagramsGroup = {};
+
+  for (const word of arr) {
+    //take each word from array
+    const sortedWord = word.split("").sort().join("");
+
+    //if already nahi hai to;
+    if(!anagramsGroup[sortedWord]){
+      anagramsGroup[sortedWord] = []; //create array space for values
+    }
+    //or agar hai to simpley push krdo;word ko
+    anagramsGroup[sortedWord].push(char);
+  }
+
+  //return array of values
+  return Object.values(anagramsGroup);
+};
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
 
 // Q:Convert camelCase to kebab-case
 // Write a function to convert strings from camelCase to kebab-case format.

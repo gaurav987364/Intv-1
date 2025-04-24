@@ -4,6 +4,30 @@
 // *Valid Parenthesis :- There are two common ways to solve this in O(n) time and O(n) space:
 
 //     1.parenthesis checker;
+function isValid(s){
+    const stack = [];
+    const pairs={
+        ")":"(",
+        "}":"{",
+        "]":"["
+    };
+
+    for(let c of s){
+        if(c === "(" || c === "{" || c === "["){
+            stack.push(c); // push 0 for same string;
+        } else if(c === ")" || c === "}" || c === "]"){
+            if(stack.length === 0 || stack.pop() !== pairs[c]){
+                return false;
+            }
+        }
+    }
+    return stack.length === 0;
+};
+console.log(isValid("()"))
+console.log(isValid("({()})"))
+console.log(isValid("({]})"))
+console.log(isValid("(({]))"))
+console.log(isValid("(((())))"))
 
 //     2.score of parenthesis
 //     Write a function scoreOfParentheses(s) that, given a balanced     parentheses string s, returns its “score” defined by:
