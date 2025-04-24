@@ -26,7 +26,7 @@ Array.prototype.myMap = function(items=[]){
     return results;
 };
 
-//? filter polyfill
+//? filter 
 Array.prototype.myFilter = function(callback){
     const filteredArray = [];
 
@@ -37,6 +37,30 @@ Array.prototype.myFilter = function(callback){
     }
     return filteredArray;
 };
+
+
+//? Reduce
+Array.prototype.myReduce = function(callback, initialValue){
+    if(this.length === 0 && initialValue === undefined){
+        throw new Error("Provide initial value")
+    }
+
+    let accumulator = initialValue !== undefined ? initialValue : this[0];
+    const startIndex = initialValue !== undefined ? 0 : 1;
+
+    for (let i = startIndex; i < this.length; i++) {
+        accumulator = callback(accumulator, this[i], i, this);
+    }
+
+    return accumulator;
+};
+const testarr = [1,2,3,4,5,6];
+const sum = testarr.myReduce((acc, curr)=> acc+curr ,0)
+console.log(sum);
+
+
+
+
 
 //? Polyfill of call;
 //  we need two things as call methods need that, like one is context, argumnets
@@ -99,6 +123,24 @@ Function.prototype.myBind = function(context={}, ...args){
     context.fn = this;
     // we have to return an new function as bind does, we take this new args because user baad me bhi argument pass kar skta hai ok;
     return function(...newArgs){
-        return context.fn(...args, ...newArgs)
+        const result = context.fn(...args, ...newArgs);
+        delete context.fn;
+        return result;
     };
 };
+const eg = {
+    name:"Jonny",
+};
+function sayHi(gender, age){
+    console.log(this.name + gender + age + " says hi to you.");
+};
+const newFn = Function.prototype.myBind(eg, "Male");
+const res = newFn("30");
+
+
+
+// Polyfill for Promise, Promise.all
+
+
+
+// custom promise
