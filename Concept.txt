@@ -48,7 +48,13 @@ Array Methods:
 Mutating: push, pop, shift, unshift, splice, sort, reverse
 Non-mutating: map, filter, reduce, forEach, find, findIndex, every, some, concat, slice
 Nested Arrays and Flattening
-Objects
+
+Q:What is the difference between `Map` and `WeakMap` in JavaScript?⭐⭐⭐
+==>> The Map object holds key-value pairs and remembers the original insertion order of the keys. Whereas, the WeakMap object is a collection of key/value pairs in which the keys are weakly referenced. You can use any data type as a key or value in a Map whereas in WeakMap you can only use objects as keys. The WeakMap is not iterable whereas Map is. In WeakMap it holds the weak reference to the original object which means if there are no other references to an object stored in the WeakMap, those objects can be garbage collected.
+
+
+
+Objects {} 
 
 Object Literals and Properties
 Accessing and Modifying Properties
@@ -82,15 +88,63 @@ Promises:
 Creating and Resolving Promises
 Promise chaining and error handling
 Async/Await
-Error Handling in Asynchronous Code
+Error Handling in Asynchronous Code,
+
+Creating Custom Events:-
+const event = new CustomEvent('roadmap-updated', {
+  detail: { name: 'JavaScript' },
+});
+element.dispatchEvent(event);
+element.addEventListener('roadmap-updated', (event) => {
+  console.log(event.detail); // { name: 'JavaScript' }
+});
+function handleEvent(event) {
+  console.log(event.detail); // { name: 'JavaScript' }
+}
+
+element.addEventListener('roadmap-updated', handleEvent);
+element.removeEventListener('roadmap-updated', handleEvent);
+
+
 Event Loop Basics
 Advanced Level Concepts
 Object-Oriented Programming (OOP) in JavaScript
 
 this Keyword and Binding✅
+
 Prototypal Inheritance
+==>>The prototype chain in JavaScript refers to the chain of objects linked by their prototypes. When a property or method is accessed on an object, JavaScript first checks the object itself. If it doesn't find it there, it looks up the property or method in the object's prototype. This process continues, moving up the chain from one prototype to the next, until the property or method is found or the end of the chain is reached (typically the prototype of the base object, which is null). The prototype chain is fundamental to JavaScript's prototypal inheritance model, allowing objects to inherit properties and methods from other objects.
+eg:-
+
+const roadmap = {
+  getRoadmapUrl() {
+    console.log(`https://roadmap.sh/${this.slug}`);
+  },
+};
+
+const javascript = {
+  name: 'JavaScript Roadmap',
+  description: 'Learn JavaScript',
+  slug: 'javascript',
+  greet() {
+    console.log(`${this.name} - ${this.description}`);
+  },
+};
+
+Object.setPrototypeOf(javascript, roadmap); // or javascript.__proto__ = roadmap;
+
+javascript.getRoadmapUrl(); // https://roadmap.sh/javascript
+javascript.greet(); // JavaScript Roadmap - Learn JavaScript
+
+
+
+
 ES6 Classes:
-Constructors, methods, inheritance
+Constructors, methods, 
+inheritance =>Inheritance is a way to create a new Class from an existing Class. The new Class inherits all the properties and methods from the existing Class. The new Class is called the child Class, and the existing Class is called the parent Class.
+(using keyword extends ok)
+
+
 Static and Instance Methods
 super and extends Keywords
 Private and Public Fields
@@ -131,6 +185,9 @@ Strategy Pattern
 Memory Management and Optimization
 
 Garbage Collection
+=> The JavaScript engine uses automatic garbage collection. JavaScript automatically manages memory by freeing up space used by objects no longer needed. This algorithm is called Mark and Sweep, which is performed periodically by the JavaScript engine.
+
+
 Memory Leaks and Common Sources (e.g., global variables, closures)
 Performance Optimization Techniques
 Debouncing and Throttling

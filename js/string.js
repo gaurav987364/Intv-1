@@ -9,6 +9,12 @@ console.log(x); // Output: o
 
 // strings question;
 
+function countVowels(str){
+    let vowel = str.match(/[aeiou]/gi);
+    return vowel ? vowel.length : 0;
+}
+console.log(countVowels('gaurav')) 
+
 //Q:Write a function that take string as argument and apply capitalization?✅
 function capitalize(str) {
   if (str === "") {
@@ -277,18 +283,151 @@ console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
 
 // Q:Convert camelCase to kebab-case
 // Write a function to convert strings from camelCase to kebab-case format.
+function camelTokebab(str){
+  let kebabStr = "";
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    // check if character is upperCase
+    if(char === char.toUpperCase() && char !== char.toLowerCase()){
+      // adding hyphen before uppercase and skip firt charcter
+      kebabStr += (i>0 ? "-" : "") + char.toLowerCase();
+    }  else {
+      kebabStr += str[i]
+    }
+  }
+
+  return kebabStr;
+};
+console.log(camelTokebab("userInfo"));
+console.log(camelTokebab("ReactRouterDom"));
+console.log(camelTokebab("hello"));
+
+
 
 // Q:Find the longest common prefix among an array of strings
+//You are given an array of strings, and you need to find the longest prefix (beginning part of the string) that is common to all the strings in the array.    //["use"] 
+
+//approach => horizontal scanning 
+// start by assuming first word as prefix
+// compare frefix with every subsequent string
+// now matches all the string until itmatches all string and becomes empty;
+function longestCommonPrefix(arr){
+  // there is empty arr return ""["user", "userInfo", "usecase", "usedItem","use"]
+  if(arr.length === 0) return "";
+
+  // assume first word as prefix for now
+  let prefix = arr[0];
+
+  //now we have to compare each remaining word with prefix
+  // start form 1 becaue 0 ko upar le chuke hai
+  for (let i = 1; i < arr.length; i++) {
+    //keep reducing the prefix until it matches
+    while(arr[i].indexOf(prefix) !== 0){
+      prefix = prefix.slice(0,-1);   // after first iteration rmove last charcter & then again compare 
+      if(prefix === "") return ""
+    }
+  }
+  return prefix;
+}
+console.log(longestCommonPrefix(["user", "userInfo", "usecase", "usedItem","use"]))
+
 
 // Q:Implement a custom String.prototype.reverse() function
+//This question asks you to extend the functionality of JavaScript strings by adding a custom method called reverse() to the String.prototype object. The purpose of this method is to reverse a string when it is called on any string instance.
+//?Polyfill of reverse() on strings;
+String.prototype.reverse = function(){
+  let result = "";
+  for (let i= this.length - 1; i>=0; i--) {
+    result+=this[i]
+  }
+  return result;
+};
+const name = 'Gaurav';
+console.log(name.reverse());
 
-// Q:String Manipulation: Remove all vowels from a given string
+
+
+
+// Q:String Manipulation: Remove all vowels from a given string;
+// simpley define a vowels and filter out them by checking if our vowels  not includes current charcter then add it
+function removeVowels(str){
+  const vowels = "aeiouAEIOU";
+  let withoutVowel = "";
+  for(let c of str){
+    if(!vowels.includes(c)){
+      withoutVowel += c; 
+    }
+  }
+};
+console.log(removeVowels("gaurav sharma"))
 
 
 // Q:Parse Complex Query Strings into Nested Objects
 // Develop a parser that converts query strings (including nested structures like ) into a proper object.
+input = //  ?user[name]=Gaurav&user[age]=25&location[city]=Ballabgarh&location[country]=India
+
+ouput = {
+  user: {
+      name: "Gaurav",
+      age: 25
+  },
+  location: {
+      city: "Ballabgarh",
+      country: "India"
+  }
+};
+
+// This question asks you to build a query string parser that can take a complex URL query string and convert it into a JavaScript object representation. This involves handling nested structures, which require recursion or hierarchical parsing.
+
+function parseQueryString(query) {
+  const result = {};
+
+  // Remove the '?' at the beginning of the query string, if present
+  query = query.startsWith('?') ? query.slice(1) : query;
+
+  // Split into key-value pairs
+  const pairs = query.split('&');
+
+  for (let pair of pairs) {
+      const [key, value] = pair.split('=');
+      assignValue(result, decodeURIComponent(key), decodeURIComponent(value || ""));
+  }
+
+  return result;
+}
+
+// Helper function to assign values into the result object
+function assignValue(obj, key, value) {
+  const keys = key.split(/[\[\]]+/).filter(Boolean); // Split nested keys, e.g., 'user[name]' -> ['user', 'name']
+
+  let current = obj;
+  for (let i = 0; i < keys.length - 1; i++) {
+      const k = keys[i];
+      if (!current[k]) current[k] = isNaN(keys[i + 1]) ? {} : []; // Determine if next key is array index
+      current = current[k];
+  }
+
+  const lastKey = keys[keys.length - 1];
+  if (Array.isArray(current)) {
+      current.push(value);
+  } else {
+      current[lastKey] = value;
+  }
+}
+
+// Example usage
+const queryString = "?user[name]=Gaurav&user[age]=25&location[city]=Ballabgarh&location[country]=India"
+const parsedObject = parseQueryString(queryString);
+console.log(parsedObject);
 
 //Q:Longest Substring Without Repeating Characters
 // Given a string, find the length (or value) of the longest substring without duplicate characters.
 
 
+// Write a function to find the longest palindromic substring in a given string.
+
+// Write a function that implements wildcard pattern matching with support for '?' and ''. The '?' matches any single character, and '' matches any sequence of characters (including the empty sequence).
+
+// Write a function to convert a given string into a zigzag pattern on a given number of rows, and then read it line by line.
+
+// Given a 2D board and a list of words, find all the words in the board.
