@@ -273,7 +273,7 @@ function groupAnagrams(arr){
       anagramsGroup[sortedWord] = []; //create array space for values
     }
     //or agar hai to simpley push krdo;word ko
-    anagramsGroup[sortedWord].push(char);
+    anagramsGroup[sortedWord].push(word);
   }
 
   //return array of values
@@ -379,6 +379,9 @@ ouput = {
 
 // This question asks you to build a query string parser that can take a complex URL query string and convert it into a JavaScript object representation. This involves handling nested structures, which require recursion or hierarchical parsing.
 
+//A query string is the part of a URL that comes after the ? symbol. It often contains key-value pairs separated by = and pairs themselves separated by &. Nested structures may use characters like [] or dots (.) to represent hierarchy.
+
+
 function parseQueryString(query) {
   const result = {};
 
@@ -403,26 +406,60 @@ function assignValue(obj, key, value) {
   let current = obj;
   for (let i = 0; i < keys.length - 1; i++) {
       const k = keys[i];
-      if (!current[k]) current[k] = isNaN(keys[i + 1]) ? {} : []; // Determine if next key is array index
+      if (!current[k]) {
+          current[k] = isNaN(keys[i + 1]) ? {} : []; // Check if the next key is numeric, suggesting an array
+      }
       current = current[k];
   }
 
   const lastKey = keys[keys.length - 1];
-  if (Array.isArray(current)) {
-      current.push(value);
+  if (Array.isArray(current[lastKey])) {
+      current[lastKey].push(value); // Push values into an array if it exists
+  } else if (current[lastKey]) {
+      current[lastKey] = [current[lastKey], value]; // Convert existing value into an array
   } else {
-      current[lastKey] = value;
+      current[lastKey] = value; // Otherwise, assign the value normally
   }
 }
 
 // Example usage
-const queryString = "?user[name]=Gaurav&user[age]=25&location[city]=Ballabgarh&location[country]=India"
+const queryString = "?user[name]=Gaurav&user[age]=25&user[hobbies][]=coding&user[hobbies][]=reading&location[country][name]=India&location[country][code]=IN"
 const parsedObject = parseQueryString(queryString);
 console.log(parsedObject);
 
 //Q:Longest Substring Without Repeating Characters
 // Given a string, find the length (or value) of the longest substring without duplicate characters.
+//Substring vs. Subsequence:
+// A substring is a contiguous block of characters within a string. For example, in "abcabcbb", "abc" is a substring, whereas "acb" (even though it has unique letters) is not a valid substring because the characters are not contiguous.
+//No Repeating Characters:
+// The substring you select must not contain any character more than once. For instance, in "abcabcbb", although "abcabc" is a substring, it has duplicate characters and is therefore not allowed.
+//Output:The question typically asks for the length of this longest substring. Some variations might ask you to return the substring itself.
 
+
+
+function lengthOfLongestSubString(str){
+  let hashmap = {};
+  let maxLength = 0;
+  let startIndex = 0;  // start of the sliding winow
+
+  for (let i = 0; i < str.length; i++) {
+    const char = str[i];
+    
+    //ye condition tab chalegi jab koi repeating charcter ayga ;
+    if(hashmap[char] !== undefined && hashmap[char] >= startIndex){
+      startIndex = hashmap[char] + 1 // move window to next
+    }
+
+    hashmap[char] = i;  // update index of the charcter;(char)
+    // console.log(hashmap);
+    // console.log(startIndex);
+
+    maxLength = Math.max(maxLength, i - startIndex + 1);
+    // console.log(maxLength)
+  }
+  return maxLength;
+}
+console.log(lengthOfLongestSubString("abcdabck"))//abcd
 
 // Write a function to find the longest palindromic substring in a given string.
 
