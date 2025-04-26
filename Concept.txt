@@ -159,7 +159,10 @@ Modules and Module Patterns
 
 Module Pattern
 ES6 Modules: import, export, default export, named exports
+
 IIFE for Module Creation
+=>mmediately Invoked Function Expressions (IIFEs) are commonly used for creating modules in JavaScript. They allow you to encapsulate functionality and create a private scope, preventing global namespace pollution. (Also known as Module & Module Revealing Pattern);
+
 Error Handling
 
 try...catch Blocks

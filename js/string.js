@@ -9,11 +9,11 @@ console.log(x); // Output: o
 
 // strings question;
 
-function countVowels(str){
-    let vowel = str.match(/[aeiou]/gi);
-    return vowel ? vowel.length : 0;
+function countVowels(str) {
+  let vowel = str.match(/[aeiou]/gi);
+  return vowel ? vowel.length : 0;
 }
-console.log(countVowels('gaurav')) 
+console.log(countVowels("gaurav"));
 
 //Q:Write a function that take string as argument and apply capitalization?✅
 function capitalize(str) {
@@ -142,32 +142,32 @@ function capitalizationOfStr(str) {
 }
 console.log(capitalizationOfStr("hey my name is panda op"));
 
-
-
-
 //Q:Reverse Each Word in a Sentence
 // Rather than reversing the whole string, reverse each word individually while keeping word order intact.
-function reverseEachWord(str){
+function reverseEachWord(str) {
   //? sol-1
   // const strArr = str.split(" ").map(word => word.split("").reverse().join("")).join(" ");
   // return strArr;
-  
+
   //? sol-2
   let result = "";
-  let word = ""
+  let word = "";
   for (let i = 0; i <= str.length; i++) {
-    if(i === str.length || str[i] === " "){ // ends of the word or string
-      for (let j=word.length - 1; j>=0; j--) { // back loop for that word
+    if (i === str.length || str[i] === " ") {
+      // ends of the word or string
+      for (let j = word.length - 1; j >= 0; j--) {
+        // back loop for that word
         result += word[j];
       }
 
-      if(i !== str.length){ // add space at the end of words after pusing one word to result.
+      if (i !== str.length) {
+        // add space at the end of words after pusing one word to result.
         result += " ";
       }
 
-      word = "" // reset the word variable so loop run on next word;
+      word = ""; // reset the word variable so loop run on next word;
     } else {
-      word += str[i] //now we join the whole string;
+      word += str[i]; //now we join the whole string;
     }
   }
   return result;
@@ -176,20 +176,19 @@ console.log(reverseEachWord("hey my name is gaurav"));
 
 // Q:Find the First Recurring Character in a String
 // Determine the first character in a string that appears more than once
-function firstReOcurringCharter(str){
+function firstReOcurringCharter(str) {
   let frequency = {};
-  for(let char of str){
+  for (let char of str) {
     frequency[char] = (frequency[char] || 0) + 1;
 
     //check which comes more
-    if(frequency[char] > 1){
+    if (frequency[char] > 1) {
       return char;
     }
   }
   return null;
-};
+}
 console.log(firstReOcurringCharter("chandu ki chachi"));
-
 
 // Q:Generate All Permutations of a Given String;;
 // Write a function that returns all possible permutations of a string’s characters.
@@ -198,8 +197,8 @@ console.log(firstReOcurringCharter("chandu ki chachi"));
 
 //? formula => n x (n-1) x (n-2) x ... x 1;
 //? also used recursion here;
-function getPermutations(string){
-  if(string.length === 1){
+function getPermutations(string) {
+  if (string.length === 1) {
     return [string]; // base string have only 1 permutation
   }
 
@@ -210,58 +209,58 @@ function getPermutations(string){
     const char = string[i];
 
     //get remaining characters also
-    const remainingChars = string.slice(0,i)+string.slice(i+1);
+    const remainingChars = string.slice(0, i) + string.slice(i + 1);
     // console.log(remainingChars);
 
     //remainning permutations using recursion;
     const remainingPerms = getPermutations(remainingChars);
-    
+
     //prepend current charater to each permutation of the remaining str;
-    for(const perm of remainingPerms){
-      allCombos.push(perm+char);
+    for (const perm of remainingPerms) {
+      allCombos.push(perm + char);
     }
   }
   return allCombos;
 }
 console.log(getPermutations("GAURAV")); //720 permutations;
 
-//Q:Merge two sorted string into single str 
+//Q:Merge two sorted string into single str
 // "ACE","BDF" => "ABCDEF";
-function MergeTwoSortedStrings(str1,str2){
+function MergeTwoSortedStrings(str1, str2) {
   const str1Arr = str1.split("");
   const str2Arr = str2.split("");
 
   let result = "";
-  let i=0;
-  let j=0;
+  let i = 0;
+  let j = 0;
 
-  while (i<str1Arr.length && j<str2Arr.length) {
-    if(str1[i]<str2[j]){
-      result += str1[i]
-      i++
+  while (i < str1Arr.length && j < str2Arr.length) {
+    if (str1[i] < str2[j]) {
+      result += str1[i];
+      i++;
     } else {
-      result += str2[j]
-      j++
+      result += str2[j];
+      j++;
     }
   }
 
-  while (i<str1Arr.length) {
-    result += str1[i]
-    i++
+  while (i < str1Arr.length) {
+    result += str1[i];
+    i++;
   }
-  while (j<str2Arr.length){
-    result += str2[j]
-    j++
+  while (j < str2Arr.length) {
+    result += str2[j];
+    j++;
   }
   return result;
-};
-console.log(MergeTwoSortedStrings("ACE","BDF"));
+}
+console.log(MergeTwoSortedStrings("ACE", "BDF"));
 
 // Q:Group Anagrams from an Array of Strings
 // Build a function that groups anagrams together from a supplied array of strings.
-Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
-Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
-function groupAnagrams(arr){
+Input: ["eat", "tea", "tan", "ate", "nat", "bat"];
+Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]];
+function groupAnagrams(arr) {
   let anagramsGroup = {};
 
   for (const word of arr) {
@@ -269,7 +268,7 @@ function groupAnagrams(arr){
     const sortedWord = word.split("").sort().join("");
 
     //if already nahi hai to;
-    if(!anagramsGroup[sortedWord]){
+    if (!anagramsGroup[sortedWord]) {
       anagramsGroup[sortedWord] = []; //create array space for values
     }
     //or agar hai to simpley push krdo;word ko
@@ -278,42 +277,40 @@ function groupAnagrams(arr){
 
   //return array of values
   return Object.values(anagramsGroup);
-};
-console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+}
+console.log(groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]));
 
 // Q:Convert camelCase to kebab-case
 // Write a function to convert strings from camelCase to kebab-case format.
-function camelTokebab(str){
+function camelTokebab(str) {
   let kebabStr = "";
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
     // check if character is upperCase
-    if(char === char.toUpperCase() && char !== char.toLowerCase()){
+    if (char === char.toUpperCase() && char !== char.toLowerCase()) {
       // adding hyphen before uppercase and skip firt charcter
-      kebabStr += (i>0 ? "-" : "") + char.toLowerCase();
-    }  else {
-      kebabStr += str[i]
+      kebabStr += (i > 0 ? "-" : "") + char.toLowerCase();
+    } else {
+      kebabStr += str[i];
     }
   }
 
   return kebabStr;
-};
+}
 console.log(camelTokebab("userInfo"));
 console.log(camelTokebab("ReactRouterDom"));
 console.log(camelTokebab("hello"));
 
-
-
 // Q:Find the longest common prefix among an array of strings
-//You are given an array of strings, and you need to find the longest prefix (beginning part of the string) that is common to all the strings in the array.    //["use"] 
+//You are given an array of strings, and you need to find the longest prefix (beginning part of the string) that is common to all the strings in the array.    //["use"]
 
-//approach => horizontal scanning 
+//approach => horizontal scanning
 // start by assuming first word as prefix
 // compare frefix with every subsequent string
 // now matches all the string until itmatches all string and becomes empty;
-function longestCommonPrefix(arr){
+function longestCommonPrefix(arr) {
   // there is empty arr return ""["user", "userInfo", "usecase", "usedItem","use"]
-  if(arr.length === 0) return "";
+  if (arr.length === 0) return "";
 
   // assume first word as prefix for now
   let prefix = arr[0];
@@ -322,78 +319,77 @@ function longestCommonPrefix(arr){
   // start form 1 becaue 0 ko upar le chuke hai
   for (let i = 1; i < arr.length; i++) {
     //keep reducing the prefix until it matches
-    while(arr[i].indexOf(prefix) !== 0){
-      prefix = prefix.slice(0,-1);   // after first iteration rmove last charcter & then again compare 
-      if(prefix === "") return ""
+    while (arr[i].indexOf(prefix) !== 0) {
+      prefix = prefix.slice(0, -1); // after first iteration rmove last charcter & then again compare
+      if (prefix === "") return "";
     }
   }
   return prefix;
 }
-console.log(longestCommonPrefix(["user", "userInfo", "usecase", "usedItem","use"]))
-
+console.log(
+  longestCommonPrefix(["user", "userInfo", "usecase", "usedItem", "use"])
+);
 
 // Q:Implement a custom String.prototype.reverse() function
 //This question asks you to extend the functionality of JavaScript strings by adding a custom method called reverse() to the String.prototype object. The purpose of this method is to reverse a string when it is called on any string instance.
 //?Polyfill of reverse() on strings;
-String.prototype.reverse = function(){
+String.prototype.reverse = function () {
   let result = "";
-  for (let i= this.length - 1; i>=0; i--) {
-    result+=this[i]
+  for (let i = this.length - 1; i >= 0; i--) {
+    result += this[i];
   }
   return result;
 };
-const name = 'Gaurav';
+const name = "Gaurav";
 console.log(name.reverse());
-
-
-
 
 // Q:String Manipulation: Remove all vowels from a given string;
 // simpley define a vowels and filter out them by checking if our vowels  not includes current charcter then add it
-function removeVowels(str){
+function removeVowels(str) {
   const vowels = "aeiouAEIOU";
   let withoutVowel = "";
-  for(let c of str){
-    if(!vowels.includes(c)){
-      withoutVowel += c; 
+  for (let c of str) {
+    if (!vowels.includes(c)) {
+      withoutVowel += c;
     }
   }
-};
-console.log(removeVowels("gaurav sharma"))
-
+}
+console.log(removeVowels("gaurav sharma"));
 
 // Q:Parse Complex Query Strings into Nested Objects
 // Develop a parser that converts query strings (including nested structures like ) into a proper object.
 input = //  ?user[name]=Gaurav&user[age]=25&location[city]=Ballabgarh&location[country]=India
-
-ouput = {
-  user: {
+  ouput = {
+    user: {
       name: "Gaurav",
-      age: 25
-  },
-  location: {
+      age: 25,
+    },
+    location: {
       city: "Ballabgarh",
-      country: "India"
-  }
-};
+      country: "India",
+    },
+  };
 
 // This question asks you to build a query string parser that can take a complex URL query string and convert it into a JavaScript object representation. This involves handling nested structures, which require recursion or hierarchical parsing.
 
 //A query string is the part of a URL that comes after the ? symbol. It often contains key-value pairs separated by = and pairs themselves separated by &. Nested structures may use characters like [] or dots (.) to represent hierarchy.
 
-
 function parseQueryString(query) {
   const result = {};
 
   // Remove the '?' at the beginning of the query string, if present
-  query = query.startsWith('?') ? query.slice(1) : query;
+  query = query.startsWith("?") ? query.slice(1) : query;
 
   // Split into key-value pairs
-  const pairs = query.split('&');
+  const pairs = query.split("&");
 
   for (let pair of pairs) {
-      const [key, value] = pair.split('=');
-      assignValue(result, decodeURIComponent(key), decodeURIComponent(value || ""));
+    const [key, value] = pair.split("=");
+    assignValue(
+      result,
+      decodeURIComponent(key),
+      decodeURIComponent(value || "")
+    );
   }
 
   return result;
@@ -405,25 +401,26 @@ function assignValue(obj, key, value) {
 
   let current = obj;
   for (let i = 0; i < keys.length - 1; i++) {
-      const k = keys[i];
-      if (!current[k]) {
-          current[k] = isNaN(keys[i + 1]) ? {} : []; // Check if the next key is numeric, suggesting an array
-      }
-      current = current[k];
+    const k = keys[i];
+    if (!current[k]) {
+      current[k] = isNaN(keys[i + 1]) ? {} : []; // Check if the next key is numeric, suggesting an array
+    }
+    current = current[k];
   }
 
   const lastKey = keys[keys.length - 1];
   if (Array.isArray(current[lastKey])) {
-      current[lastKey].push(value); // Push values into an array if it exists
+    current[lastKey].push(value); // Push values into an array if it exists
   } else if (current[lastKey]) {
-      current[lastKey] = [current[lastKey], value]; // Convert existing value into an array
+    current[lastKey] = [current[lastKey], value]; // Convert existing value into an array
   } else {
-      current[lastKey] = value; // Otherwise, assign the value normally
+    current[lastKey] = value; // Otherwise, assign the value normally
   }
 }
 
 // Example usage
-const queryString = "?user[name]=Gaurav&user[age]=25&user[hobbies][]=coding&user[hobbies][]=reading&location[country][name]=India&location[country][code]=IN"
+const queryString =
+  "?user[name]=Gaurav&user[age]=25&user[hobbies][]=coding&user[hobbies][]=reading&location[country][name]=India&location[country][code]=IN";
 const parsedObject = parseQueryString(queryString);
 console.log(parsedObject);
 
@@ -434,23 +431,20 @@ console.log(parsedObject);
 //No Repeating Characters:
 // The substring you select must not contain any character more than once. For instance, in "abcabcbb", although "abcabc" is a substring, it has duplicate characters and is therefore not allowed.
 //Output:The question typically asks for the length of this longest substring. Some variations might ask you to return the substring itself.
-
-
-
-function lengthOfLongestSubString(str){
+function lengthOfLongestSubString(str) {
   let hashmap = {};
   let maxLength = 0;
-  let startIndex = 0;  // start of the sliding winow
+  let startIndex = 0; // start of the sliding winow
 
   for (let i = 0; i < str.length; i++) {
     const char = str[i];
-    
+
     //ye condition tab chalegi jab koi repeating charcter ayga ;
-    if(hashmap[char] !== undefined && hashmap[char] >= startIndex){
-      startIndex = hashmap[char] + 1 // move window to next
+    if (hashmap[char] !== undefined && hashmap[char] >= startIndex) {
+      startIndex = hashmap[char] + 1; // move window to next
     }
 
-    hashmap[char] = i;  // update index of the charcter;(char)
+    hashmap[char] = i; // update index of the charcter;(char)
     // console.log(hashmap);
     // console.log(startIndex);
 
@@ -459,11 +453,134 @@ function lengthOfLongestSubString(str){
   }
   return maxLength;
 }
-console.log(lengthOfLongestSubString("abcdabck"))//abcd
+console.log(lengthOfLongestSubString("abcdabck")); //abcd
 
 // Write a function to find the longest palindromic substring in a given string.
+//input Input: "babad"
+//output: "bab" is palindrome from first & last same reads;
+//? we used expand around center approach;
+// start: will hold the starting index;
+// maxLength: tracks the length of palindrome;
 
-// Write a function that implements wildcard pattern matching with support for '?' and ''. The '?' matches any single character, and '' matches any sequence of characters (including the empty sequence).
+//- Odd-length: call it with the same index for both left and right
+//  Even-length: call it with i and i+1.
+//Update start and maxLength if a longer palindromic substring is found.
+
+function longestPalindromeicSubstring(str) {
+  if (str.length === 0) return "";
+
+  let start = 0;
+  let maxLength = 0;
+
+  // expand around center // suppose for babad  so b is center
+  function expandAroundCenter(left, right) {
+    //here we have two conditionone left wali is for odd expansion & right wali is for even exapnsion;
+    while (left >= 0 && right < str.length && str[left] === str[right]) {
+      left--; // move from just left element ro next in left
+      right++; //vise versa
+    }
+    return [left + 1, right - 1];
+  }
+
+  //main loop
+  for (let i = 0; i < str.length; i++) {
+    //odd length palindrome (center is the single chracter i)
+    let [left1, right1] = expandAroundCenter(i, i);
+    let length1 = right1 - left1 + 1;
+    //even length palindrome (center is b/w chracter i & i+1)
+    let [left2, right2] = expandAroundCenter(i, i + 1);
+    let length2 = right2 - left2 + 1;
+
+    //checks which palindrome is longer
+    if (length1 > maxLength) {
+      maxLength = length1;
+      start = left1;
+    }
+    if (length2 > maxLength) {
+      maxLength = length2;
+      start = left2;
+    }
+  }
+  return str.substring(start, start + maxLength);
+}
+console.log(longestPalindromeicSubstring("babad")); //bab
+console.log(longestPalindromeicSubstring("xyzracecarpqr")); //racecar
+
+
+
+
+
+
+
+
+
+
+// Wildcard Pattern Matching 
+// Write a function that implements wildcard pattern matching with support for '?' and '*'. The '?' matches any single character, and '*' matches any sequence of characters (including the empty sequence).
+
+// ? matches only one chracter in the string
+// * matches more than one character in the string;(includes empty space)
+
+//!Approach => Using dp(dynamic programming) table
+//dp[i][j]
+
+//problem : Pattern: "a*b" ,string: "axxxb" //true
+//problem : Pattern: "a?c" ,string: "abc" //true
+
+//Time Complexity: O(m × n), where m is the length of the string and n is the length of the pattern.
+// Space Complexity: O(m × n) for the DP table.
+
+// check before goes to question
+// const dp = Array(3+1).fill(false).map(()=>Array(3+1).fill(false));
+// dp[0][0] = true
+// console.log(dp)
+// [
+//   [ true, false, false, false ],
+//   [ false, false, false, false ],
+//   [ false, false, false, false ],
+//   [ false, false, false, false ]
+// ]
+
+function isMatch(string, pattern) {
+  const m = string.length;
+  const n = pattern.length;
+
+  //making the dp table
+  const dp = Array(m + 1)
+    .fill(false)
+    .map(() => Array(n + 1).fill(false));
+
+  //Base case: An empty pattren matches the empty string;//this do true first index in tabel
+  dp[0][0] = true; //1st index [i][j] so loop run from 1 from now
+
+  //handle pattern starting with *
+  //start = 1
+  //end pattren.length
+  for (let j = 1; j <= n; j++) {
+    if(pattern[j-1] === "*"){
+      dp[0][j] = dp[0][j-1]; //* match exmpty string;
+    }
+  }
+
+  //fill dp table
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) {
+      if(pattern[j-1] === string[i-1] || pattern[j-1] === "?"){
+        //characters match or ? matches a single charcter
+        dp[i][j] = dp[i-1][j-1]
+      } else if(pattern[j-1] === "*"){
+        dp[i][j] = dp[i][j-1] || dp[i-1][j]
+      }
+    }
+  }
+
+  return dp[m][n];
+}
+// Test examples
+console.log(isMatch("acb", "a?b"));      // Output: true
+console.log(isMatch("axxxb", "a*b"));    // Output: true
+console.log(isMatch("ab", "a*b"));       // Output: true
+console.log(isMatch("ab", "a*c"));       // Output: false
 
 // Write a function to convert a given string into a zigzag pattern on a given number of rows, and then read it line by line.
 

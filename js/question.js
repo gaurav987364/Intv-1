@@ -124,3 +124,228 @@ do {
 const data = true;
 data ? console.log(data) : "no data available";
 //true output
+
+
+//? Compose & Pipe Operator;
+// Compose means function composition like:-
+const add = (x)=>x+5;
+const multiply = (x)=>x*2;
+const compose = (f,g)=>x=>f(g(x));
+const res = compose(multiply,add);
+console.log(res(2,4));
+
+// eg: for n number of arguments
+//Problem statement => we have to create one Compose function which take (n) number of function and return the new function which take initial value and perform operation from end to start direction and retun the result;
+
+const addFive = (x)=>x+5;
+const subtractFour = (x) => x-4;
+const multiplyThree = (x)=>x*3;
+
+const evaluate = Compose(addFive,subtractFour,multiplyThree);
+console.log(evaluate(2));  //7 output => 2*3 =>6 => 6-4=>2=> 2+5=>7
+function Compose(...fns){
+    return function(initialValue){
+        let result = initialValue;
+        for (let i=fns.length-1; i>=0; i--) {
+            result = fns[i](result);
+        }
+        return result;
+
+        //second solution (reduce work as pipe reduceRight work as compose)
+        // return fns.reduceRight((acc,curr)=>{
+        //     return curr(acc);
+        // },initialValue);
+    }
+}; 
+
+// ham sabse pahle result ko initial value rakh rahe hai, then hm loop krege from back recieving each functio one by one and call them by providing a result/initialValue and also update the result with that function result and return it;
+
+//Pipe it is just opposite of the Compose ok means it takes function from left-to-right and solve it;
+function Pipe(...fns){
+    return function(init){
+        let result = init;
+        for (let i = 0; i < fns.length; i++) {
+            result = fns[i](result);
+        }
+        return result;
+
+        //second solution (reduce work as pipe reduceRight work as compose)
+        // return fns.reduce((acc,curr)=>{
+        //     return curr(acc);
+        // },initialValue);
+    }
+};
+const evaluateByPipe = Pipe(addFive,subtractFour,multiplyThree);
+console.log(evaluateByPipe(2)); //9
+
+
+
+//! Pattrens in Js :-
+
+// Singleton Pattern
+// Purpose=> Ensures that a class has only one global instance and provides a global access point to it;
+//Means hamari global class ka sirf ek hi instance create hoga of ek hi access point hoga uske methods ke liye;
+
+// Where it's used: Useful for managing global application states, logging, configuration settings, or caching.
+
+// Real-world example: Suppose you need a single DatabaseConnection object in your app to prevent multiple connections to the database:
+class Singleton{
+    constructor(){
+        if(Singleton.instance){
+            return Singleton.instance;
+        }
+        Singleton.instance = this;
+        this.connection = "Database connection established."
+    }
+
+    getConnection(){
+        return this.connection;
+    }
+}
+const db1 = new Singleton();
+console.log(db1.getConnection());//Database connection established.
+
+
+
+// Module and Revealing Module Pattern
+// => Encapsulates functionality and provides public methods, hiding implementation details;
+// => Means => public ko methods provide krna taki user apna kaam kar skae but hide krdena un methods ki functionality ko ki vo kis tarah se bane hue hai just like ham javascript me bhaut sare in built methods ka use krte hai like Map,filter,reduce etc. to hme thodi patahai ye kese behind the scene work kar reh hai hai ya inka code kya hai hme to sirf javascript walo ne de rkhae hai use krne ke liye to is chij ko Module or Module revealing pattren bolte hai ok
+
+// eg: shopping cart:-
+const shoppingCart = (()=>{
+    const cart = [];
+
+    //methods
+    const addItems = (item)=> cart.push(item);
+    const getItems = ()=> cart.slice();
+
+    //give methods to public
+    return{
+        addItems,
+        getItems
+    }
+})();
+shoppingCart.addItems({name:"Socks", price:"$99",quantity:2});
+console.log(shoppingCart.getItems());
+
+
+
+
+// Factory Pattern
+// Purpose: Creates objects without specifying their exact classes. It centralizes object creation logic.
+
+// => just like the name factory, jisme in factory many items are created ok, factory is centralize by itself; but we use items anywhere;
+class Dog {
+    speak() {
+      console.log("Woof!");
+    }
+}
+  
+class Cat {
+    speak() {
+      console.log("Meow!");
+    }
+}
+  
+const AnimalFactory = {
+    createAnimal(type) {
+      switch (type) {
+        case "dog":
+          return new Dog();
+        case "cat":
+          return new Cat();
+        default:
+          throw new Error("Invalid type");
+      }
+    }
+};
+  
+const dog = AnimalFactory.createAnimal("dog");
+dog.speak(); // Woof!
+
+const cat = AnimalFactory.createAnimal("cat");
+cat.speak(); // Meow!
+
+
+
+// Observer Pattern
+//used in real time state chamges senarios;
+// => Observer pattren allows a subject to notify multiple observers about state changes;Its ideal for handleing Ui updates and real time responses;
+
+//eg: => chat Notify system :-
+function Subject(){
+    this.observers = [];
+}
+
+Subject.prototype.addObserver = function(observer){
+    this.observers.push(observer);
+}
+
+Subject.prototype.notify = function(message){
+    this.observers.forEach(obs => obs.update(message))
+}
+
+function Observer(name){
+    this.name = name
+}
+
+Observer.prototype.update = function(message){
+    console.log(`${this.name} recieved message ${message}`)
+}
+
+const subject = new Subject();
+const observer1 = new Observer("Gaurav");
+const observer2 = new Observer("Yash");
+
+subject.addObserver(observer1);
+subject.addObserver(observer2);
+
+subject.notify("Hi Bro..."); //Both receieves same message;
+
+
+
+
+// Strategy Pattern
+// Purpose: Defines a family of algorithms, encapsulates them in separate classes, and makes them interchangeable.
+// Where it's used: Useful for scenarios requiring different behaviors that can be swapped dynamically, like payment methods or sorting algorithms.
+// Real-world example: Implementing a payment processing system:
+class PayPal {
+    processPayment(amount) {
+      console.log(`Processing PayPal payment of $${amount}`);
+    }
+}
+  
+class Stripe {
+    processPayment(amount) {
+      console.log(`Processing Stripe payment of $${amount}`);
+    }
+}
+  
+class PaymentProcessor {
+    setStrategy(strategy) {
+      this.strategy = strategy;
+    }
+  
+    process(amount) {
+      this.strategy.processPayment(amount);
+    }
+}
+  
+const paymentProcessor = new PaymentProcessor();
+
+const payPal = new PayPal();
+paymentProcessor.setStrategy(payPal);
+paymentProcessor.process(100); // Processing PayPal payment of $100
+
+const stripe = new Stripe();
+paymentProcessor.setStrategy(stripe);
+paymentProcessor.process(200); // Processing Stripe payment of $200
+
+//?Summary:
+// - Singleton: Ensures only one instance, ideal for global objects.
+// - Module: Encapsulates functionality, great for reusable code.
+// - Factory: Centralizes object creation, useful for varying object types.
+// - Observer: Manages subscription and notification systems.
+// - Strategy: Makes algorithms interchangeable dynamically.
+
+
