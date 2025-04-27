@@ -426,6 +426,7 @@ console.log(parsedObject);
 
 //Q:Longest Substring Without Repeating Characters
 // Given a string, find the length (or value) of the longest substring without duplicate characters.
+//? Sliding Window; [a(b(c)d)e] // c is center and taking expand around center in odd string length case, or [a(bc)d] // taking bc as center in even case and now expand around it
 //Substring vs. Subsequence:
 // A substring is a contiguous block of characters within a string. For example, in "abcabcbb", "abc" is a substring, whereas "acb" (even though it has unique letters) is not a valid substring because the characters are not contiguous.
 //No Repeating Characters:
