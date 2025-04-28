@@ -1,3 +1,36 @@
+Traditional way or first legacy way of making api calls are:-
+const xhr = new XMLHttpRequest();
+
+this is deprecated now, but we can use it it has more manual works for us;
+
+
+//fetch comes in 2017 and it is write from ground,not depend over xhr;
+It is browser feature;
+
+⭐in fetch it return promise, or ham fir usko json method call krke data lete hai, but ye sirf kind of object or array data ke liye hm .json krte hai agar backend se response text form me aata hai to hm .text methods ko call krege or agar data images/binary form me hai to hm .blob method call krege to get Data;
+
+Most Important thing about fetch is:-
+⭐⭐⭐=> WE CAN STREAM DATA, MEANS JUST LOOK AT ANY CHAT-GPT, DEEPSEEK ETC.THEY ARE NOT GIVE RESPONSE AT ONCE INFACT THEY GIVE RESPONSE LINE-BY-LINE WHICH IS CALLED DATA-STREAMING, WHICH IS NOT POSSIBLE WITH XHR & AXIOS OK ONLY POSSIBLE WITH fetch();
+
+
+
+DIFFERENCE B/W AXIOS & FETCH ERROR handling IS:-
+
+FETCH KA .catch() SIRF TAB CHALTA HAI JAB REQUEST SERVER TAK NA PAUCHI HO,YE BEKAR CHIJ HAI,ISME HME DATA NHI ANE PAR ERROR KE LIYE .THEN() BLOCK ME HI IF(RESPONSE.OK){
+    RETURN DATA;
+} ELSE {
+    THROW NEW ERROR("SOMETHING WRONG...")
+}).CATHC(ERR){
+    CONSOLE.ERROR(ERR)
+}
+
+YE SAB KRNA PDTA HAI BUT AXIOS ME .CATCH NORMALY WORK KRTA HAI VO ADVANTAGE HAI;
+
+
+
+
+AXIOS IS BASED ON XHR/XMLHttpRequest;✅
+
 Axiox is better than fetch due to following reasons:-(Basics)
 
 1. easy and cleaner syntax,
@@ -48,3 +81,12 @@ export const getData = ()=>{
 }
 
 getData(); and you are good to go;
+
+
+//features:-
+
+1. in fetch we have use AbortController to cancel request but in axios we have built in cancelToken() thing;
+
+2. in fetch to give error after certain time like 5 seconds if no data is comes so we have created a timers manually but in axios we have {timeout:5000} thing so after 5 seconds automatically .catch() block runs;
+
+3. query params ke case me bhi fetch me URLSearchParams karke phle hme hamari value ko Encode/Decode krna hota hai but axios ke case me hme ni krna pdta;

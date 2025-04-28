@@ -194,6 +194,40 @@ Garbage Collection
 Memory Leaks and Common Sources (e.g., global variables, closures)
 Performance Optimization Techniques
 Debouncing and Throttling
+function debounce(fn,delay){
+  let timer = null;
+  return function(...args){
+    if(timer){
+      clearTimeout(timer)
+      timer = null;
+    }
+    timer = setTimeout(()=>{
+      fn.apply(this,args)
+    },delay)
+  }
+}
+
+function Throttle(fn,delay){
+  let lastRan = null;
+  let timer = null;
+  return function(...args){
+    if(!lastRan){
+      fn.apply(this,args)
+      lastRan = Date.now()
+    } else {
+      clearTimeout(timer)
+      timer=setTimeout(()=>{
+        if(Date.now() - lastRan >= delay){
+          fn.apply(this,args)
+          lastRan = Date.now()
+        }
+      },delay-(Date.now()-lastRan))
+    }
+  }
+}
+
+
+
 Advanced Data Structures and Algorithms
 
 Linked Lists, Stacks, and Queues in JavaScript

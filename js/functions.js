@@ -9,29 +9,24 @@ function myFunctionDeclaration() {} // is called the function declaration
 // function expression
 const myFunctionExpression = function () {}; // is called the function expression
 
-
 // question on function declaration vs expression
-console.log(myFnc())
-function myFnc(){
-  console.log("this is function declaration.")
+console.log(myFnc());
+function myFnc() {
+  console.log("this is function declaration.");
 }
-console.log(myFnc())
-var myFnc = ()=>{
-  console.log("this is arrow function & also anonymous function as well")
-}
-console.log(myFnc())
-var myFnc = function(){
-  console.log("This is function expression.")
-}
+console.log(myFnc());
+var myFnc = () => {
+  console.log("this is arrow function & also anonymous function as well");
+};
+console.log(myFnc());
+var myFnc = function () {
+  console.log("This is function expression.");
+};
 console.log(myFnc());
 // this is function declaration.
 // this is function declaration.
 //this is arrow function & also anonymous function as well
 //This is function expression.
-
-
-
-
 
 // Types of functions
 // normal function are aslo called the function declaration as well.
@@ -264,12 +259,12 @@ console.log(curriedfunction(2)(3)(4)(5));
 
 //understand the way of writing this method ok;
 
-function infiniteCurry(a){
-  return function childFnc(b){
-    if(!b) return a
-    return infiniteCurry(a+b)
-  }
-};
+function infiniteCurry(a) {
+  return function childFnc(b) {
+    if (!b) return a;
+    return infiniteCurry(a + b);
+  };
+}
 console.log(infiniteCurry(2)(3)(4)(5)(6)(7)());
 
 //Function Composition:
@@ -324,6 +319,25 @@ function debounce(fn, delay) {
 }
 
 // Q: Write Throttle Function ?
+function throttle(fn, delay) {
+  let timer = null;
+  let lastRan = null;
+
+  return function (...args) {
+    if (!lastRan) {
+      fn.apply(this, args);
+      timer = Date.now();
+    } else {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (Date.now() - lastRan >= delay) {
+          fn.apply(this, args);
+          timer = Date.now();
+        }
+      }, delay - (Date.now() - lastRan));
+    }
+  };
+}
 
 // Q:Convert Object Keys from snake_case to camelCase
 // Provide a function that converts all keys in an object from snake_case to camelCase .
