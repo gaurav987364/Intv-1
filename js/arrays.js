@@ -202,6 +202,9 @@ function mergeTwoSortedArray(arr1,arr2){
 }
 console.log(mergeTwoSortedArray([1,3,5],[2,4,6]));
 
+
+
+
 // Q; Shuffle one array, and 2 arrays aand return shuffled array;
 
 // Q:Flatten a Nested Array (Arbitrary Depth)
