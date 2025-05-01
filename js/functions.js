@@ -118,6 +118,7 @@ function sayHii(message) {
 }
 const newObj = sayHii.call(dataset, "From Haryana.");
 console.log(newObj);
+//This not return undefined because idhr function sayHi kuch return nhai krr rha hai khud se ok agar hme return laga de console.log() ke aage or fir kuch kare to undefined ata hai because function not return anything
 
 //? apply take paramtres in form of array;
 const user = {
