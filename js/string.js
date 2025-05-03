@@ -586,3 +586,14 @@ console.log(isMatch("ab", "a*c"));       // Output: false
 // Write a function to convert a given string into a zigzag pattern on a given number of rows, and then read it line by line.
 
 // Given a 2D board and a list of words, find all the words in the board.
+
+// convert this string to that
+// this = "a.b.c.d.e"
+// that = {a:{b:{c:{d:{e:{}}}}}}
+function convert(str){
+  const strArr = str.split(".");
+  return strArr.reduce((obj,key)=>{
+    return {[key]:obj}
+  });
+};
+console.log(convert("a.b.c.d.e"))

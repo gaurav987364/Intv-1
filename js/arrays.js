@@ -161,14 +161,90 @@ function splitArray(str){
 };
 console.log(splitArray("abcdefgh"))
 
+
+
+
+
 // Q:Simple CSV to Object Converter
-// Convert a comma-separated string into an array of objects assuming the first row is the header.
+// Convert a comma-separated values=>string into an array of objects assuming the first row is the header. 
+
+// eg:- csv NOTE:- jo string ayi hai vo ek backtic ke andar hi aygi
+//`name,age,city => these are keys
+//Raju,25,Haryana
+//Amit,30,Delhi`
+
+///?Steps :- first we have two think like quotes me ham input nhi le skte kyuki vo wrong hai to ham sirf `` me input lenge special type string; then first we know string input hai output array hai split/join action me ayge; But hme split \n ke basis p krna hai line breaks ok;
+
+function CSV(str){
+    //split based on line
+    const lines = str.trim().split("\n");
+    //extract headers bcoz first item are keys
+    const keys = lines[0].split(","); // we get keys array;
+
+    const result = lines.slice(1).map(line =>{
+        const values = line.split(",");
+        return keys.reduce((obj,key,index)=>{
+            obj[key] = values[index]
+            return obj; //important to return from here
+        },{})
+    });
+    return result;
+};
+const myCsv = `name,age,sex
+Gaurav,24,Male
+Amit,22,Male`
+console.log(CSV(myCsv));
+//OUTPUT:-
+[
+  { name: "Raju", age: "25", city: "Haryana" },
+  { name: "Amit", age: "30", city: "Delhi" }
+]
+
+
+
+
+
+
 
 // Q:Rotate an Array by N Positions
 // Write a function that rotates an array by a given number (positive or negative shifts).
+//? positive rotation:-
+array1 = [1,2,3,4,5];  // rotate it by n=2; means last se 2 elements ko first pe shift krna;
+// array1 becomes [4,5,1,2,3]
+
+//? negative rotation [1,2,3,4,5] //n=-2 becomes => [3,4,5,1,2];
+function rotateArrayByN(arr,n){
+    const length = arr.length;
+    //if n is greater than array length eg: n=7 len=5 so=> 7%5=>2;
+    n = n % length;
+
+    //if n is negative convert it to positive roattaion
+    if(n<0){
+        n = length + n
+    }
+
+    const rotatedPart = arr.slice(-n);
+    const remainingPart = arr.slice(0,length-n);
+
+    return rotatedPart.concat(remainingPart);
+};
+console.log(rotateArrayByN([1, 2, 3, 4, 5], 2));
+console.log(rotateArrayByN([1, 2, 3, 4, 5], -2));
+
+
+
+
 
 // Q:Check for Duplicates Using ES6 Set
 // Determine if an array contains duplicates using the Set data structure.
+function checkDuplicates(arr){
+    const set = new Set(arr);
+    return set.size !== arr.length;
+};
+console.log(checkDuplicates([1,2,3,4,5]))
+console.log(checkDuplicates([1,1,2,2,3,4,5]))
+
+
 
 // Q:Merge Two Sorted Arrays
 // Implement a function that merges two sorted arrays into a single sorted array.
@@ -206,18 +282,99 @@ console.log(mergeTwoSortedArray([1,3,5],[2,4,6]));
 
 
 // Q; Shuffle one array, and 2 arrays aand return shuffled array;
+function shuffled(arr) {
+    for (let i = arr.length - 1; i >= 0; i--) {
+      // Correctly call Math.random() and compute a valid random index
+      const randomIndex = Math.floor(Math.random() * (i + 1));
+      // Swap the element at i with the element at randomIndex
+      [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
+    }
+    return arr;
+}
+//   console.log(shuffled([1, 2, 3, 4, 5, 6, 7, 8]));
 
-// Q:Flatten a Nested Array (Arbitrary Depth)
+
+
+// Q:Flatten a Nested Array (Arbitrary Depth) //?Flat polyfill
 // Write a function to recursively flatten an array that contains nested arrays at any depth.
+
+//using recursion
+function flatArray(arr){
+    let result = [];
+
+    for(let item of arr){
+        if(Array.isArray(item)){
+            result = result.concat(flatArray(item))
+        } else {
+            result.push(item)
+        }
+    }
+    return result;
+};
+console.log(flatArray([1,2,[3,4],[5,[6,7,[8,9]]]]));
 
 // Q:Recursive Sum of Numbers in a Nested Array
 // Implement a function that sums all numbers from a nested array structure using recursion.
+function sumOfNestedArray(arr){
+    let total = 0;
 
-// Q:Optimized Deep Flatten of Nested Arrays
-// Implement a performance-optimized function that flattens arbitrarily nested arrays.
+    for(let item of arr){
+        if(Array.isArray(item)){
+            total += sumOfNestedArray(item);
+        } else if(typeof item === "number"){
+            total += item
+        }
+    }
+    return total;
+};
+console.log(sumOfNestedArray([1,2,[3,4,5],[2,[3,4]]]))
+
+
 
 // Q:Symmetric Difference of Two Arrays
 // Write a function that finds the symmetric difference (elements only in one array but not both) between two arrays.
+
+// arr1 = [1,2,3,4];
+// arr2 = [3,4,5,6];
+// so symmetricDifference is [1,2,5,6]
+
+function symmetricDifference(arr1,arr2){
+    let result = [];
+
+    for (let i = 0; i < arr1.length; i++) {
+        let unique = true;
+        for (let j = 0; j < arr2.length; j++) {
+            if(arr1[i] === arr2[j]){
+                unique = false;
+                break;
+            } 
+        }
+        if(unique){
+            result.push(arr1[i])
+        }
+    };
+
+    for (let i = 0; i < arr2.length; i++) {
+        let isUnique = true;
+        for (let j = 0; j < arr1.length; j++) {
+          if (arr2[i] === arr1[j]) {
+            // If the element is found in arr1, it should not be added.
+            isUnique = false;
+            break;
+          }
+        }
+        if (isUnique) {
+          result.push(arr2[i]);
+        }
+      }
+
+    
+    return result;
+}
+console.log(symmetricDifference([1,2,3,4],[3,4,5,6]));
+
+
+
 
 // Q:Binary Search on a Rotated Sorted Array
 // Given a rotated sorted array, write a function that performs a binary search for a target element.
