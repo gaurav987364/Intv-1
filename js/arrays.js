@@ -306,7 +306,7 @@ function flatArray(arr){
         if(Array.isArray(item)){
             result = result.concat(flatArray(item))
         } else {
-            result.push(item)
+            result.push(item);
         }
     }
     return result;
@@ -367,20 +367,181 @@ function symmetricDifference(arr1,arr2){
           result.push(arr2[i]);
         }
       }
-
-    
     return result;
 }
 console.log(symmetricDifference([1,2,3,4],[3,4,5,6]));
 
 
 
+// What is Binary Search? {sorted array me search krna}
+// Binary search is a searching algorithm that finds the position of a target value within a sorted array.
+//? Hame simpley sabse phle ek sorted array me mid find krna hai; or array ko mid se divdie krna hai; and then target ko left half or right half ke elements se compare kaerege. Time compexcity O(log n)
+
+//? Soution:- for sorted array only ok;
+function binarySearch(arr,target){
+    let left = 0;
+    let right = arr.length-1;
+
+    while(left <= right){
+        let mid = Math.floor((left+right)/2);
+        
+        //first compare mid with target
+        if(arr[mid] === target) return mid;
+        //agar array me target bda hai to left me jao ek element
+        else if(arr[mid] < target) left = mid+1;
+        //agar array me target chota hai to right me jao ek element
+        else right = mid-1;
+    }
+    return -1; //Not found;
+}
+console.log(binarySearch([1,2,3,4,5,6,7,8,9],7)); //6
+//output 6 why ?
+//?The function returns 6 because in the sorted array, the number 7 is located at index 6 (remember that array indices start at 0).
+// 1. Standard Binary Search on a Sorted Array
+// Array: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+// Target: 7
+// - Initial Setup:
+// - left = 0
+// - right = 8
+// - The mid index is calculated as mid = Math.floor((0 + 8) / 2) = 4.
+// - The element at index 4 is 5.
+// - First Iteration:
+// - Since 5 (at index 4) is less than 7, the algorithm discards the left side by updating left = mid + 1, which makes left = 5.
+// - Second Iteration:
+// - Now with left = 5 and right = 8, the new mid index is mid = Math.floor((5 + 8) / 2) = 6.
+// - The element at index 6 is 7, which matches the target. Thus, the function returns 6.
+
+
+
+
+
 
 // Q:Binary Search on a Rotated Sorted Array
 // Given a rotated sorted array, write a function that performs a binary search for a target element.
+//? Solution :- Understand an Sorted array is an array that has been rotated at some point;
+
+// eg:- [15,18,20,2,8,10,12];
+// sorted array => [2,8,10,12,15,18,20];
+
+//! Q: How to search in a rotated sorted array?
+//* ans:- 1. identify which half is sorted;
+//* 2. check if target is in that sorted half;
+//* 3. if not in sorted half then check in other half;
+
+//! Although our array is not sorted, we solve this solution for sorted array is avobe;
+[15,18,20,2,8,10,12]; //=> target = 10;
+function binarySearchInRotatedArray(arr,target){
+    let left = 0;
+    let right = arr.length-1;
+
+    while(left <= right){
+        let mid = Math.floor((left+right)/2);
+
+        if(arr[mid] === target) return mid;
+
+        //check which half is sorted; i.e left?
+        if(arr[left] <= arr[mid]){
+            //left half is sorted; 
+            // so hmara target left or mid me hai;
+            if(arr[left] <= target && target <= arr[mid]){
+                right = mid-1; 
+            } else {
+                left = mid+1;
+            }
+        } else {
+            //right half is sorted;
+            if(target >= arr[mid] && target <= arr[right]){
+                left = mid+1; //target is in right half; 
+            } else {
+                right = mid-1;
+            }
+        }
+    }
+
+    return -1 // Not found anything;
+}
+console.log(binarySearchInRotatedArray([15,18,20,2,8,10,12],10));//5
+// - Initial Setup:
+// - left = 0
+// - right = 6
+// - The mid index is calculated as mid = Math.floor((0 + 6) / 2) = 3.
+// - The element at index 3 is 2.
+// - First Iteration:
+// - Since 2 is not equal to 10, the algorithm determines which half is sorted.
+// - It checks if (arr[left] <= arr[mid]) → here, arr[0] is 15 and arr[3] is 2. Since 15 > 2, the left portion isn’t sorted; therefore, the right half must be sorted.
+// - Now, check if the target lies in the right sorted portion by verifying if (arr[mid] <= target && target <= arr[right]) → here, 2 <= 10 <= 12 is true.
+// - The algorithm then updates left = mid + 1, so left = 4.
+// - Second Iteration:
+// - With left = 4 and right = 6, the new mid index is mid = Math.floor((4 + 6) / 2) = 5.
+// - The element at index 5 is 10, which matches the target, so the function returns 5.
+
+
+
+// Q:Find the Missing Number in an Array
+//  Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the missing number.
+
+// Problem statement :-You are given an array that contains n distinct numbers taken from the set {0, 1, 2, ..., n}. This means there are exactly n + 1 numbers in the complete range, but the array only holds n of them. Hence, one number is missing. Your task is to determine which number is missing.
+// For example, if your array is [3, 0, 1], it's built from numbers ranging from 0 to 3. The complete set should be {0, 1, 2, 3}, and since 2 is missing, the answer is 2
+//? Solution:- we have two approaches 1.Summation Formula methods 2.XOR method;
+//? 1. Summation Formula methods;
+// The idea here is based on the well-known formula for the sum of the first n natural numbers. The complete sum for numbers from 0 to n is given by:
+// [ \text{expectedSum} = \frac{n \times (n + 1)}{2} ]
+// Then, you sum the elements that are present in the array (let’s call it actualSum) and subtract this from the expected sum:
+// [ \text{missingNumber} = \text{expectedSum} - \text{actualSum} ]
+// Example with [3, 0, 1]:
+// - The array length ( n = 3 ) because there are 3 numbers present.
+// - The complete range should be 0 to 3 (which is 4 numbers).
+// - Calculate expected sum:
+// [ \frac{3 \times (3 + 1)}{2} = \frac{12}{2} = 6 ]
+// - Calculate actual sum:
+// [ 3 + 0 + 1 = 4 ]
+// - The missing number is:
+// [ 6 - 4 = 2 ]
+
+function findMissingNumber(arr){
+    let n = arr.length;  //3 for our eg;
+    let expectedSum = n*(n+1) / 2; //12/2 = 6;
+    let actualSum = arr.reduce((acc,curr)=>acc+curr,0);
+    return Math.floor(expectedSum - actualSum);
+};
+console.log(findMissingNumber([3,0,1]));
+
 
 // Q:Find the Kth Largest Number in an Array
 //  Given an array of integers, find the kth largest number.
+// solution:-
+//? 1. Sorting Method:
+function findKthLargest(arr,k){
+   //sort the arr in decending order
+   const sortedArray = arr.sort((a,b)=>b-a);
+   return sortedArray[k-1]; //k-1 because index start from 0;
+};
+// Example:
+// Consider arr = [3, 2, 1, 5, 6, 4] and k = 2.
+// - If you sort the array in descending order, you get: [6, 5, 4, 3, 2, 1].
+// - The 2nd largest element is 5.
+console.log(findKthLargest([3, 2, 1, 5, 6, 4], 2)); // Output: 5
+
+
+
+
+
+// Q:Find the Kth Smallest Number in an Array
+//  Given an array of integers, find the kth smallest number.
+function findKthSmallest(arr,k){
+    //sort the arr in ascending order
+    const sortedArray = arr.sort((a,b)=>a-b);
+    return sortedArray[k-1]; //k-1 because index start from 0; 
+}
+// Example:
+// Consider arr = [3, 2, 1, 5, 6, 4] and k = 2.
+// - If you sort the array in ascending order, you get: [1, 2, 3, 4, 5, 6].
+// - The 2nd smallest element is 2.
+console.log(findKthSmallest([3, 2, 1, 5, 6, 4], 2)); // Output: 2
+
+
+
+
 
 // Q:Check if Two Arrays are Anagrams
 //  Determine if two arrays are anagrams (contain the same elements but in a different order).
