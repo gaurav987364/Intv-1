@@ -576,7 +576,7 @@ function isMatch(string, pattern) {
   }
 
   return dp[m][n];
-}
+};
 // Test examples
 console.log(isMatch("acb", "a?b"));      // Output: true
 console.log(isMatch("axxxb", "a*b"));    // Output: true
@@ -596,4 +596,4 @@ function convert(str){
     return {[key]:obj}
   });
 };
-console.log(convert("a.b.c.d.e"))
+console.log(convert("a.b.c.d.e"));
