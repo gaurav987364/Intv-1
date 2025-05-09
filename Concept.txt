@@ -230,7 +230,7 @@ function Throttle(fn,delay){
 
 Advanced Data Structures and Algorithms
 
-Linked Lists, Stacks, and Queues in JavaScript
+Linked Lists, hashmaps = {} , Stacks = [], and Queues in JavaScript
 Hash Tables
 Binary Trees and Binary Search Trees
 Sorting Algorithms: Bubble, Merge, Quick, Insertion, Selection
