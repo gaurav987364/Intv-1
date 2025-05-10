@@ -541,8 +541,6 @@ console.log(findKthSmallest([3, 2, 1, 5, 6, 4], 2)); // Output: 2
 
 
 
-
-
 // Q:Check if Two Arrays are Anagrams
 //  Determine if two arrays are anagrams (contain the same elements but in a different order).
 
