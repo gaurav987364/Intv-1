@@ -543,9 +543,62 @@ console.log(findKthSmallest([3, 2, 1, 5, 6, 4], 2)); // Output: 2
 
 // Q:Check if Two Arrays are Anagrams
 //  Determine if two arrays are anagrams (contain the same elements but in a different order).
+//? Approach we follow is sorted arrays are equal or not; element wise
+
+const arr1 = [1,2,4,5];
+const arr2 = [4,2,1,5];
+function checkAnagram(arr1,arr2){
+  if(arr1.length !== arr2.length) return false;
+  const sortedArr1 = arr1.sort((a,b)=>a-b);
+  const sortedArr2 = arr2.sort((a,b)=>a-b);
+  return sortedArr1.every((val,idx) => val === sortedArr2[idx]); 
+};
+console.log(checkAnagram(arr1,arr2)); //true
+
+
 
 // Q:Find the Median of Two Sorted Arrays
 //  Given two sorted arrays, find the median of the combined array.
+function findMedian(arr1, arr2) {
+  let mergeArray = [];
+  let i = 0;
+  let j = 0;
+  
+  while (i < arr1.length && j < arr2.length) {
+    if (arr1[i] < arr2[j]) {
+      mergeArray.push(arr1[i]);
+      i++;
+    } else {
+      mergeArray.push(arr2[j]);
+      j++;
+    }
+  }
+  
+  // Append remaining elements from arr1
+  while (i < arr1.length) {
+    mergeArray.push(arr1[i]);
+    i++;
+  }
+  // Append remaining elements from arr2
+  while (j < arr2.length) {
+    mergeArray.push(arr2[j]);
+    j++;
+  }
+
+  const length = mergeArray.length;
+
+  if (length % 2 === 1) {
+    return mergeArray[Math.floor(length / 2)];
+  } else {
+    const mid1 = mergeArray[length / 2 - 1];
+    const mid2 = mergeArray[length / 2];
+    return (mid1 + mid2) / 2;
+  }
+}
+
+console.log(findMedian([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])); // Correct output: 5.5
+
+
 
 // Q:Find the Kth Smallest Number in a Sorted Matrix
 //  Given a sorted matrix, find the kth smallest number.
