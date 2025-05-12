@@ -29,8 +29,8 @@ console.log(isValid("({]})"))
 console.log(isValid("(({]))"))
 console.log(isValid("(((())))"))
 
-//     2.score of parenthesis
-//     Write a function scoreOfParentheses(s) that, given a balanced     parentheses string s, returns its “score” defined by:
+//  2.score of parenthesis
+//  Write a function scoreOfParentheses(s) that, given a balanced parentheses string s, returns its “score” defined by:
 // () has score 1.
 // AB (concatenation) has score A + B.
 // (A) has score 2 × A.
