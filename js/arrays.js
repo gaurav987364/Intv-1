@@ -594,7 +594,7 @@ function findMedian(arr1, arr2) {
     const mid2 = mergeArray[length / 2];
     return (mid1 + mid2) / 2;
   }
-}
+};
 
 console.log(findMedian([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])); // Correct output: 5.5
 
