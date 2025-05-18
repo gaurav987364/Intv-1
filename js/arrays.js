@@ -313,6 +313,21 @@ function flatArray(arr){
 };
 console.log(flatArray([1,2,[3,4],[5,[6,7,[8,9]]]]));
 
+
+function flatArrayWithLevel(arr,level=0){
+    let result = [];
+
+    for(let item of arr){
+        if(Array.isArray(item) && level>0){
+            result = result.concat(flatArrayWithLevel(item,level-1));
+        } else {
+            result.push(item);
+        }
+    }
+    return result;
+};
+console.log(flatArrayWithLevel([1,2,[3,4],[5,[6,7,[8,9]]]]));
+
 // Q:Recursive Sum of Numbers in a Nested Array
 // Implement a function that sums all numbers from a nested array structure using recursion.
 function sumOfNestedArray(arr){
@@ -345,7 +360,7 @@ function symmetricDifference(arr1,arr2){
         let unique = true;
         for (let j = 0; j < arr2.length; j++) {
             if(arr1[i] === arr2[j]){
-                unique = false;
+                unique = false; //if same then fset false;
                 break;
             } 
         }
@@ -366,7 +381,8 @@ function symmetricDifference(arr1,arr2){
         if (isUnique) {
           result.push(arr2[i]);
         }
-      }
+      };
+      
     return result;
 }
 console.log(symmetricDifference([1,2,3,4],[3,4,5,6]));
