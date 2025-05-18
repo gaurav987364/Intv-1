@@ -319,10 +319,10 @@ console.log({...items})
 // };
 // <T extends Element>({}:Props<T>)
 
-//Interface Props<T>{
- name:string;
- age:number;
- sex:string;
+// Interface Props<T>{
+//  name:string;
+//  age:number;
+//  sex:string;
 // }
 
 // const MyCard:React.Fc = <T extends Props<T>>({...all props:T})=>{};
