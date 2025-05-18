@@ -317,7 +317,7 @@ function debounce(fn, delay) {
       fn.apply(this, args);
     }, delay);
   };
-}
+};
 
 // Q: Write Throttle Function ?
 function throttle(fn, delay) {
@@ -338,7 +338,7 @@ function throttle(fn, delay) {
       }, delay - (Date.now() - lastRan));
     }
   };
-}
+};
 
 // Q:Convert Object Keys from snake_case to camelCase
 // Provide a function that converts all keys in an object from snake_case to camelCase .
