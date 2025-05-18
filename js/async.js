@@ -1,4 +1,4 @@
-//** All About Asynchronous Js in Js */
+//** All About Asynchronous Js in Js */;
 
 //setTimeout, setInterval and clearInterval etc...
 //Promises all about
