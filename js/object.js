@@ -26,7 +26,7 @@ const objs = {
   },
   US:{
     California:["San Francisco","Los Angeles","Sacramento"],
-  }
+  },
 };
 
 const states = Object.keys(objs["india"]);
