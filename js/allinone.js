@@ -303,7 +303,7 @@ console.log({...items})
         <button type="submit">Submit</button>
     </form>
 
-    //? no it is not submitted now due to type chnage in button
+    //? no it is not submitted now due to type chnage in button,
     <form>
         <input type="text" name="username">
         <input type="password" name="password">
