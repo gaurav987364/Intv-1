@@ -46,7 +46,7 @@ function scoreOfParenthesis(s) {
             const currentscore = Math.max(2*score, 1);
             stack[stack.length - 1] += currentscore;
         }
-    }
+    };
     return stack.pop();
 };
 console.log(scoreOfParenthesis("()")); //1
