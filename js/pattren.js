@@ -176,7 +176,7 @@ Output:
 */
 
 
-// Pascal's Triangle
+// Pascal's Triangle,
 // Problem Statement:
 // Write a JavaScript function that prints Pascal’s Triangle for a given number of rows.
 // Example (n = 5):
