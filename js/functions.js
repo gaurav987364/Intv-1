@@ -319,7 +319,7 @@ function debounce(fn, delay) {
   };
 };
 
-// Q: Write Throttle Function ?
+// Q: Write Throttle Function?.
 function throttle(fn, delay) {
   let timer = null;
   let lastRan = null;
