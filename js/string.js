@@ -345,6 +345,7 @@ console.log(name.reverse());
 
 // Q:String Manipulation: Remove all vowels from a given string;
 // simpley define a vowels and filter out them by checking if our vowels  not includes current charcter then add it
+
 function removeVowels(str) {
   const vowels = "aeiouAEIOU";
   let withoutVowel = "";
