@@ -313,13 +313,13 @@ class PayPal {
     processPayment(amount) {
       console.log(`Processing PayPal payment of $${amount}`);
     }
-}
+};
   
 class Stripe {
     processPayment(amount) {
       console.log(`Processing Stripe payment of $${amount}`);
     }
-}
+};
   
 class PaymentProcessor {
     setStrategy(strategy) {
