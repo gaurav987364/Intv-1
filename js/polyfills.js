@@ -166,4 +166,8 @@ if (!window.setTimeout) {
     };
 }
 
+// usage example;
+setTimeout(() => {
+    console.log("Hello, world!"); 
+}, 1000); // This will block the thread for 1 second before executing the callback
 // custom promise
