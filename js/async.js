@@ -1,5 +1,8 @@
 //** All About Asynchronous Js in Js */;;;;
 
+postMessage("All About Asynchronous JavaScript");
+//working of above postMessage thing;
+
 //setTimeout, setInterval and clearInterval etc...
 //Promises all about
 //what is callbacks in js
