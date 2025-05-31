@@ -141,6 +141,29 @@ const res = newFn("30");
 
 // Polyfill for Promise, Promise.all
 
+//polyfill of flat methods for array
+Array.prototype.myFlat = function(depth = 1) {
+    const flatten = (arr, d) => {
+        if (d === 0) return arr;
+        return arr.reduce((acc, item) => {
+            if (Array.isArray(item)) {
+                acc.push(...flatten(item, d - 1));
+            } else {
+                acc.push(item);
+            }
+            return acc;
+        }, []);
+    };
+    return flatten(this, depth);
+};
 
+//polyfill for settimeout in js
+if (!window.setTimeout) {
+    window.setTimeout = function(callback, delay) {
+        const start = Date.now();
+        while (Date.now() - start < delay) {}
+        callback();
+    };
+}
 
 // custom promise
