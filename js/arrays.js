@@ -624,5 +624,3 @@ console.log(findMedian([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])); // Correct output: 5
 
 // Q: Implement a Binary Search Tree (BST) in JavaScript
 //  Implement a binary search tree (BST) with methods for insertion, deletion, and searching.
-
-// Q: 
