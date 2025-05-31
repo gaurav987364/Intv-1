@@ -305,7 +305,7 @@ getUserDescription().then(console.log); // Output: "John is 25 years old."
 
 // Q:Debounce Function
 // Create a debounce function that limits the rate at which a function can fire
-function debounce(fn, delay) {
+function Debounce(fn, delay) {
   let timer = null;
   return function (...args) {
     if (timer) {
@@ -318,9 +318,8 @@ function debounce(fn, delay) {
     }, delay);
   };
 };
-
 // Q: Write Throttle Function?.
-function throttle(fn, delay) {
+function Throttle(fn, delay) {
   let timer = null;
   let lastRan = null;
 
