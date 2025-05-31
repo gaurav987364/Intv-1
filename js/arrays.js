@@ -64,7 +64,7 @@ function mergeTwoArrayNoDuplicates(arr1, arr2) {
 }
   
 console.log(mergeTwoArrayNoDuplicates([1, 2, 3, 3], [2, 3, 4, 5])); 
-  // Output: [1, 2, 3, 4, 5]
+// Output: [1, 2, 3, 4, 5];
 
 
 
