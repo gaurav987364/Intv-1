@@ -14,6 +14,7 @@ const prototypeObj = {
 };
   
 Object.setPrototypeOf(obj, prototypeObj); //?
+//Sets the prototype of a specified object o to object proto or null. Returns the object o.
   
 console.log(obj.getValue()); // Output: 42
   
