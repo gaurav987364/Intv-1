@@ -182,7 +182,7 @@ console.log(evaluateByPipe(2)); //9
 
 //! Pattrens in Js :-
 
-// Singleton Pattern
+// Singleton Pattern,
 // Purpose=> Ensures that a class has only one global instance and provides a global access point to it;
 //Means hamari global class ka sirf ek hi instance create hoga of ek hi access point hoga uske methods ke liye;
 
