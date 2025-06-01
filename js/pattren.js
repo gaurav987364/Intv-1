@@ -168,7 +168,7 @@ function spiralMatrix(n) {
 // Example:
 spiralMatrix(4);
 /*
-Output:
+Output:-
 1  2  3  4
 12 13 14  5
 11 16 15  6
@@ -196,7 +196,7 @@ function pascalsTriangle(rows) {
     }
 }
 
-// Example:
+// Example:-
 pascalsTriangle(5);
 /*
 Output:
