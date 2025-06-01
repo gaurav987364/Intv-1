@@ -4,7 +4,7 @@
 
 
 const obj = {
-    value: 42
+    value: 45
 };
   
 const prototypeObj = {
