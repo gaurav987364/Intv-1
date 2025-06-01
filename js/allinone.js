@@ -32,7 +32,7 @@ console.log(abc() + "ok"); //its give us undefined
 {
     console.log(z,"hoisted"); // undefined
     var z = 10;
-}
+};
 
 //diff bw var let const in hoisting var is hoisted and move to to top of there scope and initialize with undefined, let is also hoisted but it never initialie with undef. const is never hoisted and initialize
 
