@@ -57,7 +57,7 @@ console.log(returnOnlyDuplicates([1,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9]));
 // Q:Merge Two Arrays Without Duplicates
 // Combine two arrays and remove duplicate entries....
 function mergeTwoArrayNoDuplicates(arr1, arr2) {
-    // Set() has O(n) time complexcity;
+    // Set() has O(n) time complexcity;;;;
     // Use a Set to automatically handle duplicates
     const mergedSet = new Set([...arr1, ...arr2]); // Combine both arrays into a Set
     return Array.from(mergedSet); // Convert Set back to an array
