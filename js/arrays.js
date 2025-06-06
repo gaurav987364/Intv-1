@@ -123,7 +123,7 @@ function secondLargestNumber(arr) {
 
     // Return second largest (if available)
     return max2 === -Infinity ? null : max2;
-}
+};
 // Test the function
 console.log(secondLargestNumber([10, 20, 30])); // Output: 20
 console.log(secondLargestNumber([30, 30, 40])); // Output: 30
