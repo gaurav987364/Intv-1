@@ -61,7 +61,7 @@ function mergeTwoArrayNoDuplicates(arr1, arr2) {
     // Use a Set to automatically handle duplicates
     const mergedSet = new Set([...arr1, ...arr2]); // Combine both arrays into a Set
     return Array.from(mergedSet); // Convert Set back to an array
-}
+};
   
 console.log(mergeTwoArrayNoDuplicates([1, 2, 3, 3], [2, 3, 4, 5])); 
 // Output: [1, 2, 3, 4, 5];
