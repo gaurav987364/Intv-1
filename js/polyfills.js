@@ -185,3 +185,10 @@ function isEqual(a, b) {
   // check for number
   return Number(a) === Number(b);
 };
+
+// Example usage
+console.log(isEqual(5, "5")); // true
+console.log(isEqual(null, undefined)); // true
+console.log(isEqual({ a: 1 }, { a: 1 })); // false (different references)
+console.log(isEqual([1, 2], "1,2")); // true
+console.log(isEqual(5, 5)); // true
