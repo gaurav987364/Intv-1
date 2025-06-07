@@ -258,3 +258,63 @@ Unit Testing Basics
 Testing Libraries (e.g., Jest, Mocha, Chai)
 Writing and Running Test Suites
 Mocking and Test-Driven Development (TDD)
+
+
+
+Git/Github things for aising PR and Resolve conflicts using SHH keys 
+After setup an GitHub SSH key we have to simply clone repo using SSH clone not normally cli clone 
+
+# via SSH (recommended)
+git clone git@github.com:your-username/your-repo.git
+
+# OR via HTTPS (with CLI login)
+git clone https://github.com/your-username/your-repo.git
+
+To check the remote URL for your repo:
+git remote -v
+ 
+output:-
+origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (fetch)
+origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (push)
+
+
+step-1 simple open the repo using the file explorer using bash then first do this for login,
+
+ssh -T git@github.com   
+
+you get:-
+Hi your-username! You've successfully authenticated, but GitHub does not provide shell access.
+
+then we simply do:-
+
+git status
+git add .
+git status
+git commit -m "message about changes"
+// create new branch if needed
+git checkout -b "branch_name"
+
+// if have already branch other than master;
+git push origin branch_name
+
+
+Now If we have conflicts during raising the PR or Pushing the code into existing branch before merge:-
+
+so we have to solve the conflicts on our local by taking the pull or main/master;
+
+we have to seen like this:-
+
+<<<<<<< dashboard_new
+// your branch's changes here
+=======
+// master branch's changes here
+>>>>>>> master
+
+
+git branch
+git pull origin master
+then open vsCode solve conflicts, after solve comes again on bash
+git status
+git add .
+git commit -m "Resolved merge conflict between dashboard_new and master"
+git push origin branch_name
