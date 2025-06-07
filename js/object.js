@@ -46,6 +46,27 @@ console.log(cities);
 
 // Q:Deep Clone an Object
 // Build a function that performs a deep clone of an object (without circular references).
+//? hamare pass phle js me koi direct method nahi tha kisi bhi object ki deep cloning krne kaa then ham use karte the JSON.stringify() and JSON.parse() method;
+JSON.parse(JSON.stringify(obj));  // now it is called deep cloning; But it has many issue and cons;
+
+// now we have structured cloning (structuredClone()) method; 
+//? this method is used to deep clone the object;
+
+// our custom polyfill for that structured cloning method;
+function deepClone(obj){
+  if(typeof obj !== "object" || obj === null){
+    return obj;
+  }
+  const clonedObj = Array.isArray(obj)? []:{};
+  for(const key in obj){
+    if(obj.hasOwnProperty(key)){
+      clonedObj[key] = deepClone(obj[key]);
+    }
+  }
+  return clonedObj;
+};
+
+
 
 // Q:Find Intersection of Two Arrays of Objects
 // Given two arrays, return the common elements based on a specified property key.
