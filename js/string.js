@@ -510,6 +510,10 @@ console.log(longestPalindromeicSubstring("xyzracecarpqr")); //racecar
 
 
 
+//Q: Find the length of the longest substring with have same number of vowels and consonants
+// Given a string, find the length of the longest substring that contains an equal number of vowels and consonants.
+
+// for eg:-  "kjabcioj"  => ouput string:- "jabcio" => so length is // 6
 
 
 
