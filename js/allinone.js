@@ -268,8 +268,8 @@ String.prototype.myIncludes = function(search, fromIndex = 0) {
     return this.indexOf(search, fromIndex)!== -1;
 };
 
-console.log("Gaurav sharma".myIncludes("h"));
-console.log("Gaurav sharma".includes("h"));
+console.log("Gaurav sharma".myIncludes("h")); // true
+console.log("Gaurav sharma".includes("h")); // true
 
 
 // Nested Array and flattning
