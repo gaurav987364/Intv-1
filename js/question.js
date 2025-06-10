@@ -105,10 +105,10 @@ if(true){
 //switch loops
 switch(true){
     case "ADD":
-        console.log("Addition");
+        console.log("Addition+++");
         break;
     default:
-        console.log("Unknown operation");
+        console.log("Unknown operation...");
         break;
 };
 
