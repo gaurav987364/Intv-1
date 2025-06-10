@@ -288,7 +288,7 @@ const nestedObj = {
 };
 
 const items = nestedObj;
-console.log({...items})
+console.log({...items});
 
 
 // senario based question about forms
