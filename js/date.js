@@ -2,4 +2,4 @@
 
 // write function based on dates ?
 
-//Q:- Wriet a function that input date and count the DOB
+// Q:- write a function that input date and count the age?
