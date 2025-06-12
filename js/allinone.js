@@ -313,7 +313,7 @@ console.log({...items});
 };
 
 
-//T type
+//T type;
 // interface Props<T>{
 //     array: T[]
 // };
@@ -323,6 +323,6 @@ console.log({...items});
 //  name:string;
 //  age:number;
 //  sex:string;
-// }
+// };
 
 // const MyCard:React.Fc = <T extends Props<T>>({...all props:T})=>{};
