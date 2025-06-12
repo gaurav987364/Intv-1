@@ -291,7 +291,7 @@ const items = nestedObj;
 console.log({...items});
 
 
-// senario based question about forms
+// senario based question about forms;
 
 //Q: suppose we have one form like this and in form we have one button we have to guess what happend when user press submit button and what happen when we change the type of button from submit to another ? 
 
