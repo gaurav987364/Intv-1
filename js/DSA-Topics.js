@@ -1,7 +1,7 @@
 // All about DSA Topics used in Web Dev. For Now!
 
 // *Merge two sorted Array,strings & lists;
-// *Valid Parenthesis :- There are two common ways to solve this in O(n) time and O(n) space:
+// *Valid Parenthesis :-> There are two common ways to solve this in O(n) time and O(n) space:
 
 //     1.parenthesis checker;
 function isValid(s){
