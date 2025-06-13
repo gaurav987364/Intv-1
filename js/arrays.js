@@ -107,7 +107,7 @@ console.log(evenNumberFromArray([1,2,3,4,5,6]));
 // Q:Find the Second Largest Number
 // Given an array of numbers, return the second largest element.
 function secondLargestNumber(arr) {
-    //? we can do this also using sort and [arr.length-2];
+    //? we can do this also using sort and [arr.length-2];;
 
     let max1 = -Infinity;  // Largest number
     let max2 = -Infinity;  // Second largest number
