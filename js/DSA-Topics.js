@@ -28,6 +28,10 @@ console.log(isValid("({()})"));
 console.log(isValid("({]})"));
 console.log(isValid("(({]))"));
 console.log(isValid("(((())))"));
+console.log(isValid("(((()))())"));
+console.log(isValid("(((()))())()"));
+console.log(isValid("(((()))())()(()))"));
+console.log(isValid("(((()))())()(()())"));
 
 //  2.score of parenthesis
 //  Write a function scoreOfParentheses(s) that, given a balanced parentheses string s, returns its “score” defined by:
