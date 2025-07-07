@@ -176,7 +176,7 @@ setTimeout, setInterval, and clearInterval
 Promise.all, Promise.race, Promise.any, and Promise.allSettled;
 
 🚀🚀🚀
-Expert Level Concepts;-
+Expert Level Concepts:-
 
 JavaScript Design Patterns
 
