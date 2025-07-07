@@ -205,7 +205,7 @@ function debounce(fn,delay){
       fn.apply(this,args)
     },delay)
   }
-}
+};
 
 function Throttle(fn,delay){
   let lastRan = null;
