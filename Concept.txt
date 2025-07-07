@@ -224,7 +224,7 @@ function Throttle(fn,delay){
       },delay-(Date.now()-lastRan))
     }
   }
-}
+};
 
 
 
