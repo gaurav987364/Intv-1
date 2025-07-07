@@ -265,16 +265,16 @@ Git/Github things for aising PR and Resolve conflicts using SHH keys
 After setup an GitHub SSH key we have to simply clone repo using SSH clone not normally cli clone 
 
 # via SSH (recommended)
-git clone git@github.com:your-username/your-repo.git
+git clone git@github.com:your-username/your-repo.git,
 
 # OR via HTTPS (with CLI login)
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/your-username/your-repo.git,
 
 To check the remote URL for your repo:
 git remote -v
  
 output:-
-origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (fetch)
+origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (fetch),,
 origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (push)
 
 
