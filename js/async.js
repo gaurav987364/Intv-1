@@ -1,4 +1,4 @@
-//** All About Asynchronous Js in Js */;;;;
+//** All About Asynchronous Js in Js */
 
 postMessage("All About Asynchronous JavaScript");
 //working of above postMessage thing;
