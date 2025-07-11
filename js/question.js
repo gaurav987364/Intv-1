@@ -99,7 +99,7 @@ while(5 < 0){
 if(true){
     console.log("Condition is true");
 } else {
-    console.log("Condition is false"); // 
+    console.log("Condition is false"); 
 };
 
 //switch loops
