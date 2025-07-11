@@ -95,7 +95,7 @@ while(5 < 0){
     break; // if we want to break the loop after first iteration then we can use break statement;
 };
 
-// if-else or if-else-if-else statements
+// if-else or if-else-if-else statements...
 if(true){
     console.log("Condition is true");
 } else {
