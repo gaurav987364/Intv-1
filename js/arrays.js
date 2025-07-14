@@ -360,10 +360,11 @@ function symmetricDifference(arr1,arr2){
         let unique = true;
         for (let j = 0; j < arr2.length; j++) {
             if(arr1[i] === arr2[j]){
-                unique = false; //if same then fset false;
+                unique = false; //if same then set false;
                 break;
             } 
         }
+        
         if(unique){
             result.push(arr1[i])
         }
