@@ -349,9 +349,9 @@ console.log(sumOfNestedArray([1,2,[3,4,5],[2,[3,4]]]))
 // Q:Symmetric Difference of Two Arrays
 // Write a function that finds the symmetric difference (elements only in one array but not both) between two arrays.
 
-// arr1 = [1,2,3,4];
-// arr2 = [3,4,5,6];
-// so symmetricDifference is [1,2,5,6]
+arr1 = [1,2,3,4];
+arr2 = [3,4,5,6];
+//so symmetricDifference is [1,2,5,6]
 
 function symmetricDifference(arr1,arr2){
     let result = [];
