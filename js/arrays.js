@@ -364,7 +364,7 @@ function symmetricDifference(arr1,arr2){
                 break;
             } 
         }
-        
+        //checks if true then push to result;
         if(unique){
             result.push(arr1[i])
         }
