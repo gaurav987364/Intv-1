@@ -342,7 +342,7 @@ function sumOfNestedArray(arr){
     }
     return total;
 };
-console.log(sumOfNestedArray([1,2,[3,4,5],[2,[3,4]]]))
+console.log(sumOfNestedArray([1,2,[3,4,5],[2,[3,4]]]));
 
 
 
