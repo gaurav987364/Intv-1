@@ -633,6 +633,12 @@ function twoSum(nums, target) {
 
 console.log(twoSum([3,4,5,6],7))
 
+// Q:Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
+// Please implement encode and decode
+
+
+
+
 // Q:Find the Kth Smallest Number in a Sorted Matrix
 //  Given a sorted matrix, find the kth smallest number.
 
