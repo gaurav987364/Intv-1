@@ -13,6 +13,15 @@ postMessage("All About Asynchronous JavaScript");
 
 // Q:Basic Promise Example
 // Write a simple promise that resolves after a 1-second delay.
+const promise = new Promise((res,rej)=>{
+    setTimeout(()=>{
+        res("promise resolved")
+    },1000)
+    setTimeout(()=>{
+        rej("promise rejected")
+    },2000)
+});
+console.log(promise);
 
 // Q:Async/Await Introduction
 // Implement a simple async function that awaits a promise and returns a value.
