@@ -615,6 +615,7 @@ function findMedian(arr1, arr2) {
 
 console.log(findMedian([1, 2, 3, 4, 5], [6, 7, 8, 9, 10])); // Correct output: 5.5
 
+//* Two Sum 
 //Q:Given an array of integers nums and an integer target, return the indices i and j such that nums[i] + nums[j] == target and i != j.
 // You may assume that every input has exactly one pair of indices i and j that satisfy the condition.
 function twoSum(nums, target) {
