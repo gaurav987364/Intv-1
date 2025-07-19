@@ -11,6 +11,9 @@ postMessage("All About Asynchronous JavaScript");
 //fetch/axios
 //api optimiazations
 
+//custome wait
+const wait = (ms) => new Promise(res => setTimeout(res,ms));
+
 // Q:Basic Promise Example
 // Write a simple promise that resolves after a 1-second delay.
 const promise = new Promise((res,rej)=>{
