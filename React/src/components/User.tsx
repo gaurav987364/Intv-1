@@ -83,7 +83,7 @@ const User = () => {
            </form>
         </div>
         <div className=" mt-5 border-t p-2 flex flex-wrap w-full overflow-hidden">
-            {users.map((user:Users, index:number) => (
+            {users?.map((user:Users, index:number) => (
                 <div key={index} className=" flex gap-2 flex-wrap w-full overflow-hidden">
                    {user.name}
                    <span className=" cursor-pointer" onClick={()=>deleteUser(user.email)}>❌</span>

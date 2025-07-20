@@ -29,7 +29,7 @@ class MyClassComponent extends React.Component{
     render(): React.ReactNode {
        return <div>
         <button onClick={this.adduser}>Add</button>
-        {this.state.user}
+        {this.state.user && <p>{this.state.user}</p>}
         </div>
     }
 }
