@@ -45,7 +45,7 @@ const User = () => {
 
   return (
     <div className=" mt-5 border h-fit p-5 rounded">
-        <h1 className=" text-center">Users List</h1>
+        <h1 className=" text-center">Users List...</h1>
         <div>
            <form onSubmit={handleSubmit(onSubmit)} className=" flex flex-col mt-5 items-center justify-center">
             <input 
