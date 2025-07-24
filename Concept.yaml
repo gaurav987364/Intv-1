@@ -38,11 +38,11 @@ extraReducers : {
   [ourAsyncFunction.pending] : (state)=>{
     state.loading = true;
   },
-  [ourAsyncFunction.fullfilled] : (state,action)=>{
+  [ourAsyncFunction.fullfilled] : (state, action)=>{
     state.loading = false;
     state.dataArray = action.payload;
   },
-  [ourAsyncFunction.rejection] : (state,action)=>{
+  [ourAsyncFunction.rejection] : (state, action)=>{
     state.loading = false;
     state.error = action.error.message || "some error occurred";
   },
