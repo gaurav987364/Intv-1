@@ -49,7 +49,7 @@ extraReducers : {
 };
 
 
-this abpve is old practise new one is we have to use builder
+this abpve is old practise new one is we have to use builder;
 
 extraReducers : (builder)=>{
   builder
