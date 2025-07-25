@@ -68,7 +68,7 @@ Closures and Scope :{
     3.blocked Scope
     4. module sccope
     5.Lexical scope
-}
+};
 
 Global, Function, Block Scope✅
 Lexical Scope and Closure✅
