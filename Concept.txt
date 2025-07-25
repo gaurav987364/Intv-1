@@ -54,7 +54,7 @@ Q:What is the difference between `Map` and `WeakMap` in JavaScript?⭐⭐⭐
 
 
 
-Objects {} 
+Objects {}; 
 
 Object Literals and Properties
 Accessing and Modifying Properties
