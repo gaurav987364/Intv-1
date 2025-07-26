@@ -76,7 +76,7 @@ console.log(Array.of(123)) // [123] as whole
 // task queue;
 // Event loop;
 
-// scopes in js (function, global, bloacked )
+// scopes in js (function, global, blocked )
 //? lexical scope is js is used for resolve the variables names when the function is created in another function;
 
 // closures
