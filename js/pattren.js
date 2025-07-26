@@ -194,7 +194,7 @@ function pascalsTriangle(rows) {
         }
         console.log(triangle[i].join(" "));
     }
-}
+};
 
 // Example:-
 pascalsTriangle(5);
