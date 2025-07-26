@@ -225,7 +225,7 @@ const res3 = Promise.allSettled([]);
 // async await:-
 
 
-//? Prototype is is the object from which other objects are inherit properties;
+//? Prototype is the object from which other objects are inherit properties;
 // polyfils
 // it is piece of code provide the morder functionality to the older browsers that nativly don't support them; polyfils of array and strings are;
 
