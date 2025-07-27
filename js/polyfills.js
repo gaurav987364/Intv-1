@@ -165,6 +165,7 @@ setTimeout(() => {
 // 3. if both are object then check for reference
 // 4. if both are null then return true;
 
+
 function isEqual(a, b) {
   // check if have ame type
   if (typeof a === typeof b) return a === b;
