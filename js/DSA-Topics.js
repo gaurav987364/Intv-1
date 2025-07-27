@@ -16,6 +16,8 @@ function isValid(s){
         if(c === "(" || c === "{" || c === "["){
             stack.push(c); // push 0 for same string;
         } else if(c === ")" || c === "}" || c === "]"){
+            // console.log('stack each item in loop',stack[c])
+            // console.log('pop item' ,stack.pop())
             if(stack.length === 0 || stack.pop() !== pairs[c]){
                 return false;
             }
