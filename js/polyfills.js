@@ -124,7 +124,7 @@ function sayHi(gender, age) {
 const newFn = Function.prototype.myBind(eg, "Male");
 const res = newFn("30");
 
-// Polyfill for Promise, Promise.all
+//Polyfill for Promise, Promise.all
 
 //polyfill of flat methods for array
 Array.prototype.myFlat = function (depth = 1) {
