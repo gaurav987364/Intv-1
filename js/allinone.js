@@ -259,7 +259,7 @@ Array.prototype.myReduce = function (callback,ival){
         accum = callback(accum, this[i],i,this);
     }
     return accum;
-}
+};
 
 // strings polyfils;
 // includes();
