@@ -296,7 +296,7 @@ function camelTokebab(str) {
   }
 
   return kebabStr;
-}
+};
 console.log(camelTokebab("userInfo"));
 console.log(camelTokebab("ReactRouterDom"));
 console.log(camelTokebab("hello"));
