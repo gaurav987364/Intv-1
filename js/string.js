@@ -354,7 +354,7 @@ function removeVowels(str) {
       withoutVowel += c;
     }
   }
-}
+};
 console.log(removeVowels("gaurav sharma"));
 
 // Q:Parse Complex Query Strings into Nested Objects
