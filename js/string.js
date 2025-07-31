@@ -325,7 +325,7 @@ function longestCommonPrefix(arr) {
     }
   }
   return prefix;
-}
+};
 console.log(
   longestCommonPrefix(["user", "userInfo", "usecase", "usedItem", "use"])
 );
