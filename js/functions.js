@@ -380,6 +380,15 @@ console.log(convertObjectKeysFromSnakeToCamel({ user_info: "Gaurav", user_age: 2
 // //? Methods or reuseable functions or methods mized topics?
 
 // Q: write a function to suffle an array?
+function shuffleArray(arr){
+  //basically hame random index par values ko assign krna hai 
+  for(let i = 0; i < arr.length; i++){
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    [arr[i], arr[randomIndex]] = [arr[randomIndex], arr[i]];
+  }
+  return arr;
+};
+console.log(shuffleArray([20,30,40,50,60]))
 
 // Q: write a function to provide random game board based on rows and cols?
 
@@ -399,6 +408,7 @@ console.log(convertObjectKeysFromSnakeToCamel({ user_info: "Gaurav", user_age: 2
 
 // Q: write a function to find GCD?
 
+
 // Q:Simple Sum Function:
 // Write a function that takes two numbers as arguments and returns their sum.
 
@@ -407,6 +417,9 @@ console.log(convertObjectKeysFromSnakeToCamel({ user_info: "Gaurav", user_age: 2
 
 // Q:mmediately Invoked Function Expression (IIFE):
 // Write an IIFE that computes and logs the message "Hello, World!".
+(function(){
+  console.log("Hello, World!");
+})();
 
 // Q:Recursive Deep Clone (Basic):
 // Write a function to perform a deep clone of a simple object that may contain nested objects (focus on non-circular references).
