@@ -339,13 +339,25 @@ function Throttle(fn, delay) {
   };
 };
 
+
 // Q:Convert Object Keys from snake_case to camelCase
 // Provide a function that converts all keys in an object from snake_case to camelCase .
-function convertObjectKeysFromSnakeToCamel(obj){
-  if(obj.keys.length === 0){
-    return;
-  };
+function convertObjectKeysFromSnakeToCamel(obj) {
+  if (Object.keys(obj).length === 0) {
+    return {};
+  }
+
+  const res = {};
+  for (const key in obj) {
+    const camelKey = key.replace(/_([a-z])/g, (_, char) => char.toUpperCase());
+    res[camelKey] = obj[key];
+  }
+
+  return res;
 }
+
+console.log(convertObjectKeysFromSnakeToCamel({ user_info: "Gaurav", user_age: 25 }));
+// Q:Implement a Simple Event Emitter
 
 // Q:Memoization for Recursive Functions
 // Design a memoization function that caches results for recursive functions using object keys.
