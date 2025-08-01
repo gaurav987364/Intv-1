@@ -89,16 +89,15 @@ console.log(sortString("gaurav")); //upper chracter mattrens while sorting;
 // Given a sentence, find the length of its longest word;
 
 // "hey my name is vikas and i am a react js.".split(" ").map(word => Number(word.length)).sort((a,b)=> a-b).slice(-1)
-function lengthOfLonegestWord(str) {
-  const cleanStr = str.replace(/[^a-zA-Z0-9]/gi, "").toLowerCase();
-  const lengthOfWord = cleanStr
-    .split(" ")
-    .reduce((max, word) => Math.max(max, word.length), 0);
-  return lengthOfWord || "Not found!";
+function lengOfLongWord(str){
+    // Keep spaces, remove other non-alphanumeric characters
+    const cleanStr = str?.replace(/[^a-z0-9A-Z ]/gi, "").toLowerCase();
+    const strArr = cleanStr?.split(" ").filter(Boolean); // remove empty strings
+    const res = strArr?.map(item => item.length).reduce((curr, accm) => Math.max(curr, accm));
+    return res || "Not found!";
 }
-console.log(
-  lengthOfLonegestWord("hey my name is vikas and i am a react js developer.")
-);
+
+console.log(lengOfLongWord("hey my name is gaurab 9899")); // Output: 6
 
 // Q:Count Character Frequency
 // Create a function to count the frequency of each character in a string.
