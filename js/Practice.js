@@ -11,3 +11,18 @@ function capitalizeFirstLetter(str){
     return capitalizeArray.join(' ');
 };
 
+//bubble sort (sort a string without using sort)
+function bubbleSort(str){
+    const stringArr = str?.split('');
+
+    for (let i = 0; i < stringArr.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            if(strArray[j] > strArray[j+1]){
+                let temp = stringArr[j]
+                strArray[j] = strArray[j+1];
+                strArray[j+1] = temp;
+            }
+        }
+    }
+    return strArray?.join("");
+}
