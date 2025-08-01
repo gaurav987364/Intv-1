@@ -26,3 +26,10 @@ function bubbleSort(str){
     }
     return strArray?.join("");
 }
+
+function lengOfLongWord(str){
+    const cleanStr = str?.replace(/[^a-z0-9A-Z]/gi,"").toLowerCase();
+    const strArr = cleanStr?.split(" ");   //["hey", "gaurav"];
+    const res = strArr?.reduce((curr,accm)=> Math.max(curr,accm.length),0);
+    return res || "Not found!"
+}; console.log(lengOfLongWord("hey my name is gaurab 9899"))
