@@ -28,8 +28,11 @@ function bubbleSort(str){
 }
 
 function lengOfLongWord(str){
-    const cleanStr = str?.replace(/[^a-z0-9A-Z]/gi,"").toLowerCase();
-    const strArr = cleanStr?.split(" ");   //["hey", "gaurav"];
-    const res = strArr?.reduce((curr,accm)=> Math.max(curr,accm.length),0);
-    return res || "Not found!"
-}; console.log(lengOfLongWord("hey my name is gaurab 9899"))
+    // Keep spaces, remove other non-alphanumeric characters
+    const cleanStr = str?.replace(/[^a-z0-9A-Z ]/gi, "").toLowerCase();
+    const strArr = cleanStr?.split(" ").filter(Boolean); // remove empty strings
+    const res = strArr?.map(item => item.length).reduce((curr, accm) => Math.max(curr, accm));
+    return res || "Not found!";
+}
+
+console.log(lengOfLongWord("hey my name is gaurab 9899")); // Output: 6
