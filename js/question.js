@@ -269,7 +269,7 @@ cat.speak(); // Meow!
 
 
 // Observer Pattern
-//used in real time state chamges senarios;
+//used in real time state changes senarios;
 // => Observer pattren allows a subject to notify multiple observers about state changes;Its ideal for handleing Ui updates and real time responses;
 
 //eg: => chat Notify system :-
@@ -349,3 +349,59 @@ paymentProcessor.process(200); // Processing Stripe payment of $200
 // - Strategy: Makes algorithms interchangeable dynamically.
 
 
+
+// Event Emitter :-⭐⭐interview question
+
+// basically there is a term gang of 4 (they are 4 peoples who wrote book of 23 design pattrens)
+// there are basically 3 types of pattrens:-
+// 1. Creational pattrens:-
+// 2. Structural pattrens:-
+// 3. Behavioral pattrens:-
+
+// and then have more sub-types of them (so event emmiter is comes under ovserver pattren which is type of behavioral pattren)
+
+
+class EventEmitter {
+  constructor() {
+    this.events = {};
+  }
+
+  on(event, listener) {
+    (this.events[event] ||= []).push(listener);
+  }
+
+  off(event, listener) {
+    if (!this.events[event]) return;
+    this.events[event] = this.events[event].filter(l => l !== listener);
+  }
+
+  emit(event, ...args) {
+    (this.events[event] || []).forEach(listener => listener(...args));
+  }
+
+  once(event, listener) {
+    const wrapper = (...args) => {
+      listener(...args);
+      this.off(event, wrapper);
+    };
+    this.on(event, wrapper);
+  }
+}
+// Usage example
+const emitter = new EventEmitter();
+emitter.on('data', data => console.log(`Data received: ${data}`));
+emitter.emit('data', 'Hello, World!'); // Data received: Hello, World!
+emitter.once('onceEvent', () => console.log('This will only run once.'));
+emitter.emit('onceEvent'); // This will only run once.
+emitter.emit('onceEvent'); // No output, as the listener has been removed after the first call.
+//? Summary:
+// - EventEmitter allows you to create custom events and manage listeners.
+// - It supports adding, removing, and emitting events.
+// - The `once` method allows you to listen for an event only once before it is automatically removed.
+// - Useful for building event-driven architectures, like in Node.js or browser applications.
+//? Summary of the code:
+// - The `EventEmitter` class manages events and listeners.
+// - The `on` method adds a listener for a specific event.
+// - The `off` method removes a specific listener for an event.
+// - The `emit` method triggers an event, calling all registered listeners for that event.
+// - The `once` method adds a listener that is automatically removed after it is called once.
