@@ -405,11 +405,14 @@ function otp(length=6){
   }
   return otp;
 };
-console.log(otp());
+// console.log(otp());
 
 // Q: write a function to check if a number is prime?
 
 // Q: write a function to calculate the factorial of a number?
+function factorial(n){
+  return n*factorial(n-1);
+};
 
 // Q: write a function to convert a number to Roman numeral?
 
