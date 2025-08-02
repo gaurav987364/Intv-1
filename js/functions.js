@@ -396,6 +396,16 @@ console.log(shuffleArray([20,30,40,50,60]))
 // Q: write a function to generate UUID's ?
 
 // Q: write a function that print an 6 digits number (OTP) always?
+function otp(length=6){
+  let otp = "";
+  const digits = "0123456789";
+
+  for (let i = 0; i < length; i++) {
+    otp+=digits[Math.floor(Math.random() * digits.length)];
+  }
+  return otp;
+};
+console.log(otp());
 
 // Q: write a function to check if a number is prime?
 
