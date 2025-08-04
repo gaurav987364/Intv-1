@@ -159,7 +159,7 @@ console.log(Detect("1,2,3"))//f
 function splitArray(str){
     return Array.from(str); //["a", "b", "c"]  or .of("str")=["str"]
 };
-console.log(splitArray("abcdefgh"))
+console.log(splitArray("abcdefgh"));
 
 
 
