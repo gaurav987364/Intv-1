@@ -81,7 +81,7 @@ function sumOfArray(arr){
 
     for (let i = 0; i < arr.length; i++) {
         result += arr[i];
-    }
+    };
     return result;  
 
     //? for find average of array; we simpley result/arr.length;
