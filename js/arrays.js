@@ -218,7 +218,7 @@ function rotateArrayByN(arr,n){
     //if n is greater than array length eg: n=7 len=5 so=> 7%5=>2;
     n = n % length;
 
-    //if n is negative convert it to positive roattaion
+    //if n is negative convert it to positive rotation
     if(n<0){
         n = length + n
     }
