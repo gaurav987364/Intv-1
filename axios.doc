@@ -60,7 +60,7 @@ async ()=>{
         console.log(error.response.status)
         console.log(error.response.data)
     }
-}
+};
 
 
 //professional way;
