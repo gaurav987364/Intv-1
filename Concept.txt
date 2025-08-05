@@ -228,7 +228,7 @@ function Throttle(fn,delay){
 
 
 
-Advanced Data Structures and Algorithms
+Advanced Data Structures and Algorithms:-
 
 Linked Lists, hashmaps = {} , Stacks = [], and Queues in JavaScript
 Hash Tables
