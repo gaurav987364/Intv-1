@@ -327,7 +327,38 @@ console.log({...items});
 
 // const MyCard:React.Fc = <T extends Props<T>>({...all props:T})=>{}
 
-    
+
 
 // Proxy in js:-
 // A Proxy is an object that wraps another object and intercepts operations performed on it—like reading, writing, or function calls. It lets you customize behavior for fundamental operations.
+
+const user = {
+  name: "Gaurav",
+  age: 23
+};
+
+const handler = {
+  get(target, prop) {
+    console.log(`Accessing ${prop}`);
+    return target[prop];
+  },
+  set(target, prop, value) {
+    if (prop === "age" && typeof value !== "number") {
+      throw new TypeError("Age must be a number");
+    }
+    console.log(`Setting ${prop} to ${value}`);
+    target[prop] = value;
+    return true;
+  }
+};
+
+const proxyUser = new Proxy(user, handler);
+
+// Accessing properties
+console.log(proxyUser.name); // Logs: Accessing name → Gaurav
+
+// Setting properties
+proxyUser.age = 25;          // Logs: Setting age to 25
+
+// Invalid set
+proxyUser.age = "twenty";    // Throws: TypeError
