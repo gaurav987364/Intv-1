@@ -326,3 +326,8 @@ console.log({...items});
 // }
 
 // const MyCard:React.Fc = <T extends Props<T>>({...all props:T})=>{}
+
+
+
+
+// Proxy in js:-
