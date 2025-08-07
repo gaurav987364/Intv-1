@@ -331,3 +331,4 @@ console.log({...items});
 
 
 // Proxy in js:-
+// A Proxy is an object that wraps another object and intercepts operations performed on it—like reading, writing, or function calls. It lets you customize behavior for fundamental operations.
