@@ -173,6 +173,19 @@ function reverseEachWord(str) {
 }
 console.log(reverseEachWord("hey my name is gaurav"));
 
+
+//Q: Reverse the order of the sentence?
+function ReverseOrder(str){
+  const array = str.split(" ");
+  let res = "";
+  for (let i = array.length -1; i>=0 ; i--) {
+    res += array[i] + " "
+  }
+  return res.trim();
+}
+console.log(ReverseOrder("hello world"));
+
+
 // Q:Find the First Recurring Character in a String
 // Determine the first character in a string that appears more than once
 function firstReOcurringCharter(str) {
