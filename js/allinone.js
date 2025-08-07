@@ -325,4 +325,4 @@ console.log({...items});
 //  sex:string;
 // }
 
-// const MyCard:React.Fc = <T extends Props<T>>({...all props:T})=>{};
+// const MyCard:React.Fc = <T extends Props<T>>({...all props:T})=>{}
