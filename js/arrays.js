@@ -241,7 +241,7 @@ function checkDuplicates(arr){
     const set = new Set(arr);
     return set.size !== arr.length;
 };
-console.log(checkDuplicates([1,2,3,4,5]))
+console.log(checkDuplicates([1,2,3,4,5]));
 console.log(checkDuplicates([1,1,2,2,3,4,5]))
 
 
