@@ -291,7 +291,7 @@ function shuffled(arr) {
     }
     return arr;
 }
-//   console.log(shuffled([1, 2, 3, 4, 5, 6, 7, 8]));
+console.log(shuffled([1, 2, 3, 4, 5, 6, 7, 8]));
 
 
 
