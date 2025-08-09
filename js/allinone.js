@@ -362,3 +362,15 @@ proxyUser.age = 25;          // Logs: Setting age to 25
 
 // Invalid set
 proxyUser.age = "twenty";    // Throws: TypeError
+
+
+
+//! web components:-
+// ye sab bade bade tech giants use krte hai ye kuch componentes hai jo alag alag chijo me use hote hai, har frameowork, library and html k sath ham inhe use kar skte hai ok
+
+// Custom elements are a powerful feature of web components that allow you to create new HTML elements with custom behavior. 
+// They are defined using the customElements.define() method, which takes two arguments: the name of the custom element and a constructor function that defines its behavior.
+
+
+//Rule no.1 when we make our custom tag or web components ham usme name define sirf - se kr skte hai kyuki browser diiferenciate krega inbuild bina - ke bane hote hai ok
+//Rule no.2 we can not use any html tag name or any build in tag name;
