@@ -374,3 +374,5 @@ proxyUser.age = "twenty";    // Throws: TypeError
 
 //Rule no.1 when we make our custom tag or web components ham usme name define sirf - se kr skte hai kyuki browser diiferenciate krega inbuild bina - ke bane hote hai ok
 //Rule no.2 we can not use any html tag name or any build in tag name;
+
+// Tip:-? ham class ke anadar sirf constructor me hee console kar skte hai ok
