@@ -641,7 +641,7 @@ console.log(twoSum([3,4,5,6],7));
 // Each product is guaranteed to fit in a 32-bit integer.
 // Follow-up: Could you solve it in O(n)
 // O(n) time without using the division operation?
-Input: nums = [1,2,4,6]
+Input: nums = [1,2,4,6];
 
 Output: [48,24,12,8];
 
