@@ -376,3 +376,30 @@ proxyUser.age = "twenty";    // Throws: TypeError
 //Rule no.2 we can not use any html tag name or any build in tag name;
 
 // Tip:-? ham class ke anadar sirf constructor me hee console kar skte hai ok
+
+// Eg:- Making a simple web component of button 
+class MyButton extends HTMLElement{
+    constructor(){
+        super();
+        console.log("My button is created",this);
+    }
+
+    // add on click
+    handleClick = ()=>{
+      alert("Hey this is my button click event");
+    };
+
+    // on mounting in class just like react but
+    connectedCallback(){
+      this.querySelector('button').addEventListener("click", this.handleClick);
+    }
+
+    //did component mount (agar haa unmount hua to clean up event phase)
+    disconnectedCallback(){
+      this.querySelector('button').removeEventListener("click", this.handleClick);
+    }
+
+}
+
+// add tag to html or browser
+customElements.define("my-button", MyButton);
