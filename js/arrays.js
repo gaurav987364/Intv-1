@@ -643,7 +643,7 @@ console.log(twoSum([3,4,5,6],7));
 // O(n) time without using the division operation?
 Input: nums = [1,2,4,6]
 
-Output: [48,24,12,8]
+Output: [48,24,12,8];
 
 
 // Q:Find the Kth Smallest Number in a Sorted Matrix
