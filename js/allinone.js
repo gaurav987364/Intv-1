@@ -382,6 +382,9 @@ class MyButton extends HTMLElement{
     constructor(){
         super();
         console.log("My button is created",this);
+        this.innerHTML = `
+        <span>Click me</span>
+        `
     }
 
     // add on click
