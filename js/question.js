@@ -405,3 +405,11 @@ emitter.emit('onceEvent'); // No output, as the listener has been removed after 
 // - The `off` method removes a specific listener for an event.
 // - The `emit` method triggers an event, calling all registered listeners for that event.
 // - The `once` method adds a listener that is automatically removed after it is called once.
+
+
+// Q: what is the output?
+const users = {
+  gaurav:{},
+  yash:{},
+  rahul:{}
+};
