@@ -412,60 +412,60 @@ customElements.define("my-button", MyButton);
 // Counter web component:-
 
 //template (tag)
-// const template = document.createElement("template");
-// template.innerHTML = `
-//   <div>
-//     <button id="decrement">-</button>
-//     <span>Count: <span id="count">0</span></span>
-//     <button id="increment">+</button>
-//   </div>
-// `
-// class Counter extends HTMLElement {
-//   constructor(){
-//     super();
+const template = document.createElement("template");
+template.innerHTML = `
+  <div>
+    <button id="decrement">-</button>
+    <span>Count: <span id="count">0</span></span>
+    <button id="increment">+</button>
+  </div>
+`
+class Counter extends HTMLElement {
+  constructor(){
+    super();
 
-//     this.count = 0;
-//     //add template to shadow dom ok not directly
-//     const shadowRoot = this.attachShadow({mode:"open"});
-//     shadowRoot.appendChild(template.content.cloneNode(true)); // doing append child because template is object not a string
-//   }
+    this.count = 0;
+    //add template to shadow dom ok not directly
+    const shadowRoot = this.attachShadow({mode:"open"});
+    shadowRoot.appendChild(template.content.cloneNode(true)); // doing append child because template is object not a string
+  }
 
 
-//   handleIncrease = ()=>{
-//     const count = this.shadowRoot.getElementById("count");
-//     count.textContent = Number(count.textContent) + 1;
-//   }
+  handleIncrease = ()=>{
+    const count = this.shadowRoot.getElementById("count");
+    count.textContent = Number(count.textContent) + 1;
+  }
 
-//   handleDecrease = ()=>{
-//     const count = this.shadowRoot.getElementById("count");
-//     count.textContent = Number(count.textContent) - 1;
-//   }
+  handleDecrease = ()=>{
+    const count = this.shadowRoot.getElementById("count");
+    count.textContent = Number(count.textContent) - 1;
+  }
 
-//   // update Ui
-//   updateUi = ()=>{
-//     this.shadowRoot.getElementById("count").textContent = this.getAttribute("count");
-//     console.log(this.getAttribute("count"));
-//   }
-//   // on mounting in class just like react but
-//   connectedCallback(){
-//     this.shadowRoot.getElementById("increment").addEventListener("click", this.handleIncrease);
-//     this.shadowRoot.getElementById("decrement").addEventListener("click", this.handleDecrease);
-//   }
+  // update Ui
+  updateUi = ()=>{
+    this.shadowRoot.getElementById("count").textContent = this.getAttribute("count");
+    console.log(this.getAttribute("count"));
+  }
+  // on mounting in class just like react but
+  connectedCallback(){
+    this.shadowRoot.getElementById("increment").addEventListener("click", this.handleIncrease);
+    this.shadowRoot.getElementById("decrement").addEventListener("click", this.handleDecrease);
+  }
 
-//   //did component mount (agar haa unmount hua to clean up event phase)
-//   disconnectedCallback(){
-//     this.shadowRoot.getElementById("increment").removeEventListener("click", this.handleIncrease);
-//     this.shadowRoot.getElementById("decrement").removeEventListener("click", this.handleDecrease);
-//   }
+  //did component mount (agar haa unmount hua to clean up event phase)
+  disconnectedCallback(){
+    this.shadowRoot.getElementById("increment").removeEventListener("click", this.handleIncrease);
+    this.shadowRoot.getElementById("decrement").removeEventListener("click", this.handleDecrease);
+  }
 
-//   // attribute change
-//   attributeChangedCallback(name, oldValue, newValue){
-//     console.log(name, oldValue, newValue);
-//   }
+  // attribute change
+  attributeChangedCallback(name, oldValue, newValue){
+    console.log(name, oldValue, newValue);
+  }
 
-// }
+}
 
-// customElements.define('my-counter', Counter);
+customElements.define('my-counter', Counter);
 
 
 
