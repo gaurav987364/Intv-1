@@ -413,3 +413,11 @@ const users = {
   yash:{},
   rahul:{}
 };
+
+let rahul = 'rahul';
+console.log(users[rahul]); // {}
+if(users[rahul]){
+  console.log('rahul exists');
+} else {
+  console.log('rahul does not exist');
+}
