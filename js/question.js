@@ -415,9 +415,10 @@ const users = {
 };
 
 let rahul = 'rahul';
+// ab
 console.log(users[rahul]); // {}
 if(users[rahul]){
-  console.log('rahul exists');
+  console.log('rahul exists');  //✅ comes because if block me vo only key ko nahi but object ke prototype pe bhi check krega usko isliye true
 } else {
   console.log('rahul does not exist');
 }
