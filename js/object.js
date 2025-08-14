@@ -56,7 +56,7 @@ JSON.parse(JSON.stringify(obj));  // now it is called deep cloning; But it has m
 // Q:Find Intersection of Two Arrays of Objects?
 // Given two arrays, return the common elements based on a specified property key.
 
-// Q:Check if an Object is a Plain Object
+// Q:Check if an Object is a Plain Object?
 // Write a function to verify if a given value is a plain object (not an array, function, etc.).
 
 // Q:Deep Merge Two Objects
