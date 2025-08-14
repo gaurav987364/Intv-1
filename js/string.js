@@ -234,7 +234,7 @@ function getPermutations(string) {
   }
   return allCombos;
 }
-console.log(getPermutations("GAURAV")); //720 permutations;
+console.log(getPermutations("GAURAV.")); //720 permutations;
 
 //Q:Merge two sorted string into single str
 // "ACE","BDF" => "ABCDEF";
