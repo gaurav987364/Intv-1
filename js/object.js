@@ -74,7 +74,7 @@ JSON.parse(JSON.stringify(obj));  // now it is called deep cloning; But it has m
 // Q:Flatten Nested Object with Dot-Notation Keys and Unflatten?
 // Write two complementary functions: one to convert a nested object to a flat object with dot-separated keys and one to reverse the process.
 
-// Q:Deep Merge with Conflict Resolution Strategies
+// Q:Deep Merge with Conflict Resolution Strategies?
 // Design a utility that deep merges multiple objects while allowing custom conflict resolution (e.g., overwrite or combine).
 
 // Q:Asynchronous Recursive File Search
