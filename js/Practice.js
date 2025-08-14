@@ -35,4 +35,4 @@ function lengOfLongWord(str){
     return res || "Not found!";
 };
 
-console.log(lengOfLongWord("hey my name is gaurav...")); // Output: 6
+console.log(lengOfLongWord("hey my name is gaurav")); // Output: 6
