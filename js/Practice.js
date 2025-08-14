@@ -25,7 +25,7 @@ function bubbleSort(str){
         }
     }
     return strArray?.join("");
-}
+};
 
 function lengOfLongWord(str){
     // Keep spaces, remove other non-alphanumeric characters
