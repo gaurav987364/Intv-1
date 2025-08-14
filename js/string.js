@@ -406,7 +406,7 @@ function parseQueryString(query) {
   }
 
   return result;
-}
+};
 
 // Helper function to assign values into the result object
 function assignValue(obj, key, value) {
