@@ -259,7 +259,7 @@ function MergeTwoSortedStrings(str1, str2) {
   while (i < str1Arr.length) {
     result += str1[i];
     i++;
-  }
+  };
   while (j < str2Arr.length) {
     result += str2[j];
     j++;
