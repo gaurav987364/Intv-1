@@ -254,7 +254,7 @@ function MergeTwoSortedStrings(str1, str2) {
       result += str2[j];
       j++;
     }
-  }
+  };
 
   while (i < str1Arr.length) {
     result += str1[i];
