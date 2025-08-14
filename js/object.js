@@ -59,7 +59,7 @@ JSON.parse(JSON.stringify(obj));  // now it is called deep cloning; But it has m
 // Q:Check if an Object is a Plain Object?
 // Write a function to verify if a given value is a plain object (not an array, function, etc.).
 
-// Q:Deep Merge Two Objects
+// Q:Deep Merge Two Objects?
 // Write a function that deeply merges two objects, combining their properties recursively.
 
 // Q:Flatten an Object into a Single-Level Object
