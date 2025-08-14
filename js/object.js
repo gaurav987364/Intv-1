@@ -1,8 +1,6 @@
 //** All About objects in Js */
 
 
-
-
 const obj = {
     value: 45
 };
