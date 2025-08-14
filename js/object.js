@@ -65,7 +65,7 @@ JSON.parse(JSON.stringify(obj));  // now it is called deep cloning; But it has m
 // Q:Flatten an Object into a Single-Level Object?
 // Write a recursive function to flatten a nested object into a single-level object with dot-separated keys.
 
-// Q:Deep Comparison of Two Complex Objects
+// Q:Deep Comparison of Two Complex Objects?
 // Develop a function to perform a deep equality check between two objects, covering nested objects and arrays.
 
 // Q:Detect Cycles in an Object Graph
