@@ -285,7 +285,7 @@ function groupAnagrams(arr) {
     }
     //or agar hai to simpley push krdo;word ko
     anagramsGroup[sortedWord].push(word);
-  }
+  };
 
   //return array of values
   return Object.values(anagramsGroup);
