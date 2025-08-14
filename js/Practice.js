@@ -33,6 +33,6 @@ function lengOfLongWord(str){
     const strArr = cleanStr?.split(" ").filter(Boolean); // remove empty strings
     const res = strArr?.map(item => item.length).reduce((curr, accm) => Math.max(curr, accm));
     return res || "Not found!";
-}
+};
 
-console.log(lengOfLongWord("hey my name is gaurav 9899")); // Output: 6
+console.log(lengOfLongWord("hey my name is gaurav")); // Output: 6
