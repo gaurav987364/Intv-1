@@ -71,7 +71,7 @@ JSON.parse(JSON.stringify(obj));  // now it is called deep cloning; But it has m
 // Q:Detect Cycles in an Object Graph?
 // Create a function that detects whether there are cycles in a complex, nested object.
 
-// Q:Flatten Nested Object with Dot-Notation Keys and Unflatten
+// Q:Flatten Nested Object with Dot-Notation Keys and Unflatten?
 // Write two complementary functions: one to convert a nested object to a flat object with dot-separated keys and one to reverse the process.
 
 // Q:Deep Merge with Conflict Resolution Strategies
