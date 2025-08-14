@@ -263,7 +263,7 @@ function MergeTwoSortedStrings(str1, str2) {
   while (j < str2Arr.length) {
     result += str2[j];
     j++;
-  }
+  };
   return result;
 }
 console.log(MergeTwoSortedStrings("ACE", "BDF"));
