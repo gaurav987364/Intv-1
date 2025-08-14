@@ -200,7 +200,7 @@ function firstReOcurringCharter(str) {
   }
   return null;
 }
-console.log(firstReOcurringCharter("chandu ki chachi"));
+console.log(firstReOcurringCharter("chandu ki chachii"));
 
 // Q:Generate All Permutations of a Given String;;
 // Write a function that returns all possible permutations of a string’s characters.
