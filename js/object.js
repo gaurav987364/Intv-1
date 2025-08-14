@@ -62,7 +62,7 @@ JSON.parse(JSON.stringify(obj));  // now it is called deep cloning; But it has m
 // Q:Deep Merge Two Objects?
 // Write a function that deeply merges two objects, combining their properties recursively.
 
-// Q:Flatten an Object into a Single-Level Object
+// Q:Flatten an Object into a Single-Level Object?
 // Write a recursive function to flatten a nested object into a single-level object with dot-separated keys.
 
 // Q:Deep Comparison of Two Complex Objects
