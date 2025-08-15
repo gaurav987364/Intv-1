@@ -49,6 +49,10 @@ function isEmpty(obj){
 
 // Q:Extract Object Keys
 // Write a function that returns all keys from an object as an array.
+function extractKeys(obj){
+    return Object.keys(obj);
+}
+
 
 // Q:Deep Clone an Object
 // Build a function that performs a deep clone of an object (without circular references).
