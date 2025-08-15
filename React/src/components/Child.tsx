@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const Child = ({name,age,render}:{name:string,age:number,render:()=>any}) => {
     const happiness = "🤣🤣🤣🤣";
