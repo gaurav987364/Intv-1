@@ -4,6 +4,7 @@
 // import Child from "./components/Child";
 // import SearchComponent from "./components/Filter";
 
+import SearchComponent from "./components/Filter";
 import User from "./components/User";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
   return (
     <>
     <div className=" w-full min-h-screen p-5 bg-slate-950 text-neutral-50 flex justify-center">
+      <SearchComponent/>
       <User/>
     </div>
     </>
