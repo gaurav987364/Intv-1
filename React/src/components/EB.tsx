@@ -4,7 +4,7 @@ const EB = ({children}:{children:React.ReactNode}) => {
     const [hasError,setHasError] = useState<boolean>(false);
 
     useEffect(()=>{
-        const handelError = (error:unknown)=>{
+        const handelError = ()=>{
             setHasError(true);
         };
 
