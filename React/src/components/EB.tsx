@@ -28,6 +28,7 @@ const EB = ({children}:{children:React.ReactNode}) => {
 export default EB;
 
 
+//Error Boundary
 
 // class EBD extends React.Component{
 //     constructor(props){
