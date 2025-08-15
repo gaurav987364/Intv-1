@@ -35,6 +35,10 @@ console.log(cities);
 
 // Q:Shallow Copy of an Object
 // Create a function that makes a shallow copy of an object.
+function shallowCopy(obj){
+    return {...obj};
+}
+
 
 // Q:Check if Object is Empty
 // Write a function to determine if a given object has no properties.
