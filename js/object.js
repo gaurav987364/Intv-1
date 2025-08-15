@@ -42,6 +42,10 @@ function shallowCopy(obj){
 
 // Q:Check if Object is Empty
 // Write a function to determine if a given object has no properties.
+function isEmpty(obj){
+    return Object.keys(obj).length === 0;
+}
+
 
 // Q:Extract Object Keys
 // Write a function that returns all keys from an object as an array.
