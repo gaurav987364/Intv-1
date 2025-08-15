@@ -11,4 +11,4 @@ const Child = ({name,age,render}:{name:string,age:number,render:()=>any}) => {
   )
 }
 
-export default Child
+export default Child;
