@@ -377,7 +377,7 @@ proxyUser.age = "twenty";    // Throws: TypeError
 
 // Tip:-? ham class ke anadar sirf constructor me hee console kar skte hai ok
 
-// Eg:- Making a simple web component of button 
+// Eg:-> Making a simple web component of button 
 class MyButton extends HTMLElement{
     constructor(){
         super();
