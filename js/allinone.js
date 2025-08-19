@@ -389,7 +389,7 @@ class MyButton extends HTMLElement{
 
     // add on click
     handleClick = ()=>{
-      alert("Hey this is my button click event");
+      alert("Hey this is my button click event...");
     };
 
     // on mounting in class just like react but
