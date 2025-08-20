@@ -521,7 +521,7 @@ function findMissingNumber(arr){
     let actualSum = arr.reduce((acc,curr)=>acc+curr,0);
     return Math.floor(expectedSum - actualSum);
 };
-console.log(findMissingNumber([3,0,1]));
+console.log(findMissingNumber([3,0,1,5,7,0]));
 
 
 // Q:Find the Kth Largest Number in an Array
