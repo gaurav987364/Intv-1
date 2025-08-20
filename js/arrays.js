@@ -512,7 +512,7 @@ console.log(binarySearchInRotatedArray([15,18,20,2,8,10,12],10));//5
 // [ \frac{3 \times (3 + 1)}{2} = \frac{12}{2} = 6 ]
 // - Calculate actual sum:
 // [ 3 + 0 + 1 = 4 ]
-// - The missing number is:
+// - The missing number is:-
 // [ 6 - 4 = 2 ]
 
 function findMissingNumber(arr){
