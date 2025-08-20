@@ -527,7 +527,7 @@ console.log(findMissingNumber([3,0,1]));
 // Q:Find the Kth Largest Number in an Array
 //  Given an array of integers, find the kth largest number.
 // solution:-
-//? 1. Sorting Method:
+//? 1. Sorting Method:-
 function findKthLargest(arr,k){
    //sort the arr in decending order
    const sortedArray = arr.sort((a,b)=>b-a);
