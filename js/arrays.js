@@ -508,7 +508,7 @@ console.log(binarySearchInRotatedArray([15,18,20,2,8,10,12],10));//5
 // Example with [3, 0, 1]:
 // - The array length ( n = 3 ) because there are 3 numbers present.
 // - The complete range should be 0 to 3 (which is 4 numbers).
-// - Calculate expected sum:
+// - Calculate expected sum:-
 // [ \frac{3 \times (3 + 1)}{2} = \frac{12}{2} = 6 ]
 // - Calculate actual sum:
 // [ 3 + 0 + 1 = 4 ]
