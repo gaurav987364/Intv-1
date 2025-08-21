@@ -530,9 +530,6 @@ console.log(longestPalindromeicSubstring("xyzracecarpqr")); //racecar
 
 
 
-
-
-
 // Wildcard Pattern Matching 
 // Write a function that implements wildcard pattern matching with support for '?' and '*'. The '?' matches any single character, and '*' matches any sequence of characters (including the empty sequence).
 
