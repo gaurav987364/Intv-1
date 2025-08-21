@@ -610,4 +610,4 @@ function convert(str){
     return {[key]:obj}
   });
 };
-console.log(convert("a.b.c.d.e.f"));
+console.log(convert("a.b.c.d.e.f."));
