@@ -413,7 +413,7 @@ function assignValue(obj, key, value) {
   const keys = key.split(/[\[\]]+/).filter(Boolean); // Split nested keys, e.g., 'user[name]' -> ['user', 'name']
 
   let current = obj;
-  for (let i = 0; i < keys.length - 1; i++) {
+  for (let i = 0; i < keys?.length - 1; i++) {
     const k = keys[i];
     if (!current[k]) {
       current[k] = isNaN(keys[i + 1]) ? {} : []; // Check if the next key is numeric, suggesting an array
