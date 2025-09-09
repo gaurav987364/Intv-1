@@ -121,7 +121,7 @@ const eg = {
 function sayHi(gender, age) {
   console.log(this.name + gender + age + " says hi to you.");
 }
-const newFn = Function.prototype.myBind(eg, "Male");
+const newFn = Function.prototype.myBind(eg, "Male...");
 const res = newFn("30");
 
 //Polyfill for Promise, Promise.all
