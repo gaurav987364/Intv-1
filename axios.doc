@@ -35,7 +35,7 @@ Axiox is better than fetch due to following reasons:-(Basics)
 
 1. easy and cleaner syntax,
 2. better error handling,
-3. mainly automatically convert data to json
+3. mainly automatically convert data to json,
 
 //normal mode
 async ()=>{
