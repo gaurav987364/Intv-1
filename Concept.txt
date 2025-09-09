@@ -139,7 +139,7 @@ javascript.greet(); // JavaScript Roadmap - Learn JavaScript
 
 
 
-ES6 Classes:
+ES6 Classes:-
 Constructors, methods, 
 inheritance =>Inheritance is a way to create a new Class from an existing Class. The new Class inherits all the properties and methods from the existing Class. The new Class is called the child Class, and the existing Class is called the parent Class.
 (using keyword extends ok)
