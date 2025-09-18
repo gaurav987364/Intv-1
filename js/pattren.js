@@ -16,7 +16,7 @@ function printTraiangle(n){
         // "*".repeat(5) ***** ok
     }
 };
-console.log(printTraiangle(10))
+console.log(printTraiangle(10));
 
 
 
