@@ -43,7 +43,7 @@ function printFloyd(rows){
         console.log(row.trim());
     }
 };
-console.log(printFloyd(5))
+console.log(printFloyd(5));
 
 
 
