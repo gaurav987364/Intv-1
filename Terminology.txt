@@ -3,7 +3,7 @@ LCM,
 MODE,
 Median, 
 radius, 
-circumfrence, ;
+circumfrence, 
 prime numbers, 
 arbitrary num/sum, 
 number system (binary , decimal)
