@@ -6,7 +6,7 @@ radius,
 circumfrence, 
 prime numbers, 
 arbitrary num/sum, 
-number system (binary , decimal)
+number system (binary , decimal),
 factorials,
 
 Palindrome => same from the start as from the back; eg:- racecar;
