@@ -4,7 +4,7 @@
 
 // Q:Remove Duplicates from an Array
 // Given an array, return a new array with duplicates removed.
-//? ans=> we are solving this question by multiple ways like using Set(), for of loop, for loop, etc;
+//? ans=> we are solving this question by multiple ways like using Set(), for of loop, for loop, etc
 function removeDuplicates(arr){
     let result = [];
     //1st soluton of usning Set()
