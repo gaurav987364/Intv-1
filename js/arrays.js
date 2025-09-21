@@ -1,5 +1,5 @@
 //** All About Arrays in Js 
-//![hame time complexity ka dhayn rakha kr sab question krne hai]
+//![hame time complexity ka dhayn rakh kr sab question krne hai]
 
 
 // Q:Remove Duplicates from an Array
