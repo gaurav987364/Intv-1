@@ -24,7 +24,7 @@ console.log(removeDuplicates([1,2,3,3,3,5,5,6,6]));
 
 
 
-// Q:Return the array of only duplicates;
+// Q:Return the array of only duplicates?
 // like [1,2,3,3,4,4,5,6,7] => [3,3,4,4] ans;
 function returnOnlyDuplicates(arr){
 
