@@ -150,9 +150,9 @@ function Detect(arr){
     return Array.isArray(arr) ? true : false;
 };
 console.log(Detect([1,2,3])) //true
-console.log(Detect({name:"Gs", age:22})) //f
-console.log(Detect((1,2,3)))//f
-console.log(Detect("1,2,3"))//f
+console.log(Detect({name:"Gs", age:22})) //false
+console.log(Detect((1,2,3)))//false
+console.log(Detect("1,2,3"))//false
 
 // Q:Convert String to Array
 // Write a function that splits a string into an array of words.
