@@ -121,7 +121,7 @@ function secondLargestNumber(arr) {
         }
     }
 
-    // Return second largest (if available)
+    // Return second largest (if available);
     return max2 === -Infinity ? null : max2;
 };
 // Test the function
