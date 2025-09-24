@@ -130,7 +130,7 @@ console.log(secondLargestNumber([30, 30, 40])); // Output: 30
 console.log(secondLargestNumber([1, 4, 6, 2, 0])); // Output: 4
 
 
-//Q: Count the frequency of each charater in the array also return the sorted array of frequency count;
+// Q: Count the frequency of each charater in the array also return the sorted array of frequency count;
 // ["a", "b", "b", "c", "c"] => ["a":1, "b":2, "c":2]
 function countFrequencyNSort(arr){
     let frequency = {};
