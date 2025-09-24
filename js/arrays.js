@@ -142,7 +142,7 @@ function countFrequencyNSort(arr){
     const sortedFrequency = Object.entries(frequency).sort((a,b)=> b[1]-a[1]);
     return sortedFrequency.flat(Infinity);
 };
-console.log(countFrequencyNSort(["x","a", "s","r","r","a","x","a","s"]))
+console.log(countFrequencyNSort(["x","a","s","r","r","a","x","a","s"]))
 
 // Q:Detect Array using Array.isArray()
 // Create a function that checks if a given value is an array.
