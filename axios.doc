@@ -83,7 +83,7 @@ export const getData = ()=>{
 getData(); and you are good to go;
 
 
-//features:->
+//features:->>
 
 1). in fetch we have use AbortController to cancel request but in axios we have built in cancelToken() thing;
 
