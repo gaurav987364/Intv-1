@@ -180,7 +180,7 @@ Expert Level Concepts:->
 
 JavaScript Design Patterns
 
-Singleton Pattern
+Singleton Pattern,
 Module and Revealing Module Pattern
 Factory Pattern
 Observer Pattern (is a one of the part of Behavioural Pattern which is from term gang of 4)
