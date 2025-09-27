@@ -182,7 +182,7 @@ JavaScript Design Patterns
 
 Singleton Pattern,
 Module and Revealing Module Pattern,
-Factory Pattern
+Factory Pattern,
 Observer Pattern (is a one of the part of Behavioural Pattern which is from term gang of 4)
 Strategy Pattern
 Memory Management and Optimization
