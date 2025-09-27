@@ -175,7 +175,7 @@ Event Loop, Call Stack, Microtasks, and Macrotasks
 setTimeout, setInterval, and clearInterval
 Promise.all, Promise.race, Promise.any, and Promise.allSettled;
 
-🚀🚀🚀=>
+🚀🚀🚀
 Expert Level Concepts:->
 
 JavaScript Design Patterns
