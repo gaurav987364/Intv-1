@@ -74,7 +74,7 @@ const api = axios.create({
     credentials:true // for send/recieve cookis with each request;
 });
 
-//now make your functions here like
+=>now make your functions here like
 export const getData = ()=>{
     // we are just return the method from here;
     return api.get("/vidios");
