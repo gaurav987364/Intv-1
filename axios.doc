@@ -71,7 +71,7 @@ const baseUrl = 'https://youtube.com'
 
 const api = axios.create({
     baseUrl,
-    credentials:true // for send/recieve cookis with each request;
+    credentials:true // for send/recieve cookie with each request;
 });
 
 =>now make your functions here like
