@@ -1,4 +1,4 @@
-Traditional way or first legacy way of making api calls are:-
+Traditional way or first legacy way of making api calls are:->
 const xhr = new XMLHttpRequest();
 
 this is deprecated now, but we can use it it has more manual works for us;
