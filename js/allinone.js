@@ -462,7 +462,7 @@ class Counter extends HTMLElement {
   updateUi = ()=>{
     this.shadowRoot.getElementById("count").textContent = this.getAttribute("count");
     console.log(this.getAttribute("count"));
-  }
+  };
   // on mounting in class just like react but
   connectedCallback(){
     const minStr = this.getAttribute('min');
