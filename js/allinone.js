@@ -456,7 +456,7 @@ class Counter extends HTMLElement {
 
     count.textContent = Number(count.textContent) - this.step;
     this.updateUi();
-  }
+  };
 
   // update Ui
   updateUi = ()=>{
