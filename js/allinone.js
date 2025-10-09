@@ -481,7 +481,7 @@ class Counter extends HTMLElement {
 
     this.shadowRoot.getElementById("increment").addEventListener("click", this.handleIncrease);
     this.shadowRoot.getElementById("decrement").addEventListener("click", this.handleDecrease);
-  }
+  };
 
   //did component mount (agar haa unmount hua to clean up event phase)
   disconnectedCallback(){
