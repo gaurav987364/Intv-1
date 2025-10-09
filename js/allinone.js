@@ -445,7 +445,7 @@ class Counter extends HTMLElement {
     }
     count.textContent = Number(count.textContent) + this.step;
     this.updateUi();
-  }
+  };
 
   handleDecrease = ()=>{
     const count = this.shadowRoot.getElementById("count");
