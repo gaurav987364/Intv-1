@@ -434,7 +434,7 @@ class Counter extends HTMLElement {
     //add template to shadow dom ok not directly
     const shadowRoot = this.attachShadow({mode:"open"});
     shadowRoot.appendChild(template.content.cloneNode(true)); // doing append child because template is object not a string
-  }
+  };
 
 
   handleIncrease = ()=>{
