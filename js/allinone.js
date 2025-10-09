@@ -492,7 +492,7 @@ class Counter extends HTMLElement {
   // attribute change
   attributeChangedCallback(name, oldValue, newValue){
     console.log(name, oldValue, newValue);
-  }
+  };
 
 }
 
