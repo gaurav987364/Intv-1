@@ -487,7 +487,7 @@ class Counter extends HTMLElement {
   disconnectedCallback(){
     this.shadowRoot.getElementById("increment").removeEventListener("click", this.handleIncrease);
     this.shadowRoot.getElementById("decrement").removeEventListener("click", this.handleDecrease);
-  }
+  };
 
   // attribute change
   attributeChangedCallback(name, oldValue, newValue){
