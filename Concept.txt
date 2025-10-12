@@ -245,7 +245,7 @@ Regular Expressions (RegEx)
 
 Basics of Regular Expressions
 Common RegEx Patterns and Syntax
-Using RegEx for String Manipulation
+Using RegEx for String Manipulationh
 Advanced Browser APIs,
 
 Fetch API and HTTP Requests
