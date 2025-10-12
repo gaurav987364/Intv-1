@@ -273,7 +273,7 @@ git clone https://github.com/your-username/your-repo.git,
 To check the remote URL for your repo:
 git remote -v
  
-output:-
+output:->
 origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (fetch),
 origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (push)
 
