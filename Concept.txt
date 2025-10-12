@@ -285,7 +285,7 @@ ssh -T git@github.com
 you get:-
 Hi your-username! You've successfully authenticated, but GitHub does not provide shell access.
 
-then we simply do:-
+then we simply do:->
 
 git status
 git add .
