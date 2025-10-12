@@ -274,7 +274,7 @@ To check the remote URL for your repo:
 git remote -v
  
 output:-
-origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (fetch),,
+origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (fetch),
 origin  git@github.com:Mushin-Innovation-Labs/SWASTIKA.git (push)
 
 
