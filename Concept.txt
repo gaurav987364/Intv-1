@@ -178,7 +178,7 @@ Promise.all, Promise.race, Promise.any, and Promise.allSettled;
 🚀🚀🚀
 Expert Level Concepts:->
 
-JavaScript Design Patterns
+JavaScript Design Patterns:-
 
 Singleton Pattern,
 Module and Revealing Module Pattern,
