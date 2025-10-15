@@ -67,7 +67,7 @@ async ()=>{
 
 import axios from "axios";
 
-const baseUrl => `https://youtube.com`
+const baseUrl => `https://youtube.com`;
 
 const api = axios.create({
     baseUrl,
