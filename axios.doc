@@ -31,7 +31,7 @@ YE SAB KRNA PDTA HAI BUT AXIOS ME .CATCH NORMALY WORK KRTA HAI VO ADVANTAGE HAI;
 
 AXIOS IS BASED ON XHR/XMLHttpRequest;✅
 
-Axiox is better than fetch due to following reasons:-(Basics)
+Axiox is better than fetch due to following reasons:->(Basics)
 
 1.) easy and cleaner syntax,
 2.) better error handling,
