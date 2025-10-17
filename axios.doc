@@ -5,7 +5,7 @@ this is deprecated now, but we can use it it has more manual works for us;
 
 
 //fetch comes in 2017 and it is write from ground,not depend over xhr;
-It is browser feature;
+It is browser feature;;
 
 ⭐in fetch it return promise, or ham fir usko json method call krke data lete hai, but ye sirf kind of object or array data ke liye hm .json krte hai agar backend se response text form me aata hai to hm .text methods ko call krege or agar data images/binary form me hai to hm .blob method call krege to get Data;
 
