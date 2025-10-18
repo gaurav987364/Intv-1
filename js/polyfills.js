@@ -30,7 +30,7 @@ Array.prototype.myFilter = function (callback) {
     if (callback(this[i], i, this)) {
       filteredArray.push(this[i]);
     }
-  }
+  };
   return filteredArray;
 };
 
