@@ -19,7 +19,7 @@ now npm test;
 
 //redux async thunk, middlewere
 
-Middleware: It is function which works b/w the dispatch and reducer;
+Middleware:- It is function which works b/w the dispatch and reducer;
 
 // redux-thunk middleware ek middleware hai jo old practices ka part hai mordern me Redux toolkitquery me hm createAsyncthunk ka use krte hai;
 //=> middleware or redux-thunk ko configureStore({}); automatically add krdeta hai aabb;;
