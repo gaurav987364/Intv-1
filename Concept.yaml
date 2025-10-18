@@ -32,7 +32,7 @@ like createAsyncThunk("data/fetch",(data,{rejectionState or many features here a
 
 // after making our function asyncthunk we have to now make our reducers which are differnt from reducers they are extraReducers;
 
-syntax old me ham direclty extraReducers me :{} ese code likhte thee
+syntax old me ham direclty extraReducers me : {} ese code likhte thee
 
 extraReducers : {
   [ourAsyncFunction.pending] : (state)=>{
