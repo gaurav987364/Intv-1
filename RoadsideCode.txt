@@ -41,7 +41,7 @@ poll - widget
 Match similar tiles or memory game
 
 
-React profiler
+React profiler :-()
 client side vs server side renderings
 Web vitals
 code spilitting
