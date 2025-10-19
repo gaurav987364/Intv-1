@@ -29,7 +29,7 @@ useImerptive handle and forward ref
 Rect router interview question
 redux questions 
 
-Machine codeing round
+Machine coding round
 holy grail,
 accordian
 caraousel
