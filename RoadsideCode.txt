@@ -24,7 +24,7 @@ state vs props,
 hooks,
 useeffect polifill,
 useMemo polifill,
-memoizatons,
+memoizations,
 useImerptive handle and forward ref
 Rect router interview question
 redux questions 
