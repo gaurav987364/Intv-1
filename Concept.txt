@@ -100,7 +100,7 @@ element.addEventListener('roadmap-updated', (event) => {
 });
 function handleEvent(event) {
   console.log(event.detail); // { name: 'JavaScript' }
-}
+};
 
 element.addEventListener('roadmap-updated', handleEvent);
 element.removeEventListener('roadmap-updated', handleEvent);
