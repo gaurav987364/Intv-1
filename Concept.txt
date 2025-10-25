@@ -106,7 +106,7 @@ element.addEventListener('roadmap-updated', handleEvent);
 element.removeEventListener('roadmap-updated', handleEvent);
 
 
-Event Loop Basics:
+Event Loop Basics:-
 Advanced Level Concepts
 Object-Oriented Programming (OOP) in JavaScript
 
