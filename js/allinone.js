@@ -30,7 +30,7 @@ console.log(abc() + "ok"); //its give us undefined
 // }
 
 {
-    console.log(z,"hoisted"); // undefined
+    console.log(z,"Hoisted"); // undefined
     var z = 10;
 };
 
