@@ -17,7 +17,7 @@ a=1;
 
 console.log(abc()); // its give us hello
 function abc(){
-    console.log("Hello.");
+    console.log("Hello..");
 }
 
 console.log(abc() + "ok"); //its give us undefined
