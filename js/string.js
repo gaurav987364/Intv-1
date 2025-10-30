@@ -13,7 +13,7 @@ function countVowels(str) {
   let vowel = str.match(/[aeiou]/gi);
   return vowel ? vowel.length : 0;
 }
-console.log(countVowels("gaurav shar"));
+console.log(countVowels("gaurav sharm"));
 
 //Q:Write a function that take string as argument and apply capitalization?✅
 function capitalize(str) {
