@@ -194,7 +194,7 @@ const myCsv = `name,age,sex
 Gaurav,24,Male
 Amit,22,Male`
 console.log(CSV(myCsv));
-//OUTPUT:-
+//OUTPUT:->
 [
   { name: "Raju", age: "25", city: "Haryana" },
   { name: "Amit", age: "30", city: "Delhi" }
