@@ -173,7 +173,7 @@ console.log(splitArray("abcdefgh"));
 //Raju,25,Haryana
 //Amit,30,Delhi`
 
-///?Steps :- first we have two think like quotes me ham input nhi le skte kyuki vo wrong hai to ham sirf `` me input lenge special type string; then first we know string input hai output array hai split/join action me ayge; But hme split \n ke basis p krna hai line breaks ok;
+//?Steps :- first we have two think like quotes me ham input nhi le skte kyuki vo wrong hai to ham sirf `` me input lenge special type string; then first we know string input hai output array hai split/join action me ayge; But hme split \n ke basis p krna hai line breaks ok;
 
 function CSV(str){
     //split based on line
