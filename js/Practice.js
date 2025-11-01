@@ -1,5 +1,5 @@
 function Practice() {
-    console.log('Practice....');
+    console.log('Practice...');
 }
 Practice();
 
