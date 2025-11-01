@@ -12,21 +12,23 @@ function capitalizeFirstLetter(str){
 };
 
 //bubble sort (sort a string without using sort)
+//! Basically we runs the loop over the array from index 0 and laster index then by compare them we swap
 function bubbleSort(str){
-    const stringArr = str?.split('');
-
-    for (let i = 0; i < stringArr.length; i++) {
-        for (let j = 0; j < array.length; j++) {
-            if(strArray[j] > strArray[j+1]){
-                let temp = stringArr[j]
-                strArray[j] = strArray[j+1];
-                strArray[j+1] = temp;
+    const strArr = str?.split('');
+    for(let i=0; i<strArr.length; i++){
+        for(let j=0; j<strArr.length-i-1; j++){
+            if(strArr[j] > strArr[j+1]){
+                let temp = strArr[j];
+                strArr[j] = strArr[j+1];
+                strArr[j+1] = temp;
             }
         }
     }
-    return strArray?.join("");
+    return strArr?.join("");
 };
 
+// usage: 
+console.log(bubbleSort("hello world")) // " dehllloorw"
 function lengOfLongWord(str){
     // Keep spaces, remove other non-alphanumeric characters
     const cleanStr = str?.replace(/[^a-z0-9A-Z ]/gi, "").toLowerCase();
