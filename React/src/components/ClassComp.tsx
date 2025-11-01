@@ -10,7 +10,7 @@ class MyClassComponent extends React.Component{
 
 
     componentDidMount(): void {
-        console.log("Monted")
+        console.log("Mounted")
     }
 
     componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<{}>, snapshot?: any): void {
