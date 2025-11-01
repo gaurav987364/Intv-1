@@ -35,4 +35,5 @@ function lengOfLongWord(str){
     return res || "Not found!";
 };
 
+console.log("hey my name is gaurav"?.split(" ").filter(Boolean))
 console.log(lengOfLongWord("hey my name is gaurav")); // Output: 6
