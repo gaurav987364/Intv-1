@@ -27,7 +27,7 @@ useMemo polifill,
 memoizations,
 useImerptive handle and forward ref
 React router interview question
-redux questions 
+redux questions,
 
 Machine coding round
 holy grail,
