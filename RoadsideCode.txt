@@ -1,4 +1,4 @@
-This files contains all the list of topics that roadside coder frontend interview prepration course have :-
+This files contains all the list of topics that roadside coder frontend interview prepration course have :->
 
 var let const,
 map filter reduce,
