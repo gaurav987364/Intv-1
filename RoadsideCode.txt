@@ -29,7 +29,7 @@ useImerptive handle and forward ref
 React router interview question
 redux questions,
 
-Machine coding round
+Machine coding round:-
 holy grail,
 accordian
 caraousel
