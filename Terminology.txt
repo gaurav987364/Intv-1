@@ -7,7 +7,7 @@ circumfrence,
 prime numbers, 
 arbitrary num/sum, 
 number system (binary , decimal),
-factorials,\
+factorials,
 
 Palindrome => same from the start as from the back; eg:-> racecar;
 
