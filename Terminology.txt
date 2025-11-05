@@ -17,7 +17,7 @@ anagrams => same charcter from each side like eg:- SLUT <==> LUST;
 fibonaci series => a series of numbers like 3rd value is tha sum of first two ok eg:- [0,1,1,2,3,5,8,13,21.....].
 
 armstrong numbers => a number where the sum of the cubes of its digits is equal to the number itself;
-                    eg:-> 153 => 1^3 + 5^3 + 3^3 = 153
+                    eg:-> 153 => 1^3 + 5^3 + 3^3 = 153;
 
 perfect numbers => a number where the sum of its divisors (except itself) is equal to the number itself;
                     eg:-> 6 => 1+2+3 = 6
