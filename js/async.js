@@ -32,7 +32,7 @@ console.log(promise);
 // Q:Basic Error Handling in Promises?df
 // Show how to catch errors in a promise chain.
 
-// Q:Custom Implementation of Promise.all
+// Q:Custom Implementation of Promise.all?
 // Implement your own version of Promise.all that resolves when all the promises resolve.
 
 // Q:Chain Promises with Error Handling
