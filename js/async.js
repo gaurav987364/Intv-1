@@ -29,7 +29,7 @@ console.log(promise);
 // Q:Async/Await Introduction?
 // Implement a simple async function that awaits a promise and returns a value.
 
-// Q:Basic Error Handling in Promises
+// Q:Basic Error Handling in Promises?df
 // Show how to catch errors in a promise chain.
 
 // Q:Custom Implementation of Promise.all
