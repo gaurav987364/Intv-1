@@ -35,7 +35,7 @@ console.log(promise);
 // Q:Custom Implementation of Promise.all?
 // Implement your own version of Promise.all that resolves when all the promises resolve.
 
-// Q:Chain Promises with Error Handling
+// Q:Chain Promises with Error Handling?
 // Write code that chains multiple promises and gracefully handles errors in the chain.
 
 // Q:Asynchronous Pub/Sub System
