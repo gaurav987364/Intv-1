@@ -26,7 +26,7 @@ const promise = new Promise((res,rej)=>{
 });
 console.log(promise);
 
-// Q:Async/Await Introduction
+// Q:Async/Await Introduction?
 // Implement a simple async function that awaits a promise and returns a value.
 
 // Q:Basic Error Handling in Promises
