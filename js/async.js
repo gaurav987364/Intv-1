@@ -38,7 +38,7 @@ console.log(promise);
 // Q:Chain Promises with Error Handling?
 // Write code that chains multiple promises and gracefully handles errors in the chain.
 
-// Q:Asynchronous Pub/Sub System
+// Q:Asynchronous Pub/Sub System?
 // Develop a simple publish/subscribe model using objects that can handle asynchronous notifications
 
 // Q:Async API Call Combination
