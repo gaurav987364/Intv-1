@@ -319,4 +319,4 @@ git add .
 git commit -m "Resolved merge conflict between dashboard_new and master"
 git push origin branch_name
 
-// Mongo DB is created the collection automatically when first loads models and schemas so which is wrong
+// Mongo DB is created the collection automatically when first loads models and schemas so which is wrong so we have to just do that to stop it on our connectDb.js file 
