@@ -9,7 +9,7 @@ npm install --save-dev jest @testing-library/react
 
 in package json:
 "test" : "jest --watchAll",
-"eject" : "react-scripts eject" 
+"eject" : "react-scripts eject",
 
 now npm test;
 
