@@ -153,7 +153,7 @@ class Child extends Parent {
 }
 
 
-Note:- ham supes keyword ka use isliye krte hai taki hm child class me parnet ke features ko call kr sake ok; jese ki child class ya koi  bhi class kisi dusri class ko jab extend krti hai to to ek child class ki trah behave krti hai and jise extend kr rhe hai vo ek parnet ki trh to smjo parnet ke andarr hamare pass constructor hai to uski chijo ko hm child me use kr skte hai just like typescript ka interface extneds something ok to un chijo ko use krne ke liye hme ye sper keyword ka use krna pdta  hai;
+Note:-> ham supes keyword ka use isliye krte hai taki hm child class me parnet ke features ko call kr sake ok; jese ki child class ya koi  bhi class kisi dusri class ko jab extend krti hai to to ek child class ki trah behave krti hai and jise extend kr rhe hai vo ek parnet ki trh to smjo parnet ke andarr hamare pass constructor hai to uski chijo ko hm child me use kr skte hai just like typescript ka interface extneds something ok to un chijo ko use krne ke liye hme ye sper keyword ka use krna pdta  hai;
 
 
 
