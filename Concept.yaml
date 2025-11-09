@@ -7,7 +7,7 @@ Cypress: A powerful end-to-end testing tool that runs tests in a real browser
 npm install --save-dev jest @testing-library/react
 
 
-in package json
+in package json:
 "test" : "jest --watchAll",
 "eject" : "react-scripts eject" 
 
