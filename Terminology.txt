@@ -26,5 +26,5 @@ composite numbers => a number that is not prime;
 
 prime factors => factors of a number that are prime;
 
-fibonaci series => a series of numbers like 3rd value is tha sum of first two ok eg:- [0,1,1,2,3,5,8,13,21...].
+fibonaci series => a series of numbers like 3rd value is tha sum of first two ok eg:- [0,1,1,2,3,5,8,13,21..].
 
