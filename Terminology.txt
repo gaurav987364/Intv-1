@@ -12,7 +12,7 @@ factorials,
 Palindrome => same from the start as from the back. eg:-> racecar;
 
 anagrams => same charcter from each side like eg:- SLUT <==> LUST;
-            means containing the same carcters only..
+            means containing the same carcters only...
 
 fibonaci series => a series of numbers like 3rd value is tha sum of first two ok eg:- [0,1,1,2,3,5,8,13,21]
 
