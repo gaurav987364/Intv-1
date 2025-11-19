@@ -656,4 +656,6 @@ Output: [48,24,12,8];
 //  Implement a binary search tree (BST) with methods for insertion, deletion, and searching.
 
 
-// question on find sub arrays
+// question on find sub arrays length with sum equal to k
+// Q:Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+// A subarray is a contiguous non-empty sequence of elements within an array.
