@@ -656,4 +656,4 @@ Output: [48,24,12,8];
 //  Implement a binary search tree (BST) with methods for insertion, deletion, and searching.
 
 
-// question 
+// question on find sub arrays
