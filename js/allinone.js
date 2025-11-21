@@ -26,7 +26,7 @@ console.log(abc() + "ok"); //its give us undefined
 
 // var xyz; // this is hoisted means function expression is never hoisted
 // var xyz = function(){
-//     console.log("I am a functi");
+//     console.log("I am a funct");
 // }
 
 {
