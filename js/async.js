@@ -9,7 +9,7 @@ postMessage("All About Asynchronous JavaScript");
 //async/await and question on that in every senarios?
 //custom promisetracker function?
 //fetch/axios?
-//api optimiazations
+//api optimiazations?
 
 //custome wait
 const wait = (ms) => new Promise(res => setTimeout(res,ms));
