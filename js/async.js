@@ -8,7 +8,7 @@ postMessage("All About Asynchronous JavaScript");
 //what is callbacks in js?
 //async/await and question on that in every senarios?
 //custom promisetracker function?
-//fetch/axios
+//fetch/axios?
 //api optimiazations
 
 //custome wait
