@@ -4,7 +4,7 @@ postMessage("All About Asynchronous JavaScript");
 //working of above postMessage thing;
 
 //setTimeout, setInterval and clearInterval etc...
-//Promises all about
+//Promises all about?
 //what is callbacks in js
 //async/await and question on that in every senarios
 //custom promisetracker function
