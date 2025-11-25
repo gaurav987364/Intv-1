@@ -4,7 +4,7 @@ var let const,
 map filter reduce,
 functions,
 Closures,
-currying,
+Currying,
 objects,
 this keyword, (Implicit binding)
 call, bind , apply, (Explicit binding)
