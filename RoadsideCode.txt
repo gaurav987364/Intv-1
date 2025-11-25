@@ -3,7 +3,7 @@ This files contains all the list of topics that roadside coder frontend intervie
 var let const,
 map filter reduce,
 functions,
-closures,
+Closures,
 currying,
 objects,
 this keyword, (Implicit binding)
