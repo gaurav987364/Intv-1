@@ -355,7 +355,7 @@ function convertObjectKeysFromSnakeToCamel(obj) {
   }
 
   return res;
-}
+};
 
 console.log(convertObjectKeysFromSnakeToCamel({ user_info: "Gaurav", user_age: 25 }));
 // Q:Implement a Simple Event Emitter
