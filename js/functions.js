@@ -375,7 +375,7 @@ console.log(convertObjectKeysFromSnakeToCamel({ user_info: "Gaurav", user_age: 2
 // Q:Reactive Data Binding with Proxies?
 // Implement reactive data binding in JavaScript using the Proxy object to detect and react to changes.
 
-// Q:Custom Observable Implementation (RxJS-like)
+// Q:Custom Observable Implementation (RxJS-like)?
 // Build an observable/observer system that supports operations like filter, map, and asynchronous subscription.
 
 // //? Methods or reuseable functions or methods mized topics?
