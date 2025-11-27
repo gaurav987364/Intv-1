@@ -369,7 +369,7 @@ console.log(convertObjectKeysFromSnakeToCamel({ user_info: "Gaurav", user_age: 2
 // Q:N-Queens Problem Using Recursion and Backtracking?
 // Solve the N-Queens puzzle by implementing a recursive backtracking algorithm in JavaScript.
 
-// Q:Optimized String Matching Algorithm
+// Q:Optimized String Matching Algorithm?
 // Implement a highly optimized string matching algorithm (for example, Knuth-Morris-Pratt or Boyer-Moore).
 
 // Q:Reactive Data Binding with Proxies
