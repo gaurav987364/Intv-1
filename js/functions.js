@@ -459,4 +459,4 @@ function factorial(n){
 //       num = 60
 //       [[10,50]] = num;
 
-// Q: write a function to find common element of two arrays and strings
+// Q: write a function to find common element of two arrays and strings?
