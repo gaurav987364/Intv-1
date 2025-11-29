@@ -573,7 +573,7 @@ function isMatch(string, pattern) {
   //end pattren.length
   for (let j = 1; j <= n; j++) {
     if(pattern[j-1] === "*"){
-      dp[0][j] = dp[0][j-1]; //* match exmpty string;
+      dp[0][j] = dp[0][j-1]; // match exmpty string;
     }
   }
 
