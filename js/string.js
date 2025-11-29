@@ -548,7 +548,7 @@ console.log(longestPalindromeicSubstring("xyzracecarpqr")); //racecar
 // check before goes to question
 // const dp = Array(3+1).fill(false).map(()=>Array(3+1).fill(false));
 // dp[0][0] = true
-// console.log(dp)
+// console.log(dp);
 // [
 //   [ true, false, false, false ],
 //   [ false, false, false, false ],
