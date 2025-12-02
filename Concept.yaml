@@ -17,7 +17,7 @@ now npm test
 
 
 
-//redux async thunk, middlewere
+redux async thunk, middlewere
 
 Middleware:-> It is function which works b/w the dispatch and reducer;
 
