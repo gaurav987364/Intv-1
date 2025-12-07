@@ -441,7 +441,7 @@ function factorial(n){
 // Q:Mini EventEmitter:
 // Implement a simple EventEmitter class that supports registering event listeners, emitting events with arguments, and removing listeners. Focus on function binding and ensuring the correct context for callbacks
 
-// Q: LRU catche ?
+// Q: LRU cathe ?
 
 // Q:Partial Application for Variadic Functions:
 // Create a function that supports partial application on functions with any number of parameters (variadic functions), returning a new function that accumulates the arguments until all are provided.
