@@ -443,7 +443,7 @@ function factorial(n){
 
 // Q: LRU cache ?
 
-// Q:Partial Application for Variadic Functions:
+// Q:Partial Application for Variadic Functions?
 // Create a function that supports partial application on functions with any number of parameters (variadic functions), returning a new function that accumulates the arguments until all are provided.
 
 // Q:Tail-Call Optimized Recursive Function:
