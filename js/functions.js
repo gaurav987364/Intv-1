@@ -438,7 +438,7 @@ function factorial(n){
 // Q:Recursive Deep Clone (Basic):
 // Write a function to perform a deep clone of a simple object that may contain nested objects (focus on non-circular references).
 
-// Q:Mini EventEmitter:
+// Q:Mini EventEmitter?
 // Implement a simple EventEmitter class that supports registering event listeners, emitting events with arguments, and removing listeners. Focus on function binding and ensuring the correct context for callbacks
 
 // Q: LRU cache ?
