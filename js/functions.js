@@ -446,7 +446,7 @@ function factorial(n){
 // Q:Partial Application for Variadic Functions?
 // Create a function that supports partial application on functions with any number of parameters (variadic functions), returning a new function that accumulates the arguments until all are provided.
 
-// Q:Tail-Call Optimized Recursive Function:
+// Q:Tail-Call Optimized Recursive Function?
 // Rewrite a recursive function (such as calculating Fibonacci numbers) in a tail-recursive manner and discuss its implications in environments where tail-call optimization is supported.
 
 // Q:Error-Handling Composed Functions:
