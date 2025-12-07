@@ -449,7 +449,7 @@ function factorial(n){
 // Q:Tail-Call Optimized Recursive Function?
 // Rewrite a recursive function (such as calculating Fibonacci numbers) in a tail-recursive manner and discuss its implications in environments where tail-call optimization is supported.
 
-// Q:Error-Handling Composed Functions:
+// Q:Error-Handling Composed Functions?
 // Write a Compose (or pipe) function that chains multiple functions together. Ensure that if one function throws an error (or rejects a promise), the error is caught and handled gracefully.
 
 //? More question ?
