@@ -426,7 +426,7 @@ function factorial(n){
 // Q:Simple Sum Function?
 // Write a function that takes two numbers as arguments and returns their sum.
 
-// Q:Arrow Function for Squaring:
+// Q:Arrow Function for Squaring?
 // Create an arrow function that accepts a number and returns its square.
 
 // Q:mmediately Invoked Function Expression (IIFE):
