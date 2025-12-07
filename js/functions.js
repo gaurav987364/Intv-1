@@ -423,7 +423,7 @@ function factorial(n){
 // Q: write a function to find GCD?
 
 
-// Q:Simple Sum Function:
+// Q:Simple Sum Function?
 // Write a function that takes two numbers as arguments and returns their sum.
 
 // Q:Arrow Function for Squaring:
