@@ -328,4 +328,4 @@ mongoose.connect(()=>{
 
 git rebase,
 git refloke,
-git
+git merge
