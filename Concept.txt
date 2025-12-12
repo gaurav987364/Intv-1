@@ -326,6 +326,7 @@ mongoose.connect(()=>{
   autoCreated:false
 })
 
+Learn about this commands and advance git + revert
 git rebase,
 git refloke,
 git merge
