@@ -302,7 +302,7 @@ Now If we have conflicts during raising the PR or Pushing the code into existing
 
 so we have to solve the conflicts on our local by taking the pull or main/master;
 
-we have to seen like this:-
+we have to seen like this:->
 
 <<<<<<< dashboard_new
 // your branch's changes here
