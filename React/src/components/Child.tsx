@@ -5,7 +5,7 @@ const Child = ({name,age,render}:{name:string,age:number,render:()=>any}) => {
   return (
     <div>
         Child : {name} 
-        <p className=' text-red-400'>{age}</p>
+        <p className=' text-red-400 font-semibold '>{age}</p>
         {render(happiness)}
     </div>
   )
