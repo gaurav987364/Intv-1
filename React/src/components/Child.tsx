@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Child = ({name,age,render}:{name:string,age:number,render:()=>any}) => {
-    const happiness = "🤣🤣🤣🤣";
+  const happiness = "🤣🤣🤣🤣";
   return (
     <div>
         Child {name} 
