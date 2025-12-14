@@ -19,7 +19,7 @@ class MyClassComponent extends React.Component{
         }
     }
     componentWillUnmount(): void {
-        console.log("UnMounted")
+        console.log("UnMounted.")
     }
 
      adduser = ()=>{
