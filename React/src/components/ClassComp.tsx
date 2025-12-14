@@ -15,7 +15,7 @@ class MyClassComponent extends React.Component{
 
     componentDidUpdate(prevProps: Readonly<{}>, prevState: Readonly<{}>, snapshot?: any): void {
         if(this.prevState !== this.state.user){
-            console.log("Updated")
+            console.log("Updated.")
         }
     }
     componentWillUnmount(): void {
