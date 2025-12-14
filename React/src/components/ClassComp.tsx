@@ -23,7 +23,7 @@ class MyClassComponent extends React.Component{
     }
 
      adduser = ()=>{
-        this.setState({user: "John Doe"})
+        this.setState({user: "John Doe."})
     }
 
     render(): React.ReactNode {
