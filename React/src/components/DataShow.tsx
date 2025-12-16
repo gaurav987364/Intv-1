@@ -9,6 +9,6 @@ const DataShow = ({data}) => {
         ))}
     </div>
   )
-}
+};
 
 export default DataShow;
