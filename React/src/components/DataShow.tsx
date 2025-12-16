@@ -11,4 +11,4 @@ const DataShow = ({data}) => {
   )
 }
 
-export default DataShow
+export default DataShow;
