@@ -3,7 +3,7 @@ const DataShow = ({data}: {data: any[]}) => {
   return (
     <div className=' flex items-center justify-start w-full h-auto bg-gray-300'>
         {data?.map((item:any, index:any) => (
-            <p key={item.id}>{item.id}</p>
+            <p key={index}>{item.id}</p>
         ))}
     </div>
   )
