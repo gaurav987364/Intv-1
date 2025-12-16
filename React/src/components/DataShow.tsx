@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-const DataShow = ({data}) => {
+const DataShow = ({data}: {data: any[]}) => {
   return (
     <div className=' flex items-center justify-start w-full h-auto bg-gray-300'>
         {data?.map((item:any, index:any) => (
