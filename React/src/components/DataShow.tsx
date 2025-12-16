@@ -1,6 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react';
-
 const DataShow = ({data}) => {
   return (
     <div className=' flex items-center justify-start w-full h-auto bg-gray-300'>
