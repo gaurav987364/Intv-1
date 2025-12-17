@@ -22,7 +22,7 @@ armstrong numbers =>> a number where the sum of the cubes of its digits is equal
 perfect numbers =>> a number where the sum of its divisors (except itself) is equal to the number itself;
                     eg:-> 6 => 1+2+3 = 6
 
-composite numbers => a number that is not prime;
+composite numbers =>> a number that is not prime;
 
 prime factors => factors of a number that are prime;
 
