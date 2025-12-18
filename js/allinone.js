@@ -218,7 +218,7 @@ const res3 = Promise.allSettled([]);
 
 
 
-// event propagation:-
+// event propagation:->
 // it has two thigns one is :Event delegation: & Event Bubbling and capturing;
 //? by default there is event capturing phase:
 
