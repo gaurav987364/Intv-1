@@ -222,7 +222,7 @@ const res3 = Promise.allSettled([]);
 // it has two thigns one is :Event delegation: & Event Bubbling and capturing;
 //? by default there is event capturing phase:
 
-// async await:-
+// async await:->
 
 
 //? Prototype is the object from which other objects are inherit properties;
