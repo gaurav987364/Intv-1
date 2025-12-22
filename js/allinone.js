@@ -226,7 +226,7 @@ const res3 = Promise.allSettled([]);
 
 
 //? Prototype is the object from which other objects are inherit properties;
-// polyfills.
+// polyfills..
 // it is piece of code provide the morder functionality to the older browsers that nativly don't support them; polyfils of array and strings are;
 
 Array.prototype.myMap = function (items){
