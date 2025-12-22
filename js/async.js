@@ -21,7 +21,7 @@ const promise = new Promise((res,rej)=>{
         res("promise resolved.")
     },1000)
     setTimeout(()=>{
-        rej("promise rejected")
+        rej("promise rejected.")
     },2000)
 });
 console.log(promise);
