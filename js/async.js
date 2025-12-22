@@ -11,7 +11,7 @@ postMessage("All About Asynchronous JavaScript");
 //fetch/axios?
 //api optimiazations?
 
-//custome wait
+//custom wait function:->
 const wait = (ms) => new Promise(res => setTimeout(res,ms));
 
 // Q:Basic Promise Example
