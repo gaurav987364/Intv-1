@@ -18,7 +18,7 @@ const wait = (ms) => new Promise(res => setTimeout(res,ms));
 // Write a simple promise that resolves after a 1-second delay.
 const promise = new Promise((res,rej)=>{
     setTimeout(()=>{
-        res("promise resolved")
+        res("promise resolved.")
     },1000)
     setTimeout(()=>{
         rej("promise rejected")
