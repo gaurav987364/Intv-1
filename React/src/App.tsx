@@ -15,7 +15,7 @@ function App() {
       <User/>
     </div>
     </>
-  )
+  );
 }
 
 export default App;
