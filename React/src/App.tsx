@@ -11,7 +11,7 @@ function App() {
   return (
     <>
     <div className=" w-full min-h-screen p-5 bg-slate-800 text-neutral-100 flex justify-center">
-      <SearchComponent/>
+      <SearchComponent />
       <User/>
     </div>
     </>
