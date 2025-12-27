@@ -423,3 +423,16 @@ if(users[rahul]){
 } else {
   console.log('rahul does not exist...ok');
 }
+
+
+// solution to avoid this type of issues is to use hasOwnProperty method ok
+console.log(users[rahul].hasOwnProperty('toString')); // false
+console.log(users[rahul].hasOwnProperty('constructor')); // false
+console.log(users[rahul].hasOwnProperty('name')); // false
+
+
+// Q: what is the output?
+//! splitThis.split(/[,;-]/) will split the string on any of the delimiters (, - or ;). (regex also accepted)
+const splitThis = "gaurav,yash;rahul-ankit";
+const result = splitThis?.split(/[,;-]/);
+console.log(result); // ['gaurav', 'yash', 'rahul', 'ankit']
