@@ -2,7 +2,7 @@ Jest:-> A JavaScript testing framework created by Facebook. It's widely used for
 
 React Testing Library (RTL): A library for testing React components in a way that resembles how users interact with them.
 
-Cypress: A powerful end-to-end testing tool that runs tests in a real browser
+Cypress:- A powerful end-to-end testing tool that runs tests in a real browser
 
 npm install --save-dev jest @testing-library/react
 
