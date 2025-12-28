@@ -446,7 +446,7 @@ console.log(binarySearch([1,2,3,4,5,6,7,8,9],7)); //6
 //* 3. if not in sorted half then check in other half.
 
 //! Although our array is not sorted, we solve this solution for sorted array is avobe;
-[15,18,20,2,8,10,12]; //=> target = 10;
+[15,18,20,2,8,10,12]; //=> target = 10
 function binarySearchInRotatedArray(arr,target){
     let left = 0;
     let right = arr.length-1;
