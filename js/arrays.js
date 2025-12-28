@@ -456,7 +456,7 @@ function binarySearchInRotatedArray(arr,target){
 
         if(arr[mid] === target) return mid;
 
-        //check which half is sorted; i.e left?
+        //check which half is sorted; i.e. left?
         if(arr[left] <= arr[mid]){
             //left half is sorted; 
             // so hmara target left or mid me hai;
