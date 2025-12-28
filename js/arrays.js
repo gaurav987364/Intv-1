@@ -443,7 +443,7 @@ console.log(binarySearch([1,2,3,4,5,6,7,8,9],7)); //6
 //! Q: How to search in a rotated sorted array?
 //* ans:-> 1. identify which half is sorted.
 //* 2. check if target is in that sorted half.
-//* 3. if not in sorted half then check in other half
+//* 3. if not in sorted half then check in other half.
 
 //! Although our array is not sorted, we solve this solution for sorted array is avobe;
 [15,18,20,2,8,10,12]; //=> target = 10;
