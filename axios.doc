@@ -87,7 +87,7 @@ getData(); and you are good to go;
 
 1.) in fetch we have use AbortController to cancel request but in axios we have built in cancelToken() thing;
 
-2) in fetch to give error after certain time like 5 seconds if no data is comes so we have created a timers manually but in axios we have {timeout:5000} thing so after 5 seconds automatically .catch() block runs;
+2.) in fetch to give error after certain time like 5 seconds if no data is comes so we have created a timers manually but in axios we have {timeout:5000} thing so after 5 seconds automatically .catch() block runs;
 
 3) query params ke case me bhi fetch me URLSearchParams karke phle hme hamari value ko Encode/Decode krna hota hai but axios ke case me hme ni krna pdta...
 
