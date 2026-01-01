@@ -80,7 +80,7 @@ export const getData = ()=>{
     return api.get("/vidios");
 };
 
-getData(); and you are good to go;
+getData() and you are good to go;
 
 
 features :->
