@@ -58,7 +58,7 @@ function scoreOfParenthesis(s) {
 console.log(scoreOfParenthesis("()")) //1
 console.log(scoreOfParenthesis("(())")) //2
 console.log(scoreOfParenthesis("(()())")) //4
-console.log(scoreOfParenthesis("(()(()))")); //6
+console.log(scoreOfParenthesis("(()(()))")) //6
 console.log(scoreOfParenthesis("((())(()))")); //8
 console.log(scoreOfParenthesis("(((((())))))")); //32
 console.log(scoreOfParenthesis("((())(())(())(()))")); //16
