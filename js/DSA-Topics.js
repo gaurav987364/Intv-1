@@ -61,7 +61,7 @@ console.log(scoreOfParenthesis("(()())")); //4
 console.log(scoreOfParenthesis("(()(()))")); //6
 console.log(scoreOfParenthesis("((())(()))")); //8
 console.log(scoreOfParenthesis("(((((())))))")); //32
-console.log(scoreOfParenthesis("((())(())(())(()))")) //16
+console.log(scoreOfParenthesis("((())(())(())(()))")); //16
 
 
 // DSA (Data Structures & Algorithms) – 15 Must-Know;
