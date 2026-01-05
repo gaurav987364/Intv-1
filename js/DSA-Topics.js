@@ -64,9 +64,9 @@ console.log(scoreOfParenthesis("(((((())))))")); //32
 console.log(scoreOfParenthesis("((())(())(())(()))")); //16
 
 
-// DSA (Data Structures & Algorithms) – 15 Must-Know;
+// DSA (Data Structures & Algorithms) –> 15 Must-Know;
 
-//* Reverse a linked list (iterative & recursive)
+//* Reverse a linked list (iterative & recursive)?
 
 
 //* Detect cycle in a linked list
