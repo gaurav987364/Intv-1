@@ -77,7 +77,7 @@ console.log(scoreOfParenthesis("((())(())(())(()))")); //16
 
 //* Longest Substring Without Repeating Characters?
 
-//* Valid Parentheses
+//* Valid Parentheses?
 
 //* Sliding Window Maximum
 
