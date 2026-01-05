@@ -73,7 +73,7 @@ console.log(scoreOfParenthesis("((())(())(())(()))")); //16
 
 //* Two sum, Three sum?
 
-//* Merge two sorted arrays / lists
+//* Merge two sorted arrays / lists?
 
 //* Longest Substring Without Repeating Characters
 
