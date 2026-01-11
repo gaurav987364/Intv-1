@@ -25,7 +25,7 @@ function capitalize(str) {
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 }
-console.log(capitalize("Hey My Name is gaurav. how are you bro."));
+console.log(capitalize("Hey My Name Is gaurav. how are you bro."));
 //Hey My Name Is Gaurav. How Are You Bro.
 
 // Q:Reverse a String✅
