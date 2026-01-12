@@ -60,7 +60,7 @@ function checkAnagram(w1, w2) {
   if (sortedWord1 === sortedWord2) {
     return "Both word are Anagrams";
   } else {
-    return "Not a Valid Anagrams.";
+    return "Not a Valid Anagrams";
   }
 }
 console.log(checkAnagram("slut", "lust"));
