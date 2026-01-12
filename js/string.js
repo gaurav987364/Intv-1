@@ -97,7 +97,7 @@ function lengOfLongWord(str){
     return res || "Not found!";
 }
 
-console.log(lengOfLongWord("hey my name is gaurab 9899")); // Output: 6
+console.log(lengOfLongWord("hey my name is gaurab 989")); // Output: 6
 
 // Q:Count Character Frequency
 // Create a function to count the frequency of each character in a string.
