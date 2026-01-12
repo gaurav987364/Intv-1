@@ -58,7 +58,7 @@ function checkAnagram(w1, w2) {
   const sortedWord1 = w1.split("").sort().join("");
   const sortedWord2 = w2.split("").sort().join("");
   if (sortedWord1 === sortedWord2) {
-    return "Both word are Anagrams.";
+    return "Both word are Anagrams";
   } else {
     return "Not a Valid Anagrams.";
   }
