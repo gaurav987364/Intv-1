@@ -28,7 +28,7 @@ function capitalize(str) {
 console.log(capitalize("Hey My Name Is Gaurav.How are you bro."));
 //Hey My Name Is Gaurav. How Are You Bro.
 
-// Q:Reverse a String✅
+// Q:Reverse a String✅?
 // Write a function that takes a string and returns its reverse.
 function reverseString(str) {
   let reversedStr = "";
