@@ -14,4 +14,4 @@ function calculateAge(birthDate) {
     }
     return age;
 }
-console.log(calculateAge('1990-05-15')); // Example usage
+console.log(calculateAge('2000-12-02')); // Example usage
