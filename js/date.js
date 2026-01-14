@@ -23,4 +23,4 @@ function getDayName(dateString) {
     const dayIndex = date.getDay();
     return days[dayIndex];
 }
-console.log(getDayName('2024-02-20')); // Example usage
+console.log(getDayName('2000-12-02')); // Example usage
