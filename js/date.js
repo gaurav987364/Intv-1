@@ -15,3 +15,12 @@ function calculateAge(birthDate) {
     return age;
 }
 console.log(calculateAge('2000-12-02')); // Example usage
+// Q:- write a function that input date and return day name?
+// solution:-
+function getDayName(dateString) {
+    const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const date = new Date(dateString);
+    const dayIndex = date.getDay();
+    return days[dayIndex];
+}
+console.log(getDayName('2024-02-20')); // Example usage
