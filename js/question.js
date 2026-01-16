@@ -411,7 +411,7 @@ emitter.emit('onceEvent'); // No output, as the listener has been removed after 
 const users = {
   gaurav:{},
   yash:{},
-  rahul:{}
+  rahul:{},
 };
 
 let rahul = 'rahul';
