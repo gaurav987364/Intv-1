@@ -417,7 +417,7 @@ const users = {
 let rahul = 'rahul';
 // ab agar hamare pass idhr ho 'toString' or 'constructor' jo ki prototype pe exit krete hai to bi true dega ok
 
-console.log(users[rahul]); // {}
+console.log(users[rahul]); // {};
 if(users[rahul]){
   console.log('rahul exists...');  //✅ comes because if block me vo only key ko nahi but object ke prototype pe bhi check krega usko isliye true
 } else {
