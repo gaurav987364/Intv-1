@@ -59,7 +59,7 @@ console.log(sum);
 Function.prototype.myCall = function (context = {}, ...args) {
   //first check for errors or where my polifil is call
   if (typeof this !== "function") {
-    throw new Error(this + " It is not Callable.");
+    throw new Error(this + " It is not Callable");
   }
 
   context.fn = this;
