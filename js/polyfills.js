@@ -37,7 +37,7 @@ Array.prototype.myFilter = function (callback) {
 //? Reduce
 Array.prototype.myReduce = function (callback, initialValue) {
   if (this.length === 0 && initialValue === undefined) {
-    throw new Error("Provide initial value...");
+    throw new Error("Provide initial value..");
   }
 
   let accumulator = initialValue !== undefined ? initialValue : this[0];
