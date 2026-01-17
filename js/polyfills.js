@@ -49,7 +49,7 @@ Array.prototype.myReduce = function (callback, initialValue) {
 
   return accumulator;
 };
-const testarr = [1, 2, 3, 4, 5, 6];
+const testarr = [1, 2, 3, 4, 5, ];
 const sum = testarr.myReduce((acc, curr) => acc + curr, 0);
 console.log(sum);
 
