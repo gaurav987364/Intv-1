@@ -64,7 +64,7 @@ Function.prototype.myCall = function (context = {}, ...args) {
 
   context.fn = this;
   const result = context.fn(...args);
-  delete context.fn; // Clean up
+  delete context.fn; // Clean upp
   return result;
 };
 
