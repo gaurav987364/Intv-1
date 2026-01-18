@@ -429,7 +429,7 @@ function factorial(n){
 // Q: Arrow Function for Squaring?
 // Create an arrow function that accepts a number and returns its square.
 
-// Q: mmediately Invoked Function Expression (IIFE)?
+// Q: Immediately Invoked Function Expression (IIFE)?
 // Write an IIFE that computes and logs the message "Hello, World!".
 (function(){
   console.log("Hello, World!");
