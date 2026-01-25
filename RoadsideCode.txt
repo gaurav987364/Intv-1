@@ -35,7 +35,7 @@ accordian,
 caraousel,
 configurable color box,
 post with comment,
-E-commerce filters systmes,
+E-commerce filters system,
 advance tix tac toe
 poll - widget
 Match similar tiles or memory game
