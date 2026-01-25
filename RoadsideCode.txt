@@ -34,7 +34,7 @@ holy grail,
 accordian,
 caraousel,
 configurable color box,
-post with comment
+post with comment,
 E-commerce filters systmes
 advance tix tac toe
 poll - widget
