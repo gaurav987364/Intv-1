@@ -32,7 +32,7 @@ redux questions,
 Machine coding round:->
 holy grail,
 accordian,
-caraousel
+caraousel,
 configurable color box
 post with comment
 E-commerce filters systmes
