@@ -31,7 +31,7 @@ redux questions,
 
 Machine coding round:->
 holy grail,
-accordian
+accordian,
 caraousel
 configurable color box
 post with comment
