@@ -33,7 +33,7 @@ Machine coding round:->
 holy grail,
 accordian,
 caraousel,
-configurable color box
+configurable color box,
 post with comment
 E-commerce filters systmes
 advance tix tac toe
