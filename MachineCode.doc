@@ -47,7 +47,7 @@ How would you implement a custom hook?
 
 Node.js + Express (10)
 11.) How does the event loop work in Node.js?
-12. What is middleware in Express?
+12.) What is middleware in Express?
 13. Explain the difference between process.nextTick(), setImmediate(), and setTimeout().
 14. How do you handle file uploads in Node.js?
 15. How would you secure a Node.js app (helmet, rate-limiter, etc.)?
