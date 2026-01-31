@@ -26,7 +26,7 @@ useeffect polifill,
 useMemo polifill,
 memoizations,
 useImerptive handle and forward ref
-React router interview question
+React router interview question,
 redux questions,
 
 Machine coding round:->
