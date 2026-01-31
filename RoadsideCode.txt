@@ -38,7 +38,7 @@ post with comment,
 E-commerce filters system,
 advance tix tac toe,
 poll - widget,
-Match similar tiles or memory game
+Match similar tiles or memory game,
 
 
 React profiler :->(A tool for debug)
