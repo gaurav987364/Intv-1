@@ -25,7 +25,7 @@ hooks,
 useeffect polifill,
 useMemo polifill,
 memoizations,
-useImerptive handle and forward ref
+useImerptive handle and forward ref,
 React router interview question,
 redux questions,
 
