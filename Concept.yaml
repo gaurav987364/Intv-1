@@ -75,7 +75,7 @@ export type AppDispatch = typeOf store.dispatch;
 // now call these types on useDispatch<AppDispatch> and useSelector(state:RootState) like this;;;
 
 
-//Performance Optimization in redux
+// Performance Optimization in redux
 
 1.) Ham redux store ke update hone par jaha jaha par uski values useSeletor se use hori hogi vo sab component re-render hhge just like context to hm React.memo() ka use kar skate hai for avoid re-renders;
 
