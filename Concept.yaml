@@ -122,7 +122,7 @@ configureStore({
 
 
 
-//We have to add some more concepts here;
+// We have to add some more concepts here;
 
 // Middleware: It is function which works b/w the dispatch and reducer;
 
