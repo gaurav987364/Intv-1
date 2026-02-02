@@ -26,7 +26,7 @@ Middleware:-> It is function which works b/w the dispatch and reducer;
 
 // hm createAsyncthunk ko hamari slice me banate hai isme built in different features ate hai ;
 
-hm iska use krke proper CRUD kar skate hai ;
+hm iska use krke proper CRUD kar skate hai;
 
 like createAsyncThunk("data/fetch",(data,{rejectionState or many features here ate hai })=>{ perform our async operation by giving api a POST,DELETE methods});
 
