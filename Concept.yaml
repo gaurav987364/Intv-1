@@ -82,7 +82,7 @@ export type AppDispatch = typeOf store.dispatch;
 2.) useSelector() ka wisely use kar skate hai like only un values ko store se elege jinka actual use hai component me naki sabhi ko;
 
 3.) createSelector():
- Use createSelector for Memoization
+Use createSelector for Memoization
 createSelector se derived state ko efficiently calculate kar sakte hain. Agar input state same hai, to yeh cached result return karta hai, jo unnecessary calculations ko avoid karta hai.
 
 it is return cache value of state if state not changes so it dont re-calculate again:
