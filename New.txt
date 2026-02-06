@@ -4,7 +4,7 @@ Date :-> 2/12/2000 (RoadMap);
 
 //* Revise Some Topics of React.js + Express.js + MongoDB *//;
 
-//* Learn Next Js (Again) *//;
+//* Learn Next Js (Again) *//
 
 //* Learn About Docker + AWS (Cloud things + CI/CD) + Kafka + Redis + kubernetes + Testing *//;
 
