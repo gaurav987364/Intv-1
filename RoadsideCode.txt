@@ -47,5 +47,5 @@ Web vitals
 code spilitting
 Virtualizations,
 accessiblity,
-HOC Pattrens
+HOC Pattrens,
 
