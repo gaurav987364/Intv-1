@@ -14,7 +14,7 @@ event propagation,
 Compose & Pipe,
 Prototypes,
 Class & Constructor,
-Event loop,
+Event loop
 
 How react works under the hood?
 virtual dom , reconciliation & diifing algorithm,
