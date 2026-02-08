@@ -13,7 +13,7 @@ debounce and throttle,
 event propagation,
 Compose & Pipe,
 Prototypes,
-Class & constructor,
+Class & Constructor,
 Event loop,
 
 How react works under the hood?
