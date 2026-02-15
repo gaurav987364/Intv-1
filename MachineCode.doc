@@ -51,7 +51,7 @@ Node.js + Express (10):-
 13.) Explain the difference between process.nextTick(), setImmediate(), and setTimeout().
 14.) How do you handle file uploads in Node.js?
 15.) How would you secure a Node.js app (helmet, rate-limiter, etc.)?
-16. How do you structure a scalable Express backend project?
+16.) How do you structure a scalable Express backend project?
 17. Difference between synchronous and asynchronous code in Node.js.
 18. How do you handle errors centrally in Express?
 19. JWT vs sessions – pros, cons, and implementation.
