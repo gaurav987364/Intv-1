@@ -54,7 +54,7 @@ Node.js + Express (10):-
 16.) How do you structure a scalable Express backend project?
 17.) Difference between synchronous and asynchronous code in Node.js.
 18.) How do you handle errors centrally in Express?
-19. JWT vs sessions – pros, cons, and implementation.
+19.) JWT vs sessions – pros, cons, and implementation.
 20. How would you write a RESTful API using Express?
 
 MongoDB (5)
