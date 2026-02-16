@@ -78,7 +78,7 @@ const api = axios.create({
 export const getData = ()=>{
     // we are just return the method from here;
     return api.get("/vidios");
-};
+}
 
 getData() and you are good to go;
 
