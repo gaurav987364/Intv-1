@@ -134,7 +134,7 @@ function minRemoveToMakeValid(s) {
   }
 
   return finalResult.join('');
-}
+};
 
 // DSA (Data Structures & Algorithms) –> 15 Must-Know;
 
