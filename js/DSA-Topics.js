@@ -64,6 +64,78 @@ console.log(scoreOfParenthesis("(((((())))))")); //32
 console.log(scoreOfParenthesis("((())(())(())(()))")); //16
 
 
+//Q:  given a string s of '(' , ')' and lowercase English characters. Your task is to remove the minimun number of paranthesis ( '{' or '}' , in any positions ) so that the resulting paranthesis string is valid and return any valid string. Formally, a parenthesis string is a valid if and only if: it is the empty string, contains only lowercase characters, or it can be written as AB (A concatenated with B), where A and B are valid strings, it can be written as (A),where A is a valid string.
+// explain the problem in depth, what are requirements and how we think of to do it, first explain problem with some senairios and eg. questions as well, then provide with 2-3 best of best way solutions with best time and space complexity , Note use language javascript+typescript,
+
+// 🔍 Problem Understanding
+// You’re given a string s containing:
+// - '(' (opening parenthesis)
+// - ')' (closing parenthesis)
+// - lowercase English letters
+// Your task: remove the minimum number of parentheses so that the resulting string is valid.
+
+// What does "valid" mean?
+// A string is valid if:
+// - It’s empty.
+// - It contains only lowercase letters.
+// - It can be written as AB (concatenation of two valid strings).
+// - It can be written as (A) where A is valid.
+
+// 🧠 Example Scenarios
+// 1. Input: s = "a)b(c)d"
+// Output: "ab(c)d"
+// Explanation: The string is already valid.
+
+// 2. Input: s = "a)b(c)d"
+// Output: "ab(c)d"
+// Explanation: The string is already valid.
+
+// 3. Input: s = "lee(t(c)o)de)"
+// Output: "lee(t(c)o)de"
+// Explanation: Remove the minimum number of parentheses to make the string valid.
+
+// 4. Input: s = "))(("
+// Output: ""
+// Explanation: Remove all parentheses to make the string valid.
+
+function minRemoveToMakeValid(s) {
+  let openCount = 0;
+  let balance = 0;
+  let result= [];
+
+  // First pass: remove invalid ')'
+  for (let char of s) {
+    if (char === '(') {
+      openCount++;
+      balance++;
+      result.push(char);
+    } else if (char === ')') {
+      if (balance > 0) {
+        balance--;
+        result.push(char);
+      }
+    } else {
+      result.push(char);
+    }
+  }
+
+  // Second pass: remove extra '('
+  let finalResult= [];
+  let openToKeep = openCount - balance;
+  for (let char of result) {
+    if (char === '(') {
+      if (openToKeep > 0) {
+        finalResult.push(char);
+        openToKeep--;
+      }
+    } else {
+      finalResult.push(char);
+    }
+  }
+
+  return finalResult.join('');
+}
+
 // DSA (Data Structures & Algorithms) –> 15 Must-Know;
 
 //* Reverse a linked list (iterative & recursive)?
