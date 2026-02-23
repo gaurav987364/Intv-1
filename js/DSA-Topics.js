@@ -81,7 +81,7 @@ console.log(scoreOfParenthesis("((())(())(())(()))")); //16
 // - It can be written as AB (concatenation of two valid strings).
 // - It can be written as (A) where A is valid.
 
-// 🧠 Example Scenarios
+// 🧠 Example Scenarios-
 // 1. Input: s = "a)b(c)d"
 // Output: "ab(c)d"
 // Explanation: The string is already valid.
