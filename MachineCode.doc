@@ -3,7 +3,7 @@ Todo App with local storage, filters, and undo
 
 Rate Limiter (per IP / per user),
 
-Infinite Scroll List
+Infinite Scroll List,
 
 Custom Modal Manager with Portal (Create Portal)
 
