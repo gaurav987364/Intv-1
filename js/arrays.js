@@ -434,14 +434,14 @@ console.log(binarySearch([1,2,3,4,5,6,7,8,9],7)); //6
 
 
 // Q:Binary Search on a Rotated Sorted Array?
-// Given a rotated sorted array, write a function that performs a binary search for a target element.
+// Given a rotated sorted array, write a function that performs a binary search for a target element?
 //? Solution :- Understand an Sorted array is an array that has been rotated at some point;
 
 // eg:- [15,18,20,2,8,10,12];
 // sorted array => [2,8,10,12,15,18,20];
 
 //! Q: How to search in a rotated sorted array?
-//* ans:-> 1. identify which half is sorted.
+//* ans:- 1. identify which half is sorted.
 //* 2. check if target is in that sorted half.
 //* 3. if not in sorted half then check in other half.
 
