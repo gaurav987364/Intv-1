@@ -435,4 +435,4 @@ console.log(users[rahul].hasOwnProperty('name')); // false
 //! splitThis.split(/[,;-]/) will split the string on any of the delimiters (, - or ;). (regex also accepted)
 const splitThis = "gaurav,yash;rahul-ankit";
 const result = splitThis?.split(/[,;-]/);
-console.log(result); // ['gaurav', 'yash', 'rahul', 'ankit']
+console.log(result); // ['gaurav', 'yash', 'rahul', 'ankit'];
