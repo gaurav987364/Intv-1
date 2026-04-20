@@ -78,7 +78,7 @@ function printReverseTriangle(n){
         console.log("*".repeat(i))
     }
 };
-console.log(printReverseTriangle(5));
+console.log(printReverseTriangle(5))
 
 
 //reverse pyramid
