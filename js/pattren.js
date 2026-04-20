@@ -94,7 +94,7 @@ console.log(reversePyramid(5));
 
 
 
-// Diamond Pattern
+// Diamond Pattern.
 // Problem Statement:
 // Write a function that prints a diamond shape made up of stars. The function should handle the upper (pyramid) and lower (inverted pyramid) parts of the diamond with a given odd number of rows.
 // Example (n = 5):
