@@ -89,7 +89,7 @@ function reversePyramid(n){
         console.log(spaces+stars)
     }
 }
-console.log(reversePyramid(5))
+console.log(reversePyramid(5));
 
 
 
