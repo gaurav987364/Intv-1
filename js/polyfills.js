@@ -3,7 +3,7 @@
 
 //? Note := polifill ko banaya jata hai Prototype par jisse vo belog krte hai like map,filter,reduce are array methods hai to Array.Prototype par hi hm hamare polifill banayge;
 
-// write polifill of :-
+// write polifill of :->
 // 1.map
 // 2.filter
 // 3.reduce
