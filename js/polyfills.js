@@ -11,7 +11,7 @@
 // 5.call
 // 6.apply
 // 7.bind
-// ...etc
+// ..etc
 
 //? Map
 Array.prototype.myMap = function (items = []) {
