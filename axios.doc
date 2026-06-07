@@ -49,7 +49,7 @@ async ()=>{
 };
 
 
-/In axios :->
+In axios :->
 async ()=>{
     try{
         const res = await axios.get("Our.api.com");
