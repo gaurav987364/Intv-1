@@ -647,7 +647,7 @@ Output: [48,24,12,8];
 
 
 // Q:Find the Kth Smallest Number in a Sorted Matrix
-//  Given a sorted matrix, find the kth smallest number.
+// Given a sorted matrix, find the kth smallest number.
 
 // Q:Find the Longest Continuous Increasing Subsequence
 // Given an array of integers, find the longest continuous increasing subsequence.
