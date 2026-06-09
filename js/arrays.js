@@ -653,7 +653,7 @@ Output: [48,24,12,8];
 //  Given an array of integers, find the longest continuous increasing subsequence.
 
 // Q: Implement a Binary Search Tree (BST) in JavaScript?
-//  Implement a binary search tree (BST) with methods for insertion, deletion, and searching.
+// Implement a binary search tree (BST) with methods for insertion, deletion, and searching.
 
 
 // Question on find sub arrays length with sum equal to k?
