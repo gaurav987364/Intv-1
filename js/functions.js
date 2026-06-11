@@ -393,7 +393,7 @@ console.log(shuffleArray([20,30,40,50,60]));
 
 // Q: write a function to provide random game board based on rows and cols?
 
-// Q: write a function to generate UUID's ?
+// Q: write a function to generate UUID's?
 
 // Q: write a function that print an 6 digits number (OTP) always?
 function otp(length=6){
