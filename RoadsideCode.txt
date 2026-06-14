@@ -42,7 +42,7 @@ Match similar tiles or memory game,
 
 
 React profiler :-> (A tool for debug)
-client side vs server side renderings
+client side vs server side renderings,
 Web vitals,
 code spilitting
 Virtualizations,
